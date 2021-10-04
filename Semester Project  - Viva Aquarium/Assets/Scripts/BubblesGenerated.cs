@@ -5,7 +5,7 @@ using UnityEngine;
 public class BubblesGenerated : MonoBehaviour
 {
     float seconds = 0f;
-    public static int bubbles = 1;
+    public static int bubbles = 0;
 
     private bool ResetTimer;
 
@@ -16,7 +16,7 @@ public class BubblesGenerated : MonoBehaviour
     void Start()
     {
         ResetTimer = false;
-        Instantiate(BubblePrefab, SpawnPoint.position, SpawnPoint.rotation);
+       
     }
 
 
@@ -28,6 +28,7 @@ public class BubblesGenerated : MonoBehaviour
         {
             bubbles ++;      //+1 each time a bubble spawns
             ResetTimer = true;
+            Instantiate(BubblePrefab, SpawnPoint.position, SpawnPoint.rotation);
         }
 
         if (ResetTimer)
