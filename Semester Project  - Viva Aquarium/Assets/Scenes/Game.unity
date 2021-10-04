@@ -781,7 +781,7 @@ MonoBehaviour:
   StartWaitTime: 1
   moveSpots: {fileID: 106634426}
   minX: -9.41
-  maxX: -5.14
+  maxX: -5
   maxY: 3.76
   minY: -4
 --- !u!1 &991002255
