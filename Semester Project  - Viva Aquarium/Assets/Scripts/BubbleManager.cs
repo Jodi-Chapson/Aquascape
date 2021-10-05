@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BubbleManager : MonoBehaviour
 {
 
-    int Count = 0;
+    public static int Count = 0;
 
     public Text KeepCount;
 
