@@ -24,11 +24,11 @@ public class BubblesGenerated : MonoBehaviour
     {
         seconds += Time.deltaTime;
 
-        if (seconds >= 5)
+        if (seconds >= 2)
         {
             bubbles ++;      //+1 each time a bubble spawns
             ResetTimer = true;
-            Instantiate(BubblePrefab, SpawnPoint.position, SpawnPoint.rotation);
+            GenerateBubble();
         }
 
         if (ResetTimer)
@@ -38,5 +38,19 @@ public class BubblesGenerated : MonoBehaviour
         }
 
        // Debug.Log(bubbles);
+    }
+
+    public void OnMouseDown()
+    {
+        bubbles++;
+        GenerateBubble();
+        seconds = 0f;
+        Debug.Log("nani");
+    }
+
+
+    public void GenerateBubble()
+    {
+        Instantiate(BubblePrefab, SpawnPoint.position, SpawnPoint.rotation);
     }
 }

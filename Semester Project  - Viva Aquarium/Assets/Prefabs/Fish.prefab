@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 780711293047101207}
   - component: {fileID: 780711293047101204}
   - component: {fileID: 780711293047101205}
+  - component: {fileID: -6748274667821366890}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -148,7 +149,20 @@ MonoBehaviour:
   StartWaitTime: 1
   moveSpots: {fileID: 1315062939697185262, guid: c74bb855b4f9dfa439ea09d927846864,
     type: 3}
-  minX: -9.41
-  maxX: -5
+  minX: -8.5
+  maxX: -4.6
   maxY: 3.76
   minY: -4
+--- !u!65 &-6748274667821366890
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780711293047101201}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

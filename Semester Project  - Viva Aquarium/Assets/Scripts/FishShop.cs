@@ -13,7 +13,7 @@ public class FishShop : MonoBehaviour
         if (BubbleManager.Count >= 50)  //Players can only buy Fish1 once they have this amount of bubbles
         {
             Instantiate(FishPrefab, FishSpawnPoint.position, FishSpawnPoint.rotation);
-            BubblesGenerated.bubbles -= 40; 
+            BubblesGenerated.bubbles -= 50; 
         }
         
     }
