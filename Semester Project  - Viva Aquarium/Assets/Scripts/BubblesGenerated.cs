@@ -40,13 +40,13 @@ public class BubblesGenerated : MonoBehaviour
        // Debug.Log(bubbles);
     }
 
-    public void OnMouseDown()
-    {
-        bubbles++;
-        GenerateBubble();
-        seconds = 0f;
-        Debug.Log("nani");
-    }
+    //public void OnMouseDown()
+    //{
+    //    bubbles++;
+    //    GenerateBubble();
+    //    seconds = 0f;
+    //    Debug.Log("nani");
+    //}
 
 
     public void GenerateBubble()
