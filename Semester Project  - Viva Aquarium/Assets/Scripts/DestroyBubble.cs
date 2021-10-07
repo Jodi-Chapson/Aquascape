@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyBubble : MonoBehaviour
 {
 
-    public float LifeTime = 5f;
+    public float LifeTime;
     
     void Start()
     {
