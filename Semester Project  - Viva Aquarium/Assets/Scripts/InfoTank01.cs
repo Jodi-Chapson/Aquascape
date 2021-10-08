@@ -35,11 +35,11 @@ public class InfoTank01 : MonoBehaviour
             CapacityText.text = "Capacity : " + FishInTank + "/" + FishAllowed;
 
             TankLevel += 1;
-            TankProductionModifer += 1;
+            TankProductionModifer ++;
             TankLevelText.text = "Tank Level : " + TankLevel;
 
 
-            UpgradeTankPrice += 20; //The next upgrade will cost 20 bubbles more
+            UpgradeTankPrice = (int)(UpgradeTankPrice * 1.5f);
             UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
 
            

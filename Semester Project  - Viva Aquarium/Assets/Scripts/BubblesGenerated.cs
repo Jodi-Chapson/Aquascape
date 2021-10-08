@@ -24,7 +24,7 @@ public class BubblesGenerated : MonoBehaviour
     {
         ResetTimer = false;
 
-        hometank = GameObject.Find("Tank01 Info").GetComponent<InfoTank01>();
+        hometank = GameObject.Find("Tank01").GetComponent<InfoTank01>();
         tankmodifier = hometank.TankProductionModifer;
        
     }
@@ -42,7 +42,7 @@ public class BubblesGenerated : MonoBehaviour
         if (seconds >= 1)
         {
             bubbles += bubbleproduction;      //+1 each time a bubble spawns
-            bubbles++;
+            
             ResetTimer = true;
             GenerateBubble();
         }
