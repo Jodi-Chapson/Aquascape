@@ -13,20 +13,35 @@ public class BubblesGenerated : MonoBehaviour
     public GameObject BubblePrefab;
 
 
+
+    public int bubbleproduction;
+    public int baseproduction;
+    public InfoTank01 hometank;
+    public float tankmodifier;
+
+
     void Start()
     {
         ResetTimer = false;
+
+        hometank = GameObject.Find("Tank01 Info").GetComponent<InfoTank01>();
+        tankmodifier = hometank.TankProductionModifer;
        
     }
 
 
     void Update()
     {
+
+
+        tankmodifier = hometank.TankProductionModifer;
+        bubbleproduction = (int)((float)baseproduction * tankmodifier);
         seconds += Time.deltaTime;
 
-        if (seconds >= 2)
+        
+        if (seconds >= 1)
         {
-            bubbles ++;      //+1 each time a bubble spawns
+            bubbles += bubbleproduction;      //+1 each time a bubble spawns
             ResetTimer = true;
             GenerateBubble();
         }

@@ -586,18 +586,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This is a very basic prototype!
+  m_Text: 'Welcome to milestones 1!
 
 
     Current features:
 
-    - fish will
-    generate 1 bubble every 2 seconds
+    - fish will generate
+    1 bubble every 1 second
 
-    - you can click on the fish to generate
-    bubbles!
+    - you can upgrade tanks with bubbles (which improve
+    fish bubble production)
 
-    - you can buy Fish 01 from the shop using bubbles!'
+    - you can buy more fish from the shop using bubbles!'
 --- !u!222 &341872324
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -821,7 +821,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: a very bare bones prototype
+  m_Text: a somewhar barebones prototype 2.0
 --- !u!222 &557595105
 CanvasRenderer:
   m_ObjectHideFlags: 0
