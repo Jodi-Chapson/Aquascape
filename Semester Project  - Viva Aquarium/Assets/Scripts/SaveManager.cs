@@ -12,9 +12,9 @@ public static class SaveManager
     public static void SaveFishData(/*Fish fish*/) //Saves the fish data. Will be used in a fish class.
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string savepath = Application.persistentDataPath + "/fish.txt";
+        string savepath = Application.persistentDataPath + "/fish.txt"; //Finds save path for us.
         FileStream fstream = new FileStream(savepath, FileMode.Create); //Creates the file that needs to be saved in a directory.
-        FishData data = new FishData(/*fish*/); //Need to pass the fish class in here. REQUIRES THE CONSTRUCTOR IN THE FISHDATA CLASS.
+        FishData data = new FishData(/*fish*/); //Need to pass the fish class in here.
         formatter.Serialize(fstream, data); //Serializes it into binary to protect the data so that a player cannot modify data about the fish.
         fstream.Close();
     }

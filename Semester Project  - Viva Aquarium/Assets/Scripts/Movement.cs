@@ -39,7 +39,5 @@ public class Movement : MonoBehaviour //This script is for the movement of the f
                 waitTime -= Time.deltaTime;
             }
         }
-        
-    
     }
 }
