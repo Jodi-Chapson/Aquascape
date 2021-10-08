@@ -13,7 +13,9 @@ public class FishShop : MonoBehaviour
         if (BubbleManager.Count >= 50)  //Players can only buy Fish1 once they have this amount of bubbles
         {
             Instantiate(FishPrefab, FishSpawnPoint.position, FishSpawnPoint.rotation);
-            BubblesGenerated.bubbles -= 50; 
+            BubblesGenerated.bubbles -= 50;
+
+            GameObject.Find("Tank01 Info").GetComponent<InfoTank01>().FishInTank += 1;
         }
         
     }
