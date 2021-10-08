@@ -5406,7 +5406,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 50 Bubbles
+  m_Text: 10 Bubbles
 --- !u!222 &1796739565
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6323,8 +6323,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TankLevelText: {fileID: 1128878103}
+  CapacityText: {fileID: 0}
   TankLevel: 1
   UpgradeTankPrice: 20
+  FishInTank: 1
+  FishAllowed: 8
 --- !u!1 &2059901013
 GameObject:
   m_ObjectHideFlags: 0
@@ -6434,7 +6437,7 @@ PrefabInstance:
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.16139103
+      value: 0.161391
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
@@ -6505,12 +6508,12 @@ PrefabInstance:
     - target: {fileID: 780711293047101207, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.107547104
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101207, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.6380677
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101207, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}

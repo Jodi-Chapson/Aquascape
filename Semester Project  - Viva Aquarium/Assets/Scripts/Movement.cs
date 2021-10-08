@@ -15,12 +15,17 @@ public class Movement : MonoBehaviour //This script is for the movement of the f
     public float maxY;
     public float minY;
 
+    public float scaleX;
+
     
     void Start()
     {
         waitTime = StartWaitTime;
+        scaleX = this.transform.localScale.x;
+
 
         moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY)); //Free movement for the fish within its boundaries
+        FlipFish();
     }
 
     void Update()
@@ -32,12 +37,29 @@ public class Movement : MonoBehaviour //This script is for the movement of the f
             if(waitTime <= 0)
             {
                 moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+
+                FlipFish();
+               
+
                 waitTime = StartWaitTime;
             }
             else
             {
                 waitTime -= Time.deltaTime;
             }
+        }
+    }
+
+
+    public void FlipFish()
+    {
+        if (moveSpots.position.x < this.transform.position.x) //the new location is towards the left of the fish
+        {
+            this.transform.localScale = new Vector3(scaleX, this.transform.localScale.y, this.transform.localScale.z);
+        }
+        else if (moveSpots.position.x > this.transform.position.x) //the new location is towards the right of the fish
+        {
+            this.transform.localScale = new Vector3(-scaleX, this.transform.localScale.y, this.transform.localScale.z);
         }
     }
 }
