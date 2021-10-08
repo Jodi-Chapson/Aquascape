@@ -6424,7 +6424,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TankLevelText: {fileID: 1128878103}
   CapacityText: {fileID: 2059901015}
+  UpgradePrice: {fileID: 0}
   TankLevel: 1
+  TankProductionModifer: 0
   UpgradeTankPrice: 20
   FishInTank: 1
   FishAllowed: 8

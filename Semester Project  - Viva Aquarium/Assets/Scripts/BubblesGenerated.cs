@@ -42,6 +42,7 @@ public class BubblesGenerated : MonoBehaviour
         if (seconds >= 1)
         {
             bubbles += bubbleproduction;      //+1 each time a bubble spawns
+            bubbles++;
             ResetTimer = true;
             GenerateBubble();
         }
