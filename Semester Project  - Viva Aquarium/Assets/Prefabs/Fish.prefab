@@ -134,7 +134,7 @@ MonoBehaviour:
   BubblePrefab: {fileID: 3891401958653588265, guid: ac25ff0550131da4f8a633e74c9ea7cb,
     type: 3}
   bubbleproduction: 0
-  baseproduction: 0
+  baseproduction: 1
   hometank: {fileID: 0}
   tankmodifier: 0
 --- !u!114 &780711293047101205
