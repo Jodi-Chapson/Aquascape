@@ -53,17 +53,7 @@ public class BubblesGenerated : MonoBehaviour
             ResetTimer = false;
         }
 
-       // Debug.Log(bubbles);
     }
-
-    //public void OnMouseDown()
-    //{
-    //    bubbles++;
-    //    GenerateBubble();
-    //    seconds = 0f;
-    //    Debug.Log("nani");
-    //}
-
 
     public void GenerateBubble()
     {
