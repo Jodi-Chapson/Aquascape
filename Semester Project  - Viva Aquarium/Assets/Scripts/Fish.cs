@@ -20,11 +20,11 @@ public class Fish : MonoBehaviour
 
     void Start()
     {
-        FishTankTrigger = this.GetComponent<BoxCollider2D>();
-        //minX = FishTankTrigger.bounds.size.x * -1;
-        //maxX = FishTankTrigger.bounds.size.x;
-        //minY = FishTankTrigger.bounds.size.y * -1;
-        //maxY = FishTankTrigger.bounds.size.y;
+        FishTankTrigger = GameObject.Find("Tank01").GetComponent<BoxCollider2D>();
+        minX = FishTankTrigger.bounds.min.x;
+        maxX = FishTankTrigger.bounds.max.x;
+        minY = FishTankTrigger.bounds.min.y;
+        maxY = FishTankTrigger.bounds.max.y;
         waitTime = StartWaitTime;
         MoveSpot = new GameObject();
         MoveSpotTransform = MoveSpot.transform;
