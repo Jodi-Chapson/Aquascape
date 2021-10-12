@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 780711293047101207}
   - component: {fileID: 780711293047101204}
   - component: {fileID: 780711293047101205}
+  - component: {fileID: -7484625207602008992}
   - component: {fileID: -5565318386594651653}
   m_Layer: 0
   m_Name: Fish
@@ -132,6 +133,10 @@ MonoBehaviour:
   SpawnPoint: {fileID: 780711291800588916}
   BubblePrefab: {fileID: 3891401958653588265, guid: ac25ff0550131da4f8a633e74c9ea7cb,
     type: 3}
+  bubbleproduction: 0
+  baseproduction: 0
+  hometank: {fileID: 0}
+  tankmodifier: 0
 --- !u!114 &780711293047101205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +144,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780711293047101201}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82844ba64cbd8904d8b3bfe64ae61e78, type: 3}
   m_Name: 
@@ -153,6 +158,26 @@ MonoBehaviour:
   maxY: 3.76
   minY: -4
   scaleX: 0
+--- !u!114 &-7484625207602008992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780711293047101201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f60514192f341d40a23472dede0ea16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpotTransform: {fileID: 0}
+  minX: -8.5
+  maxX: -4.6
+  maxY: 3.76
+  minY: -4
+  Speed: 0.5
+  waitTime: 0
+  StartWaitTime: 1
 --- !u!61 &-5565318386594651653
 BoxCollider2D:
   m_ObjectHideFlags: 0
