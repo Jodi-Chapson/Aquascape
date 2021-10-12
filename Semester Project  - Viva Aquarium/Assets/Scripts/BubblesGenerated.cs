@@ -39,7 +39,7 @@ public class BubblesGenerated : MonoBehaviour
         seconds += Time.deltaTime;
 
         
-        if (seconds >= 1)
+        if (seconds >= 3)
         {
             bubbles += bubbleproduction;      //+1 each time a bubble spawns
             
