@@ -17,6 +17,8 @@ public class Fish : MonoBehaviour
     public float waitTime;
     public float StartWaitTime;
 
+    public float scaleX;
+
 
     void Start()
     {
@@ -28,6 +30,7 @@ public class Fish : MonoBehaviour
         waitTime = StartWaitTime;
         MoveSpot = new GameObject();
         MoveSpotTransform = MoveSpot.transform;
+        scaleX = this.transform.localScale.x;
 
         DetermineMoveSpot(MoveSpotTransform);
     }
@@ -47,6 +50,7 @@ public class Fish : MonoBehaviour
                 MoveSpot = new GameObject();
                 MoveSpotTransform = MoveSpot.transform;
 
+                FlipFish(MoveSpotTransform);
                 DetermineMoveSpot(MoveSpotTransform);
 
 
@@ -70,5 +74,17 @@ public class Fish : MonoBehaviour
         float yPos = Random.Range(minY, maxY);
         movespot.position = new Vector2(xPos, yPos);
         return movespot;
+    }
+
+    public void FlipFish(Transform movespot)
+    {
+        if (movespot.position.x < this.transform.position.x) //the new location is towards the left of the fish
+        {
+            this.transform.localScale = new Vector3(scaleX, this.transform.localScale.y, this.transform.localScale.z);
+        }
+        else if (movespot.position.x > this.transform.position.x) //the new location is towards the right of the fish
+        {
+            this.transform.localScale = new Vector3(-scaleX, this.transform.localScale.y, this.transform.localScale.z);
+        }
     }
 }
