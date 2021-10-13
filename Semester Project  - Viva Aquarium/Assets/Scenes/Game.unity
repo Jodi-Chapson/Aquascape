@@ -1541,7 +1541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &408336035
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3209,7 +3209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &810191523
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3843,7 +3843,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Fish 02
 
-    60 bubbles'
+    (Coming Soon)'
 --- !u!222 &903665128
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3924,7 +3924,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Fish 03
 
-    150 bubbles'
+    (Coming Soon)'
 --- !u!222 &911007163
 CanvasRenderer:
   m_ObjectHideFlags: 0
