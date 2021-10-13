@@ -30,6 +30,7 @@ public class Fish : MonoBehaviour
         MoveSpotTransform = MoveSpot.transform;
 
         DetermineMoveSpot(MoveSpotTransform);
+
     }
 
 
