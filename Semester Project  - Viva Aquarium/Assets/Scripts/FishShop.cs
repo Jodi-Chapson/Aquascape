@@ -20,7 +20,7 @@ public class FishShop : MonoBehaviour
             Instantiate(FishPrefab, FishSpawnPoint.position, FishSpawnPoint.rotation);
             BubblesGenerated.bubbles -= 10;
 
-            GameObject.Find("Tank01 Info").GetComponent<InfoTank01>().FishInTank += 1;
+            GameObject.Find("Tank01").GetComponent<InfoTank01>().FishInTank += 1;
         }
         
     }
