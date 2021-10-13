@@ -51,8 +51,10 @@ public class Fish : MonoBehaviour
                 MoveSpot = new GameObject();
                 MoveSpotTransform = MoveSpot.transform;
 
-                FlipFish(MoveSpotTransform);
                 DetermineMoveSpot(MoveSpotTransform);
+
+                FlipFish(MoveSpotTransform);
+                
 
 
                 waitTime = StartWaitTime;
