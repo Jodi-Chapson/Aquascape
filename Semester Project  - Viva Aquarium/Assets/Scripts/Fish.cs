@@ -33,6 +33,7 @@ public class Fish : MonoBehaviour
         scaleX = this.transform.localScale.x;
 
         DetermineMoveSpot(MoveSpotTransform);
+        FlipFish(MoveSpotTransform);
 
     }
 

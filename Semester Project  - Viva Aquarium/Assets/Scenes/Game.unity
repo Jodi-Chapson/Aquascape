@@ -2319,9 +2319,13 @@ MonoBehaviour:
   tank2: {fileID: 583073070}
   tank3: {fileID: 133022841}
   tank4: {fileID: 509612768}
-  CurrentTankID: 1
   LeftScrollButton: {fileID: 856958861}
   RightScrollButton: {fileID: 796806483}
+  CurrentTankID: 1
+  TargetXValue: 0
+  Lerp: 0
+  StartingLerp: 0.05
+  LatestTankUnlocked: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -9720,22 +9724,22 @@ PrefabInstance:
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.161391
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.16139105
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.16139105
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.32
+      value: -5.55
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}

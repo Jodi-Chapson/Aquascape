@@ -5,17 +5,38 @@ using UnityEngine;
 public class CameraPanScript : MonoBehaviour
 {
     public GameObject tank1, tank2, tank3, tank4;
-    public int CurrentTankID;
-    public int LatestTankUnlocked;
     public GameObject LeftScrollButton, RightScrollButton;
+
+    public int CurrentTankID;
+    public float TargetXValue;
+    public float Lerp;
+    public float StartingLerp;
+    public int LatestTankUnlocked;
+    
 
     
     public void Start()
     {
         CurrentTankID = 1;
+        Lerp = 1;
+        
+        
+        TargetXValue = tank1.transform.position.x;
     }
     public void Update()
     {
+
+        float targetx = Mathf.Lerp(this.transform.position.x, TargetXValue, Lerp);
+        this.transform.position = new Vector3(targetx, this.transform.position.y, this.transform.position.z);
+
+        if (Lerp < 1)
+        {
+            Lerp += 0.01f;
+        }
+        
+        
+        
+        
         
         if (CurrentTankID == 1)
         {
@@ -47,17 +68,21 @@ public class CameraPanScript : MonoBehaviour
 
             if (CurrentTankID == 2)
             {
-                this.gameObject.transform.position = new Vector3(tank1.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+                TargetXValue = tank1.transform.position.x;
+                Lerp = StartingLerp;
+                
                 CurrentTankID = 1;
             }
             else if (CurrentTankID == 3)
             {
-                this.gameObject.transform.position = new Vector3(tank2.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+                TargetXValue = tank2.transform.position.x;
+                Lerp = StartingLerp;
                 CurrentTankID = 2;
             }
             else if (CurrentTankID == 4)
             {
-                this.gameObject.transform.position = new Vector3(tank3.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+                TargetXValue = tank3.transform.position.x;
+                Lerp = StartingLerp;
                 CurrentTankID = 3;
             }
 
@@ -69,17 +94,20 @@ public class CameraPanScript : MonoBehaviour
 
             if (CurrentTankID == 1)
             {
-                this.gameObject.transform.position = new Vector3(tank2.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+                TargetXValue = tank2.transform.position.x;
+                Lerp = StartingLerp;
                 CurrentTankID = 2;
             }
             else if (CurrentTankID == 2)
             {
-                this.gameObject.transform.position = new Vector3(tank3.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+                TargetXValue = tank3.transform.position.x;
+                Lerp = StartingLerp;
                 CurrentTankID = 3;
             }
             else if (CurrentTankID == 3)
             {
-                this.gameObject.transform.position = new Vector3(tank4.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+                TargetXValue = tank4.transform.position.x;
+                Lerp = StartingLerp;
                 CurrentTankID = 4;
             }
 
