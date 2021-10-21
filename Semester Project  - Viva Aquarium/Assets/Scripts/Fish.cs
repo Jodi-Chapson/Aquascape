@@ -19,9 +19,14 @@ public class Fish : MonoBehaviour
 
     public float scaleX;
 
+    public GameObject HappinessLevel;            //This is the happiness level indicator
+
 
     void Start()
     {
+
+        HappinessLevel.SetActive(false);
+
         FishTankTrigger = GameObject.Find("Tank01").GetComponent<BoxCollider2D>();
         minX = FishTankTrigger.bounds.min.x;
         maxX = FishTankTrigger.bounds.max.x;
@@ -37,6 +42,15 @@ public class Fish : MonoBehaviour
 
     }
 
+    void OnMouseOver()
+    {
+        HappinessLevel.SetActive(true);         // Only Appear when mouse hovers over the fish
+    }
+
+    void OnMouseExit()
+    {
+        HappinessLevel.SetActive(false);
+    }
 
     void Update()
     {
@@ -91,4 +105,8 @@ public class Fish : MonoBehaviour
             this.transform.localScale = new Vector3(-scaleX, this.transform.localScale.y, this.transform.localScale.z);
         }
     }
+
+
+
+ 
 }
