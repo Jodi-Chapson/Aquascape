@@ -15,10 +15,10 @@ public class FishShop : MonoBehaviour
 
     public void FishSelect() //This function is for the first fish
     {
-        if (BubbleManager.Count >= 10)  //Players can only buy Fish1 once they have this amount of bubbles
+        if (BubbleManager.Count >= 60)  //Players can only buy Fish1 once they have this amount of bubbles
         {
             Instantiate(FishPrefab, FishSpawnPoint.position, FishSpawnPoint.rotation);
-            BubblesGenerated.bubbles -= 10;
+            BubblesGenerated.bubbles -= 60;
 
             GameObject.Find("Tank01").GetComponent<InfoTank01>().FishInTank += 1;
         }
@@ -28,10 +28,10 @@ public class FishShop : MonoBehaviour
 
     public void FishSelect02() //Function for the second fish
     {
-        if (BubbleManager.Count >= 60)  
+        if (BubbleManager.Count >= 350)  
         {
             Instantiate(FishPrefab02, FishSpawnPoint02.position, FishSpawnPoint02.rotation);
-            BubblesGenerated.bubbles -= 60;
+            BubblesGenerated.bubbles -= 350;
 
             GameObject.Find("Tank01 Info").GetComponent<InfoTank01>().FishInTank += 1;
         }
@@ -41,10 +41,10 @@ public class FishShop : MonoBehaviour
 
     public void FishSelect03() //Function for the third fish
     {
-        if (BubbleManager.Count >= 150)
+        if (BubbleManager.Count >= 900)
         {
             Instantiate(FishPrefab03, FishSpawnPoint03.position, FishSpawnPoint03.rotation);
-            BubblesGenerated.bubbles -= 150;
+            BubblesGenerated.bubbles -= 900;
 
             GameObject.Find("Tank01 Info").GetComponent<InfoTank01>().FishInTank += 1;
         }

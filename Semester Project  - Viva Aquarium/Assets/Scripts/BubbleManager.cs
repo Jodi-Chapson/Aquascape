@@ -17,6 +17,7 @@ public class BubbleManager : MonoBehaviour
         //Debug.Log(Count +"Bubbles");
 
         KeepCount.text = Count + "";
+
     }
 }
 
