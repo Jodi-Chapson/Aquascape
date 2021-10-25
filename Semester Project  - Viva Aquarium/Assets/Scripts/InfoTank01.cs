@@ -22,10 +22,18 @@ public class InfoTank01 : MonoBehaviour
     public GameObject FishFoodPrefab;
     public Transform FoodSpawnPoint;
 
+    public GameObject moveSpots;                 //This is for feeding the fish depending on where you click on the tank
+
+
 
     public void Start()
     {
         UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
+    }
+
+    public void Update()
+    {
+
     }
 
     public void UpgradeTank()
@@ -57,7 +65,11 @@ public class InfoTank01 : MonoBehaviour
             GameObject.Find("Fish").GetComponent<RealTimeCounter>().Hungry = false;
             GameObject.Find("Fish").GetComponent<RealTimeCounter>().timer = 12;        //Reseting the Timer;
 
-            Instantiate(FishFoodPrefab, FoodSpawnPoint.position, FoodSpawnPoint.rotation);
+
+           // Instantiate(FishFoodPrefab, FoodSpawnPoint.position, FoodSpawnPoint.rotation);
+
+            Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Instantiate(FishFoodPrefab, new Vector3(cursorPos.x, cursorPos.y, 0), Quaternion.identity);
         }
     }
 }
