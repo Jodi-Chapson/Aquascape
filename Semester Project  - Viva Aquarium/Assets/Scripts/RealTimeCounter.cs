@@ -10,7 +10,7 @@ public class RealTimeCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = 43200;
+        timer = 43200; //This is 12 hours
 
         timer -= TimeMaster.instance.CheckDate();
     }
