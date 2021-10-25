@@ -79,6 +79,8 @@ public class Fish : MonoBehaviour
                 waitTime -= Time.deltaTime;
             }
         }
+
+       
     }
 
     private void MoveFish(Transform movespot)

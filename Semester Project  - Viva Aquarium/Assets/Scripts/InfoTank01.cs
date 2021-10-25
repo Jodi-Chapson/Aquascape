@@ -19,6 +19,9 @@ public class InfoTank01 : MonoBehaviour
     public float FishInTank = 1f;       
     public float FishAllowed = 8f;                  //Both these lines represent the capacity of the tank :)
 
+    public GameObject FishFoodPrefab;
+    public Transform FoodSpawnPoint;
+
 
     public void Start()
     {
@@ -44,8 +47,17 @@ public class InfoTank01 : MonoBehaviour
 
            
         }
+    }
 
-   
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Feed Fish
+            GameObject.Find("Fish").GetComponent<RealTimeCounter>().Hungry = false;
+            GameObject.Find("Fish").GetComponent<RealTimeCounter>().timer = 12;        //Reseting the Timer;
 
+            Instantiate(FishFoodPrefab, FoodSpawnPoint.position, FoodSpawnPoint.rotation);
+        }
     }
 }

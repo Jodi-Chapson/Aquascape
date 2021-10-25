@@ -7,31 +7,37 @@ public class RealTimeCounter : MonoBehaviour
 
     public float timer;
 
-    // Start is called before the first frame update
+    public bool Hungry;
+
+
     void Start()
     {
-        timer = 43200; //This is 12 hours
+        timer = 12; //43200; //This is 12 hours
 
         timer -= TimeMaster.instance.CheckDate();
+
+        Hungry = false;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         timer -= Time.deltaTime;
-        Debug.Log(timer);
+       // Debug.Log(timer);
 
         if(timer <= 0)
         {
             ResetTimer();
+            Hungry = true;
         }
     }
 
     void ResetTimer()
     {
         TimeMaster.instance.SaveDate();
-        timer = 43200;
+        timer = 12; //43200;
         timer -= TimeMaster.instance.CheckDate();
+
     }
 
    
