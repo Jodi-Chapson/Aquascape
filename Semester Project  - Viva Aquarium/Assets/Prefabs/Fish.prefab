@@ -545,7 +545,7 @@ MonoBehaviour:
   maxX: 0
   maxY: 0
   minY: 0
-  Speed: 0.5
+  Speed: 0.35
   waitTime: 0
   StartWaitTime: 1
   scaleX: 0
