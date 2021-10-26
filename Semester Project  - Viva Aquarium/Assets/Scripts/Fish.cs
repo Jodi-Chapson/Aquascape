@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Fish : MonoBehaviour
 {
@@ -21,6 +22,17 @@ public class Fish : MonoBehaviour
 
     public GameObject HappinessLevel;            //This is the happiness level indicator
 
+    //Save File stuff
+    public int Level;
+    public float Happiness;
+    public string Species;
+
+
+
+    void Awake()
+    {
+        SaveManager.Fish.Add(this);
+    }
 
     void Start()
     {
@@ -36,6 +48,7 @@ public class Fish : MonoBehaviour
         MoveSpot = new GameObject();
         MoveSpotTransform = MoveSpot.transform;
         scaleX = this.transform.localScale.x;
+        Happiness = HappinessLevel.GetComponent<Slider>().value;
 
         DetermineMoveSpot(MoveSpotTransform);
         FlipFish(MoveSpotTransform);

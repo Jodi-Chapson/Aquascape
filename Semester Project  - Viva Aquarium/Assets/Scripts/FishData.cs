@@ -13,11 +13,11 @@ public class FishData
      * This will save the fishes data so that it can be saved into a file and then loaded when needed.
      */
 
-    /* public PlayerData (Fish fish) - Constructor to make initialisation easier -
-     * {
-     *    Level = fish.level;
-     *    Happiness = fish.happiness;
-     *    Species = fish.species;
-     * }
-     */
+     public FishData (Fish fish) 
+     {
+        Level = fish.Level;
+        Happiness = fish.Happiness;
+        Species = fish.Species;
+      }
+
 }
