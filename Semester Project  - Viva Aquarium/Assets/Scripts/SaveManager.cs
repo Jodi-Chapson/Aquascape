@@ -16,15 +16,15 @@ public class SaveManager: MonoBehaviour
     /// </summary>
     ///
 
-    //private void Awake()
-    //{
-    //    LoadFishData();
-    //}
+    private void Awake()
+    {
+        LoadFishData();
+    }
 
-    //private void OnApplicationQuit()
-    //{
-    //    SaveFishData();
-    //}
+    private void OnApplicationQuit()
+    {
+       SaveFishData();
+    }
     public void SaveFishData()
     {
         BinaryFormatter formatter = new BinaryFormatter();
