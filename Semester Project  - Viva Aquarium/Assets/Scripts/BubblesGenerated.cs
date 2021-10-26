@@ -5,7 +5,7 @@ using UnityEngine;
 public class BubblesGenerated : MonoBehaviour
 {
     float seconds = 0f;
-    public static int bubbles = 0;
+    public static double bubbles = 0;
 
     private bool ResetTimer;
 

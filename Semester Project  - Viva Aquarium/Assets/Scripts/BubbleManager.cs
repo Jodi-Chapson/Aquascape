@@ -6,17 +6,30 @@ using UnityEngine.UI;
 public class BubbleManager : MonoBehaviour
 {
 
-    public static int Count = 0;
+    public static double Count = 0;
 
     public Text KeepCount;
 
     void Update()
     {
+
         Count = BubblesGenerated.bubbles;
-
-        //Debug.Log(Count +"Bubbles");
-
         KeepCount.text = Count + "";
+
+        if (Count >= 1000)
+        {
+            if(Count>= 1000000)
+            {
+                KeepCount.text = (Count / 1000000f).ToString("F2") + " M";
+            }
+            else
+            {
+                KeepCount.text = (Count / 1000f).ToString("F2") + " K";
+            }
+        }
+
+
+      
 
     }
 }
