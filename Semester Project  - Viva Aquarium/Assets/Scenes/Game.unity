@@ -2731,6 +2731,7 @@ GameObject:
   - component: {fileID: 461718192}
   - component: {fileID: 461718194}
   - component: {fileID: 461718193}
+  - component: {fileID: 461718195}
   m_Layer: 5
   m_Name: Fish04
   m_TagString: Untagged
@@ -2795,6 +2796,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461718191}
   m_CullTransparentMesh: 1
+--- !u!114 &461718195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461718191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a3d451733ec9242b6c26fa8512c03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isText: 0
+  text: {fileID: 0}
+  size: 0
+  scale: {x: 0, y: 0, z: 0}
 --- !u!1 &504985298
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,6 +3550,7 @@ GameObject:
   - component: {fileID: 574456933}
   - component: {fileID: 574456935}
   - component: {fileID: 574456934}
+  - component: {fileID: 574456936}
   m_Layer: 5
   m_Name: Fish02
   m_TagString: Untagged
@@ -3600,6 +3618,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574456932}
   m_CullTransparentMesh: 1
+--- !u!114 &574456936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574456932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a3d451733ec9242b6c26fa8512c03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isText: 0
+  text: {fileID: 0}
+  size: 0
+  scale: {x: 0, y: 0, z: 0}
 --- !u!1 &582405021
 GameObject:
   m_ObjectHideFlags: 0
@@ -9368,6 +9402,7 @@ GameObject:
   - component: {fileID: 1274640987}
   - component: {fileID: 1274640986}
   - component: {fileID: 1274640985}
+  - component: {fileID: 1274640988}
   m_Layer: 5
   m_Name: Fish01
   m_TagString: Untagged
@@ -9455,6 +9490,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274640983}
   m_CullTransparentMesh: 1
+--- !u!114 &1274640988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274640983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a3d451733ec9242b6c26fa8512c03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isText: 0
+  text: {fileID: 0}
+  size: 0
+  scale: {x: 0, y: 0, z: 0}
 --- !u!1 &1283890224
 GameObject:
   m_ObjectHideFlags: 0
@@ -10078,6 +10129,7 @@ GameObject:
   - component: {fileID: 1440031260}
   - component: {fileID: 1440031262}
   - component: {fileID: 1440031261}
+  - component: {fileID: 1440031263}
   m_Layer: 5
   m_Name: Fish03
   m_TagString: Untagged
@@ -10145,6 +10197,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440031259}
   m_CullTransparentMesh: 1
+--- !u!114 &1440031263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440031259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a3d451733ec9242b6c26fa8512c03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isText: 0
+  text: {fileID: 0}
+  size: 0
+  scale: {x: 0, y: 0, z: 0}
 --- !u!1 &1453856022
 GameObject:
   m_ObjectHideFlags: 0
@@ -12900,6 +12968,7 @@ GameObject:
   - component: {fileID: 2024000828}
   - component: {fileID: 2024000827}
   - component: {fileID: 2024000826}
+  - component: {fileID: 2024000829}
   m_Layer: 5
   m_Name: Pause Button
   m_TagString: Untagged
@@ -13021,6 +13090,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024000824}
   m_CullTransparentMesh: 1
+--- !u!114 &2024000829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024000824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a3d451733ec9242b6c26fa8512c03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isText: 0
+  text: {fileID: 0}
+  size: 0
+  scale: {x: 0, y: 0, z: 0}
 --- !u!1 &2034678968
 GameObject:
   m_ObjectHideFlags: 0
