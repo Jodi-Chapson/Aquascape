@@ -9102,9 +9102,10 @@ MonoBehaviour:
   ThreeStar: {fileID: 1405526389}
   FourStar: {fileID: 700418503}
   FiveStar: {fileID: 1516942830}
+  targetfish: {fileID: 1266236697}
   UpgradePrice: {fileID: 1141952458}
   Clicks: 0
-  UpgradeFishPrice: 100
+  UpgradeFishPrice: 10
 --- !u!1 &1037049424
 GameObject:
   m_ObjectHideFlags: 0
@@ -10741,6 +10742,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260957072}
   m_CullTransparentMesh: 1
+--- !u!1 &1266236697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 780711293047101201, guid: c2c52e390a74ed843aa122478ea2f85a,
+    type: 3}
+  m_PrefabInstance: {fileID: 780711293183376674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1271913989
 GameObject:
   m_ObjectHideFlags: 0
@@ -15961,6 +15968,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}

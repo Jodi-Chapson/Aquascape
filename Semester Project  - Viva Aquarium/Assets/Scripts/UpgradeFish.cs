@@ -11,6 +11,7 @@ public class UpgradeFish : MonoBehaviour
     public GameObject ThreeStar;
     public GameObject FourStar;
     public GameObject FiveStar;
+    public GameObject targetfish;
 
     public Text UpgradePrice;
 
@@ -33,6 +34,7 @@ public class UpgradeFish : MonoBehaviour
             OneStar.SetActive(true);
 
             UpgradePrice.text = "Price: " + UpgradeFishPrice;
+            targetfish.GetComponent<BubblesGenerated>().levelmodifier += 1;
 
             Clicks++;
         }

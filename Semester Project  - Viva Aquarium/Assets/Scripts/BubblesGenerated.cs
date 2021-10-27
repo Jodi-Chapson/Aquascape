@@ -16,6 +16,7 @@ public class BubblesGenerated : MonoBehaviour
 
     public int bubbleproduction;
     public int baseproduction;
+    public int levelmodifier = 1;
     public InfoTank01 hometank;
     public float tankmodifier;
 
@@ -35,7 +36,7 @@ public class BubblesGenerated : MonoBehaviour
 
 
         tankmodifier = hometank.TankProductionModifer;
-        bubbleproduction = (int)((float)baseproduction * tankmodifier);
+        bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier);
         seconds += Time.deltaTime;
 
         
