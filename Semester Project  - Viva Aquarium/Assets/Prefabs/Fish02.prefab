@@ -37,6 +37,22 @@ PrefabInstance:
       propertyPath: MoveSpotTransform
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2060001998, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.5438514
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060001998, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.5438514
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060001998, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.5438514
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060001998, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.52
+      objectReference: {fileID: 0}
     - target: {fileID: 780711293047101201, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_Name
@@ -70,17 +86,17 @@ PrefabInstance:
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.161391
+      value: 0.2050252
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.16139105
+      value: 0.20502524
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.16139105
+      value: 0.20502524
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
@@ -157,7 +173,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a4896914ae3970747a02ff69cf4128c3,
+      objectReference: {fileID: 21300000, guid: b7b3c8e85c686ec48a8940196c8f4b82,
         type: 3}
     m_RemovedComponents:
     - {fileID: 0}
