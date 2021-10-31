@@ -47,11 +47,6 @@ PrefabInstance:
       propertyPath: baseproduction
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 780711293047101205, guid: c2c52e390a74ed843aa122478ea2f85a,
-        type: 3}
-      propertyPath: moveSpots
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_RootOrder
