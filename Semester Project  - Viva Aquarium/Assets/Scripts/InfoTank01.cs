@@ -16,8 +16,8 @@ public class InfoTank01 : MonoBehaviour
     public float UpgradeTankPrice = 20f; //Initial upgrade price for the tank
 
 
-    public float FishInTank = 1f;
-    public float FishAllowed = 8f;                  //Both these lines represent the capacity of the tank :)
+    public float FishInnTank;
+    public float FishAllowed;                  //Both these lines represent the capacity of the tank :)
 
     public GameObject FishFoodPrefab;
     public Transform FoodSpawnPoint;
@@ -29,11 +29,13 @@ public class InfoTank01 : MonoBehaviour
     public void Start()
     {
         UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
+        FishAllowed = 8f;
+        FishInnTank = 1f;
     }
 
     public void Update()
     {
-
+        
     }
 
     public void UpgradeTank()
@@ -43,7 +45,7 @@ public class InfoTank01 : MonoBehaviour
             BubblesGenerated.bubbles -= (int)UpgradeTankPrice;
 
             FishAllowed += 2;
-            CapacityText.text = "Capacity : " + FishInTank + "/" + FishAllowed;
+            CapacityText.text = "Capacity : " + FishInnTank + "/" + FishAllowed;
 
             TankLevel += 1;
             TankProductionModifer++;
