@@ -45,7 +45,7 @@ public class BubblesGenerated : MonoBehaviour
             bubbles += bubbleproduction;      //+1 each time a bubble spawns
             
             ResetTimer = true;
-            GenerateBubble();
+            StartCoroutine(GenerateBubble());
         }
 
         if (ResetTimer)
@@ -56,8 +56,13 @@ public class BubblesGenerated : MonoBehaviour
 
     }
 
-    public void GenerateBubble()
+    
+    public IEnumerator GenerateBubble()
     {
+        float random = Random.Range(0,1);
+        
+        yield return new WaitForSeconds(random);
+        
         Instantiate(BubblePrefab, SpawnPoint.position, SpawnPoint.rotation);
     }
 }

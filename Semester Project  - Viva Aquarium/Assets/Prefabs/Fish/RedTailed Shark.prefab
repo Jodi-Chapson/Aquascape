@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 780711293047101201, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_Name
-      value: Fish02
+      value: RedTailed Shark
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101201, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
@@ -86,17 +86,17 @@ PrefabInstance:
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2050252
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.20502524
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.20502524
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
@@ -173,7 +173,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b7b3c8e85c686ec48a8940196c8f4b82,
+      objectReference: {fileID: 21300000, guid: 32a92364192302d43a1133de708b9d69,
         type: 3}
     m_RemovedComponents:
     - {fileID: 0}
