@@ -482,7 +482,7 @@ Transform:
   m_GameObject: {fileID: 780711293047101201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.32, y: -0.33, z: 0.24995968}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.168344, y: 0.168344, z: 0.84172}
   m_Children:
   - {fileID: 780711291800588916}
   - {fileID: 4284740068437721396}
@@ -527,20 +527,20 @@ MonoBehaviour:
   maxX: 0
   maxY: 0
   minY: 0
-  minspeed: 0
-  maxspeed: 0
+  minspeed: 0.3
+  maxspeed: 0.6
   currentSpeed: 0
   speedTime: 0
-  MinSpeedTime: 0
-  MaxSpeedTime: 0
-  waitTime: 0
-  StartWaitTime: 1
+  MinSpeedTime: 2
+  MaxSpeedTime: 4
+  waitTime: 1
+  StartWaitTime: 3
   scaleX: 0
   canMove: 0
   HappinessLevel: {fileID: 1345299883}
   Level: 0
   Happiness: 0
-  Species: Gold
+  Species: 
 --- !u!61 &-5565318386594651653
 BoxCollider2D:
   m_ObjectHideFlags: 0
