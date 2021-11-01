@@ -175,20 +175,43 @@ public class Fish : MonoBehaviour
     public void VarySpeed()
     {
         //ramdomly increasing or decreasing speed
-        
-        
-        int random = Random.Range(0, 2);
+
+
+        int random;
+        float speed;
+
+        if (currentSpeed == maxspeed)
+        {
+            random = 1;
+        }
+        else if (currentSpeed == minspeed)
+        {
+            random = 0;
+        }
+        else
+        {
+            random = Random.Range(0, 2);
+        }
 
         if (random == 0)
         {
-            float speed = currentSpeed + 0.05f;
+            speed = currentSpeed + 0.1f;
         }
-        else if (random == 1)
+        else
         {
-            float speed = currentSpeed - 0.05f;
+            speed = currentSpeed - 0.1f;
         }
-        
-        
+
+        if (speed > maxspeed)
+        {
+            speed = maxspeed;
+        }
+        else if (speed < minspeed)
+        {
+            speed = minspeed;
+        }
+
+        currentSpeed = speed;
 
         speedTime = Random.Range(MinSpeedTime, MaxSpeedTime);
     }
