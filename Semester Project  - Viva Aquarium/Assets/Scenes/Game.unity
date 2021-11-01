@@ -6593,6 +6593,7 @@ MonoBehaviour:
   Neon_Tetra: {fileID: 1176685205805307522, guid: 751b3276fc4fa714287057e1fffe6421,
     type: 3}
   FishTankCollider: {fileID: 246969933}
+  FishTank: {fileID: 246969931}
 --- !u!4 &761694662
 Transform:
   m_ObjectHideFlags: 0

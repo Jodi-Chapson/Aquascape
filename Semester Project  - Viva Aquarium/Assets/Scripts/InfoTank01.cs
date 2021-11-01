@@ -30,7 +30,7 @@ public class InfoTank01 : MonoBehaviour
     {
         UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
         FishAllowed = 8f;
-        FishInnTank = 1f;
+        //FishInnTank = 1f;
     }
 
     public void Update()
