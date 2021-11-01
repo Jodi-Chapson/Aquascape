@@ -6876,7 +6876,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &761694661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6889,8 +6889,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ec1aff7d995c2428bd8dff33018a04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FishPrefab: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+  Gold_Fish: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
     type: 3}
+  Red_Tailed_Shark: {fileID: 8509304733263675962, guid: e82b451d1d9183d45aec2dfe5051f5ce,
+    type: 3}
+  Exodon: {fileID: 5794334053201423468, guid: add29cae57aa86b419ba2eb1d0bbd603, type: 3}
 --- !u!4 &761694662
 Transform:
   m_ObjectHideFlags: 0

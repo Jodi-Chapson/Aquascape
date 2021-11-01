@@ -12,7 +12,9 @@ public class SaveManager: MonoBehaviour
     const string FISH_COUNT_PATH = "/fish.count";
     const string BUBBLES_PATH = "/bubbles";
 
-    [SerializeField] Fish FishPrefab;
+    [SerializeField] Fish Gold_Fish;
+    [SerializeField] Fish Red_Tailed_Shark;
+    [SerializeField] Fish Exodon;
     /// <summary>
     /// Functions to save and load a fishes necessary data.
     /// </summary>
@@ -86,10 +88,27 @@ public class SaveManager: MonoBehaviour
                 {
                     Vector2 Pos = new Vector2(0f, 0f);
 
-                    Fish fish = Instantiate(FishPrefab, Pos, Quaternion.identity);
-                    fish.Level = data.Level;
-                    fish.Species = data.Species;
-                    fish.Happiness = data.Happiness;
+                    if (data.Species == "Gold Fish")
+                    {
+                        Fish fish = Instantiate(Gold_Fish, Pos, Quaternion.identity);
+                        fish.Level = data.Level;
+                        fish.Species = data.Species;
+                        fish.Happiness = data.Happiness;
+                    } 
+                    else if (data.Species == "Red Tailed Shark")
+                    {
+                        Fish fish = Instantiate(Red_Tailed_Shark, Pos, Quaternion.identity);
+                        fish.Level = data.Level;
+                        fish.Species = data.Species;
+                        fish.Happiness = data.Happiness;
+                    }
+                    else if (data.Species == "Exodon")
+                    {
+                        Fish fish = Instantiate(Exodon, Pos, Quaternion.identity);
+                        fish.Level = data.Level;
+                        fish.Species = data.Species;
+                        fish.Happiness = data.Happiness;
+                    }
                 }
             }
             else
