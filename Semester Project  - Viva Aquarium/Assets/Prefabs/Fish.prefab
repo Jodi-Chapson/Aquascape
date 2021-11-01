@@ -527,10 +527,16 @@ MonoBehaviour:
   maxX: 0
   maxY: 0
   minY: 0
-  Speed: 0.35
-  waitTime: 0
-  StartWaitTime: 1
+  minspeed: 0.3
+  maxspeed: 0.6
+  currentSpeed: 0
+  speedTime: 0
+  MinSpeedTime: 2
+  MaxSpeedTime: 4
+  waitTime: 1
+  StartWaitTime: 3
   scaleX: 0
+  canMove: 0
   HappinessLevel: {fileID: 1345299883}
   Level: 0
   Happiness: 0

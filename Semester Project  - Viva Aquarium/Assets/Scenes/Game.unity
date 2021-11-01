@@ -1487,6 +1487,7 @@ MonoBehaviour:
   FishPrefab03: {fileID: 4800131112817055517, guid: add29cae57aa86b419ba2eb1d0bbd603,
     type: 3}
   FishSpawnPoint03: {fileID: 1897446665}
+  CapacityText: {fileID: 2059901015}
 --- !u!114 &182728870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2100,7 +2101,7 @@ MonoBehaviour:
   TankLevel: 1
   TankProductionModifer: 1
   UpgradeTankPrice: 250
-  FishInTank: 1
+  FishInnTank: 0
   FishAllowed: 8
   FishFoodPrefab: {fileID: 5788731206443467250, guid: 15a30baaa8e0e47418b583dba075192f,
     type: 3}
@@ -17670,36 +17671,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 240329221}
     m_Modifications:
-    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
-        type: 3}
-      propertyPath: maxspeed
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
-        type: 3}
-      propertyPath: minspeed
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
-        type: 3}
-      propertyPath: waitTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
-        type: 3}
-      propertyPath: MaxSpeedTime
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
-        type: 3}
-      propertyPath: MinSpeedTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
-        type: 3}
-      propertyPath: StartWaitTime
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2060002001, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
       propertyPath: m_Camera
       value: 
