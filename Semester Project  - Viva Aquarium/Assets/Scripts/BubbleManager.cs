@@ -29,7 +29,11 @@ public class BubbleManager : MonoBehaviour
         }
 
 
-      
+      if (Input.GetKeyDown("h"))
+        {
+            
+            BubblesGenerated.bubbles += 1000f;
+        }
 
     }
 }
