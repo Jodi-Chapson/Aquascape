@@ -17670,6 +17670,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 240329221}
     m_Modifications:
+    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: maxspeed
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: minspeed
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: MaxSpeedTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: MinSpeedTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: StartWaitTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2060002001, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
       propertyPath: m_Camera
       value: 
@@ -17679,11 +17709,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish
       objectReference: {fileID: 0}
-    - target: {fileID: 780711293047101205, guid: c2c52e390a74ed843aa122478ea2f85a,
-        type: 3}
-      propertyPath: moveSpots
-      value: 
-      objectReference: {fileID: 106634426}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_RootOrder
