@@ -527,14 +527,20 @@ MonoBehaviour:
   maxX: 0
   maxY: 0
   minY: 0
-  Speed: 0.35
+  minspeed: 0
+  maxspeed: 0
+  currentSpeed: 0
+  speedTime: 0
+  MinSpeedTime: 0
+  MaxSpeedTime: 0
   waitTime: 0
   StartWaitTime: 1
   scaleX: 0
+  canMove: 0
   HappinessLevel: {fileID: 1345299883}
   Level: 0
   Happiness: 0
-  Species: 
+  Species: Gold
 --- !u!61 &-5565318386594651653
 BoxCollider2D:
   m_ObjectHideFlags: 0

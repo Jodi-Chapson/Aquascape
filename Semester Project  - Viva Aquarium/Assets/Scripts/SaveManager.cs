@@ -8,8 +8,10 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class SaveManager: MonoBehaviour
 {
     public static List<Fish> Fish = new List<Fish>();
-    const string SUB_PATH = "/fish";
-    const string COUNT_PATH = "/fish.count";
+    const string FISH_SUB_PATH = "/fish";
+    const string FISH_COUNT_PATH = "/fish.count";
+    const string BUBBLES_PATH = "/bubbles";
+
     [SerializeField] Fish FishPrefab;
     /// <summary>
     /// Functions to save and load a fishes necessary data.
@@ -19,17 +21,20 @@ public class SaveManager: MonoBehaviour
     private void Awake()
     {
         LoadFishData();
+        LoadNumberOfBubbles();
     }
 
     private void OnApplicationQuit()
     {
        SaveFishData();
+       SaveNumberOfBubbles();
     }
+
     public void SaveFishData()
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string savepath = Application.persistentDataPath + SUB_PATH;           //Finds save path for us.
-        string countpath = Application.persistentDataPath + COUNT_PATH;
+        string savepath = Application.persistentDataPath + FISH_SUB_PATH;           //Finds save path for us.
+        string countpath = Application.persistentDataPath + FISH_COUNT_PATH;
 
         FileStream countfstream = new FileStream(countpath, FileMode.Create);
         formatter.Serialize(countfstream, Fish.Count);
@@ -47,8 +52,8 @@ public class SaveManager: MonoBehaviour
     public void LoadFishData() //Will load the fishes data.
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string savepath = Application.persistentDataPath + SUB_PATH;
-        string countpath = Application.persistentDataPath + COUNT_PATH;
+        string savepath = Application.persistentDataPath + FISH_SUB_PATH;
+        string countpath = Application.persistentDataPath + FISH_COUNT_PATH;
         int FishCount = 0;
 
         if (File.Exists(countpath))
@@ -59,7 +64,7 @@ public class SaveManager: MonoBehaviour
         }
         else
         {
-            Debug.LogError("File path does not exist at " + COUNT_PATH);
+            Debug.LogError("File path does not exist at " + FISH_COUNT_PATH);
         }
 
         for (int i = 0; i < FishCount; i++)
@@ -89,8 +94,36 @@ public class SaveManager: MonoBehaviour
             }
             else
             {
-                Debug.LogError("File does not exist at " + SUB_PATH);
+                Debug.LogError("File does not exist at " + FISH_SUB_PATH);
             }
+        }
+    }
+
+
+
+    public void SaveNumberOfBubbles()
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string savepath = Application.persistentDataPath + BUBBLES_PATH;
+        FileStream fstream = new FileStream(savepath, FileMode.Create);
+
+        formatter.Serialize(fstream, BubblesGenerated.bubbles);
+    }
+
+    public void LoadNumberOfBubbles()
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string savepath = Application.persistentDataPath + BUBBLES_PATH;
+
+        if (File.Exists(savepath))
+        {
+            FileStream fStream = new FileStream(savepath, FileMode.Open);
+            BubblesGenerated.bubbles = (double)formatter.Deserialize(fStream);
+            fStream.Close();
+        }
+        else
+        {
+            Debug.Log("File not found at " + savepath);
         }
     }
 
