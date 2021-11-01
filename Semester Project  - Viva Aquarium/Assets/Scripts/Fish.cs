@@ -163,7 +163,7 @@ public class Fish : MonoBehaviour
 
         float distance = Vector2.Distance(mousepos, currentfishpos);
 
-        if (distance < 1.5f)
+        if (distance < 2f)
         {
             MoveSpotTransform.position = mousepos;
             FlipFish(MoveSpotTransform);
