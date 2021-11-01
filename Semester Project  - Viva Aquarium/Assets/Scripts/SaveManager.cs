@@ -70,12 +70,22 @@ public class SaveManager: MonoBehaviour
                 FishData data = formatter.Deserialize(fstream) as FishData;
                 fstream.Close();
 
-                Vector2 Pos = new Vector2(0f, 0f);
+                if (i == 0)
+                {
+                    GameObject StartFish = GameObject.Find("Fish");
+                    StartFish.GetComponent<Fish>().Level = data.Level;
+                    StartFish.GetComponent<Fish>().Species = data.Species;
+                    StartFish.GetComponent<Fish>().Happiness = data.Happiness;
+                }
+                else
+                {
+                    Vector2 Pos = new Vector2(0f, 0f);
 
-                Fish fish = Instantiate(FishPrefab, Pos, Quaternion.identity);
-                fish.Level = data.Level;
-                fish.Species = data.Species;
-                fish.Happiness = data.Happiness;
+                    Fish fish = Instantiate(FishPrefab, Pos, Quaternion.identity);
+                    fish.Level = data.Level;
+                    fish.Species = data.Species;
+                    fish.Happiness = data.Happiness;
+                }
             }
             else
             {
