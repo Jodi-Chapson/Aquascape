@@ -15,6 +15,8 @@ public class SaveManager: MonoBehaviour
     [SerializeField] Fish Gold_Fish;
     [SerializeField] Fish Red_Tailed_Shark;
     [SerializeField] Fish Exodon;
+    [SerializeField] Fish Neon_Tetra;
+    public BoxCollider2D FishTankCollider;
     /// <summary>
     /// Functions to save and load a fishes necessary data.
     /// </summary>
@@ -86,7 +88,10 @@ public class SaveManager: MonoBehaviour
                 }
                 else
                 {
-                    Vector2 Pos = new Vector2(0f, 0f);
+                    float xPos = Random.Range(FishTankCollider.bounds.min.x, FishTankCollider.bounds.max.x);
+                    float yPos = Random.Range(FishTankCollider.bounds.min.y, FishTankCollider.bounds.max.y);
+
+                    Vector2 Pos = new Vector2(xPos, yPos);
 
                     if (data.Species == "Gold Fish")
                     {
@@ -105,6 +110,13 @@ public class SaveManager: MonoBehaviour
                     else if (data.Species == "Exodon")
                     {
                         Fish fish = Instantiate(Exodon, Pos, Quaternion.identity);
+                        fish.Level = data.Level;
+                        fish.Species = data.Species;
+                        fish.Happiness = data.Happiness;
+                    }
+                    else if (data.Species == "Neon Tetra")
+                    {
+                        Fish fish = Instantiate(Neon_Tetra, Pos, Quaternion.identity);
                         fish.Level = data.Level;
                         fish.Species = data.Species;
                         fish.Happiness = data.Happiness;

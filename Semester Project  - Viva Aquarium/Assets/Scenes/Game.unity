@@ -6590,6 +6590,9 @@ MonoBehaviour:
   Red_Tailed_Shark: {fileID: 8509304733263675962, guid: e82b451d1d9183d45aec2dfe5051f5ce,
     type: 3}
   Exodon: {fileID: 5794334053201423468, guid: add29cae57aa86b419ba2eb1d0bbd603, type: 3}
+  Neon_Tetra: {fileID: 1176685205805307522, guid: 751b3276fc4fa714287057e1fffe6421,
+    type: 3}
+  FishTankCollider: {fileID: 246969933}
 --- !u!4 &761694662
 Transform:
   m_ObjectHideFlags: 0
