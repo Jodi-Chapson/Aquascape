@@ -29,6 +29,8 @@ public class SaveManager: MonoBehaviour
         LoadFishData();
         LoadNumberOfBubbles();
         LoadTankData();
+
+        Debug.Log(Application.persistentDataPath);
     }
 
     private void OnApplicationQuit()

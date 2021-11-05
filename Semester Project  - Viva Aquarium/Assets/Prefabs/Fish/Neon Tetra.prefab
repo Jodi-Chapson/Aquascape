@@ -118,7 +118,7 @@ MonoBehaviour:
   HappinessLevel: {fileID: 609439447958069065}
   Level: 0
   Happiness: 0
-  Species: Exodon
+  Species: Neon Tetra
 --- !u!61 &4229211670273743641
 BoxCollider2D:
   m_ObjectHideFlags: 0
