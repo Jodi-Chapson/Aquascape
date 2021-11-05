@@ -14,6 +14,9 @@ public class Fish : MonoBehaviour
     public float maxY;
     public float minY;
 
+    public float fishheight;
+    public float fishlength;
+
     public float minspeed;
     public float maxspeed;
     public float currentSpeed;
@@ -47,10 +50,10 @@ public class Fish : MonoBehaviour
         HappinessLevel.SetActive(false);
 
         FishTankTrigger = GameObject.Find("Tank01").GetComponent<BoxCollider2D>();
-        minX = FishTankTrigger.bounds.min.x;
-        maxX = FishTankTrigger.bounds.max.x;
-        minY = FishTankTrigger.bounds.min.y;
-        maxY = FishTankTrigger.bounds.max.y;
+        minX = FishTankTrigger.bounds.min.x + fishlength;
+        maxX = FishTankTrigger.bounds.max.x - fishlength;
+        minY = FishTankTrigger.bounds.min.y + fishheight;
+        maxY = FishTankTrigger.bounds.max.y - fishheight;
         speedTime = Random.Range(MinSpeedTime, MaxSpeedTime);
         waitTime = StartWaitTime;
         currentSpeed = Random.Range(minspeed, maxspeed);
@@ -159,6 +162,13 @@ public class Fish : MonoBehaviour
         //checks the position of the players cursor
 
         Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (mousepos.x > maxX || mousepos.x < minX || mousepos.y > maxY || mousepos.y < minY)
+        {
+            return;
+        }
+
+
         Vector2 currentfishpos = this.transform.position;
 
         float distance = Vector2.Distance(mousepos, currentfishpos);

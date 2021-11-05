@@ -105,8 +105,10 @@ MonoBehaviour:
   maxX: -4.6
   maxY: 3.76
   minY: -4
-  minspeed: 0.3
-  maxspeed: 0.6
+  fishheight: 0.2
+  fishlength: 0.4
+  minspeed: 0.5
+  maxspeed: 1
   currentSpeed: 0
   speedTime: 0
   MinSpeedTime: 2
