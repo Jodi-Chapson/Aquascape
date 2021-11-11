@@ -12,13 +12,18 @@ public class UnlockTank : MonoBehaviour
     public static int TankNumber;
 
     public GameObject Tank2;
-    public GameObject Tank2Background;
+    public SpriteRenderer Tank2Background;
 
     public GameObject Tank3;
-    public GameObject Tank3Background;
+    public SpriteRenderer Tank3Background;
 
     public GameObject Tank4;
-    public GameObject Tank4Background;
+    public SpriteRenderer Tank4Background;
+
+    public GameObject Fade02;
+    public GameObject Fade03;
+    public GameObject Fade04;
+
 
 
     public void Tank02()
@@ -47,31 +52,44 @@ public class UnlockTank : MonoBehaviour
 
     public void Yes() 
     {
-        if(BubblesGenerated.bubbles < Price)        //Check if player has enough funds to purchase a tank
+
+       // Color newColor = new Color(1597E6); // r, g, b  
+        Color newColor;
+        ColorUtility.TryParseHtmlString("#18A1DB", out newColor);
+
+
+        if (BubblesGenerated.bubbles < Price)        //Check if player has enough funds to purchase a tank
         {
             Panel.SetActive(true);
         }
-        else
+        else if(BubblesGenerated.bubbles > Price)
         {
+            BubblesGenerated.bubbles -= Price;
             Panel.SetActive(false);
 
-            BubblesGenerated.bubbles -= Price;
-        }
+            if (TankNumber == 2)                              //Here we deactive the lock symbols and everything else on the tanks
+            {
+              Tank2.SetActive(false);
+              Tank2Background.color = newColor;
+              Fade02.SetActive(true);
+            }
 
+            if (TankNumber == 3)                             
+            {
+                Tank3.SetActive(false);
+                Tank3Background.color = newColor;
+                Fade03.SetActive(true);
+            }
 
-        if(TankNumber == 2)                              //Here we deactive the lock symbols and everything else on the tanks
-        {
-            Tank2.SetActive(false);
-        }
+            if (TankNumber == 4)                              
+            {
+                Tank4.SetActive(false);
+                Tank4Background.color = newColor;
+                Fade04.SetActive(true);
+            }
 
-        if (TankNumber == 3)
-        {
-            Tank3.SetActive(false);
-        }
-
-        if (TankNumber == 4)
-        {
-            Tank4.SetActive(false);
+       
         }
     }
+
 }
