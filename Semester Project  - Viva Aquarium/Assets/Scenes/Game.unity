@@ -1808,6 +1808,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PriceText: {fileID: 1025358136}
   Panel: {fileID: 973119434}
+  Tank2: {fileID: 615447452}
+  Tank2Background: {fileID: 972676172}
+  Tank3: {fileID: 1038472562}
+  Tank3Background: {fileID: 408929348}
+  Tank4: {fileID: 1674631972}
+  Tank4Background: {fileID: 2008958982}
 --- !u!1 &243789262
 GameObject:
   m_ObjectHideFlags: 0
@@ -8697,6 +8703,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PriceText: {fileID: 1262353229}
   Panel: {fileID: 973119434}
+  Tank2: {fileID: 0}
+  Tank2Background: {fileID: 0}
+  Tank3: {fileID: 0}
+  Tank3Background: {fileID: 0}
+  Tank4: {fileID: 0}
+  Tank4Background: {fileID: 0}
 --- !u!1 &977414687
 GameObject:
   m_ObjectHideFlags: 0
