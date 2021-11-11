@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class UnlockTank : MonoBehaviour
 {
-    public int Price = 0;
+    public static int Price;
     public Text PriceText;
-
     public GameObject Panel;
 
+    
    public void Tank02()
     {
         Price = 1000;
@@ -28,16 +28,17 @@ public class UnlockTank : MonoBehaviour
         PriceText.text = "" + Price;
     }
 
-
     public void Yes() 
     {
-        if (BubbleManager.Count <= Price)            //Cant unlock tank if you do not have sufficient bubbles
+        if(BubblesGenerated.bubbles < Price)
         {
             Panel.SetActive(true);
         }
         else
         {
-            Panel.SetActive(true);
+            Panel.SetActive(false);
+
+            BubblesGenerated.bubbles -= Price;
         }
     }
 }

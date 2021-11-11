@@ -1767,6 +1767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 240329221}
+  - component: {fileID: 240329222}
   m_Layer: 0
   m_Name: Tanks
   m_TagString: Untagged
@@ -1793,6 +1794,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &240329222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240329220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a3e0ae25240e246bfdb93a6fc9d25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PriceText: {fileID: 1025358136}
+  Panel: {fileID: 973119434}
 --- !u!1 &243789262
 GameObject:
   m_ObjectHideFlags: 0
@@ -4686,7 +4701,6 @@ GameObject:
   - component: {fileID: 615447454}
   - component: {fileID: 615447458}
   - component: {fileID: 615447459}
-  - component: {fileID: 615447460}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -4787,7 +4801,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 615447460}
+      - m_Target: {fileID: 240329222}
         m_TargetAssemblyTypeName: UnlockTank, Assembly-CSharp
         m_MethodName: Tank02
         m_Mode: 1
@@ -4877,21 +4891,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 36.251133, y: 38.481323}
   m_EdgeRadius: 0
---- !u!114 &615447460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615447452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45a3e0ae25240e246bfdb93a6fc9d25a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Price: 0
-  PriceText: {fileID: 1025358136}
-  Panel: {fileID: 0}
 --- !u!1 &617481006
 GameObject:
   m_ObjectHideFlags: 0
@@ -8696,7 +8695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a3e0ae25240e246bfdb93a6fc9d25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Price: 0
   PriceText: {fileID: 1262353229}
   Panel: {fileID: 973119434}
 --- !u!1 &977414687
@@ -9556,7 +9554,6 @@ GameObject:
   - component: {fileID: 1038472568}
   - component: {fileID: 1038472567}
   - component: {fileID: 1038472569}
-  - component: {fileID: 1038472570}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -9641,7 +9638,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1038472570}
+      - m_Target: {fileID: 240329222}
         m_TargetAssemblyTypeName: UnlockTank, Assembly-CSharp
         m_MethodName: Tank03
         m_Mode: 1
@@ -9747,21 +9744,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 36.3418, y: 38.581722}
   m_EdgeRadius: 0
---- !u!114 &1038472570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038472562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45a3e0ae25240e246bfdb93a6fc9d25a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Price: 0
-  PriceText: {fileID: 1025358136}
-  Panel: {fileID: 0}
 --- !u!1 &1055897128
 GameObject:
   m_ObjectHideFlags: 0
@@ -14089,7 +14071,6 @@ GameObject:
   - component: {fileID: 1674631978}
   - component: {fileID: 1674631977}
   - component: {fileID: 1674631979}
-  - component: {fileID: 1674631980}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -14174,7 +14155,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1674631980}
+      - m_Target: {fileID: 240329222}
         m_TargetAssemblyTypeName: UnlockTank, Assembly-CSharp
         m_MethodName: Tank04
         m_Mode: 1
@@ -14280,21 +14261,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Locked: {fileID: 1571724455}
   Unlocked: {fileID: 1675382169}
---- !u!114 &1674631980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1674631972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45a3e0ae25240e246bfdb93a6fc9d25a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Price: 0
-  PriceText: {fileID: 1025358136}
-  Panel: {fileID: 0}
 --- !u!1 &1675382169
 GameObject:
   m_ObjectHideFlags: 0
