@@ -51,9 +51,7 @@ public class UnlockTank : MonoBehaviour
     }
 
     public void Yes() 
-    {
-
-       // Color newColor = new Color(1597E6); // r, g, b  
+    { 
         Color newColor;
         ColorUtility.TryParseHtmlString("#18A1DB", out newColor);
 
@@ -67,9 +65,9 @@ public class UnlockTank : MonoBehaviour
             BubblesGenerated.bubbles -= Price;
             Panel.SetActive(false);
 
-            if (TankNumber == 2)                              //Here we deactive the lock symbols and everything else on the tanks
+            if (TankNumber == 2)                              
             {
-              Tank2.SetActive(false);
+              Tank2.SetActive(false);                   //Here we deactive the lock symbols and everything else on the tanks
               Tank2Background.color = newColor;
               Fade02.SetActive(true);
             }
