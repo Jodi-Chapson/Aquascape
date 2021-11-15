@@ -49,6 +49,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
+      propertyPath: hometankID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
       propertyPath: MoveSpotTransform
       value: 
       objectReference: {fileID: 0}
@@ -96,12 +101,12 @@ PrefabInstance:
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.35
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.35
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}

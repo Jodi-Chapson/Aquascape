@@ -482,7 +482,7 @@ Transform:
   m_GameObject: {fileID: 780711293047101201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.32, y: -0.33, z: 0.24995968}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 780711291800588916}
   - {fileID: 4284740068437721396}
@@ -507,7 +507,9 @@ MonoBehaviour:
     type: 3}
   bubbleproduction: 0
   baseproduction: 1
+  level: 0
   levelmodifier: 1
+  hometankID: 0
   hometank: {fileID: 0}
   tankmodifier: 0
 --- !u!114 &-7484625207602008992
@@ -523,6 +525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpotTransform: {fileID: 0}
+  hometankID: 1
   minX: 0
   maxX: 0
   maxY: 0

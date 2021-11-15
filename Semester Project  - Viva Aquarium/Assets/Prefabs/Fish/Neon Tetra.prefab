@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 189306466236919283}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.3185, y: -0.28921, z: -2}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 189306465341679766}
   - {fileID: 3675884622804433878}
@@ -85,7 +85,9 @@ MonoBehaviour:
     type: 3}
   bubbleproduction: 0
   baseproduction: 4
+  level: 0
   levelmodifier: 1
+  hometankID: 0
   hometank: {fileID: 0}
   tankmodifier: 0
 --- !u!114 &1176685205805307522
@@ -101,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpotTransform: {fileID: 0}
+  hometankID: 1
   minX: -8.5
   maxX: -4.6
   maxY: 3.76
@@ -523,6 +526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3675884622804433878}
   - component: {fileID: 5699860711379761906}
+  - component: {fileID: 919245810195513466}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -596,3 +600,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &919245810195513466
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141726422267327225}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d88d02fbeeab574da5a4eff352c7505, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

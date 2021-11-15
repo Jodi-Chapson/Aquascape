@@ -45,6 +45,8 @@ public class Fish : MonoBehaviour
         SaveManager.Fish.Add(this);
     }
 
+   
+
     void Start()
     {
         canMove = true;
@@ -97,7 +99,7 @@ public class Fish : MonoBehaviour
 
 
         //checks if fish is new movespot position
-        if (Vector2.Distance(transform.position, MoveSpotTransform.position) < 0.2f)
+        if (Vector2.Distance(transform.position, MoveSpotTransform.position) < 0.3f)
         {
             if (waitTime <= 0)
             {
@@ -117,6 +119,7 @@ public class Fish : MonoBehaviour
             else
             {
                 waitTime -= Time.deltaTime;
+                currentSpeed = minspeed;
             }
         }
 
