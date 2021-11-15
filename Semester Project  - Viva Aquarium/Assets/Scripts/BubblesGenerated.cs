@@ -16,6 +16,7 @@ public class BubblesGenerated : MonoBehaviour
 
     public int bubbleproduction;
     public int baseproduction;
+    public int level;
     public int levelmodifier = 1;
     public int hometankID;
     public InfoTankManager hometank;

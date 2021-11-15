@@ -6,11 +6,18 @@ using UnityEngine.UI;
 public class FishShop : MonoBehaviour
 {
     public GameManager manager;
+    public GameObject panelprefab;
     
     public Transform Tank01SpawnPoint;
     public Transform Tank02SpawnPoint;
     public Transform Tank03SpawnPoint;
     public Transform Tank04SpawnPoint;
+
+    public GameObject tank01fishgroup;
+    public GameObject tank02fishgroup;
+    public GameObject tank03fishgroup;
+    public GameObject tank04fishgroup;
+
 
 
     public Text CapacityText;
@@ -25,6 +32,7 @@ public class FishShop : MonoBehaviour
     {
         InfoTankManager targettank;
         Transform targetspawnpoint;
+        GameObject targetpanel;
         GameObject targetfish;
         int fishprice;
 
@@ -32,11 +40,13 @@ public class FishShop : MonoBehaviour
         {
             targettank = manager.tanks[0];
             targetspawnpoint = Tank01SpawnPoint;
+            targetpanel = tank01fishgroup;
         }
         else
         {
             targettank = manager.tanks[0]; //remove this later
             targetspawnpoint = Tank01SpawnPoint;
+            targetpanel = tank01fishgroup;
         }
 
         //else if (manager.CurrentTankID == 2)
@@ -83,11 +93,26 @@ public class FishShop : MonoBehaviour
 
         if (BubbleManager.Count >= fishprice) //Players can only buy fish once they have this amount of bubbles
         {
-            Instantiate(targetfish, targetspawnpoint.position, Quaternion.identity);
-            BubblesGenerated.bubbles -= fishprice;
+            //instantiates fish
             
+            GameObject fish = Instantiate(targetfish, targetspawnpoint.position, Quaternion.identity);
+            BubblesGenerated.bubbles -= fishprice;
             targettank.FishInTank += 1;
             CapacityText.text = "Capacity : " + targettank.FishInTank + "/" + targettank.FishAllowed;
+
+            
+            //instantiates associated fish panel
+            GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity) as GameObject;
+            panel.transform.SetParent(targetpanel.transform);
+            panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
+            panel.GetComponent<FishPanelInfo>().LoadInfo(fish);
+
+
+
+                
+            
+
+
         }
 
 

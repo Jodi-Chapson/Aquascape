@@ -35,6 +35,7 @@ public class UpgradeFish : MonoBehaviour
 
             UpgradePrice.text = "Price: " + UpgradeFishPrice;
             targetfish.GetComponent<BubblesGenerated>().levelmodifier += 1;
+            targetfish.GetComponent<BubblesGenerated>().level += 1;
 
             Clicks++;
         }
