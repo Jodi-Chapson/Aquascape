@@ -171,7 +171,7 @@ public class SaveManager: MonoBehaviour
         BinaryFormatter formatter = new BinaryFormatter();
         string savepath = Application.persistentDataPath + TANK_SUB_PATH;
         FileStream fstream = new FileStream(savepath, FileMode.Create);
-        formatter.Serialize(fstream, FishTank.GetComponent<InfoTank01>().FishInnTank);
+        formatter.Serialize(fstream, FishTank.GetComponent<InfoTankManager>().FishInTank);
         fstream.Close();
     }
 
@@ -183,7 +183,7 @@ public class SaveManager: MonoBehaviour
         if (File.Exists(savepath))
         {
             FileStream fstream = new FileStream(savepath, FileMode.Open);
-            FishTank.GetComponent<InfoTank01>().FishInnTank = (float)formatter.Deserialize(fstream);
+            FishTank.GetComponent<InfoTankManager>().FishInTank = (float)formatter.Deserialize(fstream);
             fstream.Close();
         }
         else

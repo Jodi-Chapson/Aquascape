@@ -17,7 +17,8 @@ public class BubblesGenerated : MonoBehaviour
     public int bubbleproduction;
     public int baseproduction;
     public int levelmodifier = 1;
-    public InfoTank01 hometank;
+    public int hometankID;
+    public InfoTankManager hometank;
     public float tankmodifier;
 
 
@@ -25,7 +26,7 @@ public class BubblesGenerated : MonoBehaviour
     {
         ResetTimer = false;
 
-        hometank = GameObject.Find("Tank01").GetComponent<InfoTank01>();
+        hometank = GameObject.Find("Tank01").GetComponent<InfoTankManager>();
         tankmodifier = hometank.TankProductionModifer;
        
     }

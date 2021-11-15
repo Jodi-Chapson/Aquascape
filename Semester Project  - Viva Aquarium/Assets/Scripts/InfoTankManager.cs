@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InfoTank01 : MonoBehaviour
+public class InfoTankManager : MonoBehaviour
 {
 
     public Text TankLevelText;
@@ -16,7 +16,7 @@ public class InfoTank01 : MonoBehaviour
     public float UpgradeTankPrice = 20f; //Initial upgrade price for the tank
 
 
-    public float FishInnTank;
+    public float FishInTank;
     public float FishAllowed;                  //Both these lines represent the capacity of the tank :)
 
     public GameObject FishFoodPrefab;
@@ -45,7 +45,7 @@ public class InfoTank01 : MonoBehaviour
             BubblesGenerated.bubbles -= (int)UpgradeTankPrice;
 
             FishAllowed += 2;
-            CapacityText.text = "Capacity : " + FishInnTank + "/" + FishAllowed;
+            CapacityText.text = "Capacity : " + FishInTank + "/" + FishAllowed;
 
             TankLevel += 1;
             TankProductionModifer++;

@@ -6,8 +6,9 @@ public class CameraPanScript : MonoBehaviour
 {
     public GameObject tank1, tank2, tank3, tank4;
     public GameObject LeftScrollButton, RightScrollButton;
+    public GameManager manager;
 
-    public int CurrentTankID;
+    
     public float TargetXValue;
     public float Lerp;
     public float StartingLerp;
@@ -17,7 +18,9 @@ public class CameraPanScript : MonoBehaviour
     
     public void Start()
     {
-        CurrentTankID = 1;
+        manager = GameObject.Find("Bubble_Manager").GetComponent<GameManager>();
+        
+        manager.CurrentTankID = 1;
         Lerp = 1;
         
         
@@ -38,7 +41,7 @@ public class CameraPanScript : MonoBehaviour
         
         
         
-        if (CurrentTankID == 1)
+        if (manager.CurrentTankID == 1)
         {
             LeftScrollButton.gameObject.SetActive(false);
         }
@@ -47,7 +50,7 @@ public class CameraPanScript : MonoBehaviour
             LeftScrollButton.gameObject.SetActive(true);
         }
 
-        if (CurrentTankID == 4)
+        if (manager.CurrentTankID == 4)
         {
             RightScrollButton.gameObject.SetActive(false);
         }
@@ -66,24 +69,24 @@ public class CameraPanScript : MonoBehaviour
         {
             //moving to the tank on the left
 
-            if (CurrentTankID == 2)
+            if (manager.CurrentTankID == 2)
             {
                 TargetXValue = tank1.transform.position.x;
                 Lerp = StartingLerp;
                 
-                CurrentTankID = 1;
+                manager.CurrentTankID = 1;
             }
-            else if (CurrentTankID == 3)
+            else if (manager.CurrentTankID == 3)
             {
                 TargetXValue = tank2.transform.position.x;
                 Lerp = StartingLerp;
-                CurrentTankID = 2;
+                manager.CurrentTankID = 2;
             }
-            else if (CurrentTankID == 4)
+            else if (manager.CurrentTankID == 4)
             {
                 TargetXValue = tank3.transform.position.x;
                 Lerp = StartingLerp;
-                CurrentTankID = 3;
+                manager.CurrentTankID = 3;
             }
 
 
@@ -92,23 +95,23 @@ public class CameraPanScript : MonoBehaviour
         {
             //moving to the tank on the right
 
-            if (CurrentTankID == 1)
+            if (manager.CurrentTankID == 1)
             {
                 TargetXValue = tank2.transform.position.x;
                 Lerp = StartingLerp;
-                CurrentTankID = 2;
+                manager.CurrentTankID = 2;
             }
-            else if (CurrentTankID == 2)
+            else if (manager.CurrentTankID == 2)
             {
                 TargetXValue = tank3.transform.position.x;
                 Lerp = StartingLerp;
-                CurrentTankID = 3;
+                manager.CurrentTankID = 3;
             }
-            else if (CurrentTankID == 3)
+            else if (manager.CurrentTankID == 3)
             {
                 TargetXValue = tank4.transform.position.x;
                 Lerp = StartingLerp;
-                CurrentTankID = 4;
+                manager.CurrentTankID = 4;
             }
 
 

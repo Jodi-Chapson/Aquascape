@@ -8,6 +8,7 @@ public class Fish : MonoBehaviour
     private BoxCollider2D FishTankTrigger;
     private GameObject MoveSpot;
     public Transform MoveSpotTransform;
+    public int hometankID;
 
     public float minX;
     public float maxX;
@@ -176,6 +177,7 @@ public class Fish : MonoBehaviour
         if (distance < 2f)
         {
             MoveSpotTransform.position = mousepos;
+            currentSpeed = maxspeed;
             FlipFish(MoveSpotTransform);
         }
 
