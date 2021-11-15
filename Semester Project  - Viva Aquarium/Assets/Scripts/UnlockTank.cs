@@ -11,18 +11,16 @@ public class UnlockTank : MonoBehaviour
 
     public static int TankNumber;
 
-    public GameObject Tank2;
-    public SpriteRenderer Tank2Background;
+    public GameObject Tank02_LockButton;
+    public GameObject Tank02_LockedSprite;
 
-    public GameObject Tank3;
-    public SpriteRenderer Tank3Background;
+    public GameObject Tank03_LockButton;
+    public GameObject Tank03_LockedSprite;
 
-    public GameObject Tank4;
-    public SpriteRenderer Tank4Background;
+    public GameObject Tank04_LockButton;
+    public GameObject Tank04_LockedSprite;
 
-    public GameObject Fade02;
-    public GameObject Fade03;
-    public GameObject Fade04;
+    
 
 
 
@@ -52,8 +50,8 @@ public class UnlockTank : MonoBehaviour
 
     public void Yes() 
     { 
-        Color newColor;
-        ColorUtility.TryParseHtmlString("#18A1DB", out newColor);
+        //Color newColor;
+        //ColorUtility.TryParseHtmlString("#18A1DB", out newColor);
 
 
         if (BubblesGenerated.bubbles < Price)        //Check if player has enough funds to purchase a tank
@@ -67,23 +65,23 @@ public class UnlockTank : MonoBehaviour
 
             if (TankNumber == 2)                              
             {
-              Tank2.SetActive(false);                   //Here we deactive the lock symbols and everything else on the tanks
-              Tank2Background.color = newColor;
-              Fade02.SetActive(true);
+              Tank02_LockButton.SetActive(false);                   //Here we deactive the lock symbols and everything else on the tanks
+              Tank02_LockedSprite.SetActive(false);
+              
             }
 
             if (TankNumber == 3)                             
             {
-                Tank3.SetActive(false);
-                Tank3Background.color = newColor;
-                Fade03.SetActive(true);
+                Tank03_LockButton.SetActive(false);
+                Tank03_LockedSprite.SetActive(false);
+                
             }
 
             if (TankNumber == 4)                              
             {
-                Tank4.SetActive(false);
-                Tank4Background.color = newColor;
-                Fade04.SetActive(true);
+                Tank04_LockButton.SetActive(false);
+                Tank04_LockedSprite.SetActive(false);
+                
             }
 
        
