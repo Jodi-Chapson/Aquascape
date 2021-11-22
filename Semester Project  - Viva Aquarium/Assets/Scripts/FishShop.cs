@@ -49,22 +49,28 @@ public class FishShop : MonoBehaviour
             targetpanel = tank01fishgroup;
         }
 
-        //else if (manager.CurrentTankID == 2)
-        //{
-        //    targettank = manager.tanks[1];
-        //}
-        //else if (manager.CurrentTankID == 3)
-        //{
-        //    targettank = manager.tanks[2];
-        //}
-        //else 
-        //{
-        //    targettank = manager.tanks[4];
-        //}
+        if (manager.CurrentTankID == 2)
+        {
+            //targettank = manager.tanks[1];
+            targetspawnpoint = Tank02SpawnPoint;
+            targetpanel = tank02fishgroup;
+        }
+        if (manager.CurrentTankID == 3)
+        {
+            //targettank = manager.tanks[2];
+            targetspawnpoint = Tank03SpawnPoint;
+            targetpanel = tank02fishgroup;
+        }
+        if (manager.CurrentTankID == 4)
+        {
+            //targettank = manager.tanks[4];
+            targetspawnpoint = Tank04SpawnPoint;
+            targetpanel = tank02fishgroup;
+        }
 
-        ////NB ADD THIS LATER ^^ WHEN YOUVE BROUGHT IN ALL THE TANKS
-        
-        if (targettank.FishInTank >= targettank.FishAllowed) //the tank is full :D
+            ////NB ADD THIS LATER ^^ WHEN YOUVE BROUGHT IN ALL THE TANKS
+
+            if (targettank.FishInTank >= targettank.FishAllowed) //the tank is full :D
         {
             return;
         }

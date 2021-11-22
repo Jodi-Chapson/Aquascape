@@ -13,14 +13,17 @@ public class UnlockTank : MonoBehaviour
 
     public GameObject Tank02_LockButton;
     public GameObject Tank02_LockedSprite;
+    public GameObject Tank02_InfoButton;
 
     public GameObject Tank03_LockButton;
     public GameObject Tank03_LockedSprite;
+    public GameObject Tank03_InfoButton;
 
     public GameObject Tank04_LockButton;
     public GameObject Tank04_LockedSprite;
+    public GameObject Tank04_InfoButton;
 
-    
+
 
 
 
@@ -67,21 +70,23 @@ public class UnlockTank : MonoBehaviour
             {
               Tank02_LockButton.SetActive(false);                   //Here we deactive the lock symbols and everything else on the tanks
               Tank02_LockedSprite.SetActive(false);
-              
+                Tank02_InfoButton.SetActive(true);
             }
 
             if (TankNumber == 3)                             
             {
                 Tank03_LockButton.SetActive(false);
                 Tank03_LockedSprite.SetActive(false);
-                
+                Tank03_InfoButton.SetActive(true);
+
             }
 
             if (TankNumber == 4)                              
             {
                 Tank04_LockButton.SetActive(false);
                 Tank04_LockedSprite.SetActive(false);
-                
+                Tank04_InfoButton.SetActive(true);
+
             }
 
        
