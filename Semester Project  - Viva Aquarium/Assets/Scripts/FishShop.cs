@@ -43,25 +43,27 @@ public class FishShop : MonoBehaviour
             targetpanel = tank01fishgroup;
 
         }
-        else
+        else 
         {
             targettank = manager.tanks[0]; //remove this later
             targetspawnpoint = Tank01SpawnPoint;
             targetpanel = tank01fishgroup;
         }
 
-        if (manager.CurrentTankID == 2)
+         if (manager.CurrentTankID == 2)
         {
             //targettank = manager.tanks[1];
             targetspawnpoint = Tank02SpawnPoint;
             targetpanel = tank02fishgroup;
         }
-        if (manager.CurrentTankID == 3)
+
+        else if (manager.CurrentTankID == 3)
         {
             //targettank = manager.tanks[2];
             targetspawnpoint = Tank03SpawnPoint;
             targetpanel = tank03fishgroup;
         }
+
         if (manager.CurrentTankID == 4)
         {
             //targettank = manager.tanks[4];

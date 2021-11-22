@@ -12,6 +12,7 @@ public class Fish : MonoBehaviour
 
     private GameObject MoveSpot;
     public Transform MoveSpotTransform;
+
     public static int hometankID;
 
     public float minX;
@@ -130,7 +131,7 @@ public class Fish : MonoBehaviour
 
         CheckCursor();
 
-        if(hometankID == 1)
+        if(this.transform.position.x >= -7.5 && this.transform.position.x <= 7.3)
         {
 
             minX = FishTankTrigger.bounds.min.x + fishlength;
@@ -139,7 +140,7 @@ public class Fish : MonoBehaviour
             maxY = FishTankTrigger.bounds.max.y - fishheight;
         }
 
-        if (hometankID == 2)
+        else if (this.transform.position.x >= 9 && this.transform.position.x <= 23)
         {
 
             minX = FishTankTrigger02.bounds.min.x + fishlength;
@@ -148,7 +149,7 @@ public class Fish : MonoBehaviour
             maxY = FishTankTrigger02.bounds.max.y - fishheight;
         }
 
-        if (hometankID == 3)
+        else if (this.transform.position.x >= 25 && this.transform.position.x <= 39)
         {
 
             minX = FishTankTrigger03.bounds.min.x + fishlength;
@@ -157,7 +158,7 @@ public class Fish : MonoBehaviour
             maxY = FishTankTrigger03.bounds.max.y - fishheight;
         }
 
-        if (hometankID == 4)
+        else if (this.transform.position.x >= 42 && this.transform.position.x <= 55)
         {
 
             minX = FishTankTrigger04.bounds.min.x + fishlength;
