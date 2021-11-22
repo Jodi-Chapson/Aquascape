@@ -6,9 +6,13 @@ using UnityEngine.UI;
 public class Fish : MonoBehaviour
 {
     private BoxCollider2D FishTankTrigger;
+    private BoxCollider2D FishTankTrigger02;
+    private BoxCollider2D FishTankTrigger03;
+    private BoxCollider2D FishTankTrigger04;
+
     private GameObject MoveSpot;
     public Transform MoveSpotTransform;
-    public int hometankID;
+    public static int hometankID;
 
     public float minX;
     public float maxX;
@@ -53,10 +57,10 @@ public class Fish : MonoBehaviour
         HappinessLevel.SetActive(false);
 
         FishTankTrigger = GameObject.Find("Tank01").GetComponent<BoxCollider2D>();
-        minX = FishTankTrigger.bounds.min.x + fishlength;
-        maxX = FishTankTrigger.bounds.max.x - fishlength;
-        minY = FishTankTrigger.bounds.min.y + fishheight;
-        maxY = FishTankTrigger.bounds.max.y - fishheight;
+        FishTankTrigger02 = GameObject.Find("Tank02").GetComponent<BoxCollider2D>();
+        FishTankTrigger03 = GameObject.Find("Tank03").GetComponent<BoxCollider2D>();
+        FishTankTrigger04 = GameObject.Find("Tank04").GetComponent<BoxCollider2D>();
+
         speedTime = Random.Range(MinSpeedTime, MaxSpeedTime);
         waitTime = StartWaitTime;
         currentSpeed = Random.Range(minspeed, maxspeed);
@@ -125,6 +129,42 @@ public class Fish : MonoBehaviour
 
 
         CheckCursor();
+
+        if(hometankID == 1)
+        {
+
+            minX = FishTankTrigger.bounds.min.x + fishlength;
+            maxX = FishTankTrigger.bounds.max.x - fishlength;
+            minY = FishTankTrigger.bounds.min.y + fishheight;
+            maxY = FishTankTrigger.bounds.max.y - fishheight;
+        }
+
+        if (hometankID == 2)
+        {
+
+            minX = FishTankTrigger02.bounds.min.x + fishlength;
+            maxX = FishTankTrigger02.bounds.max.x - fishlength;
+            minY = FishTankTrigger02.bounds.min.y + fishheight;
+            maxY = FishTankTrigger02.bounds.max.y - fishheight;
+        }
+
+        if (hometankID == 3)
+        {
+
+            minX = FishTankTrigger03.bounds.min.x + fishlength;
+            maxX = FishTankTrigger03.bounds.max.x - fishlength;
+            minY = FishTankTrigger03.bounds.min.y + fishheight;
+            maxY = FishTankTrigger03.bounds.max.y - fishheight;
+        }
+
+        if (hometankID == 4)
+        {
+
+            minX = FishTankTrigger04.bounds.min.x + fishlength;
+            maxX = FishTankTrigger04.bounds.max.x - fishlength;
+            minY = FishTankTrigger04.bounds.min.y + fishheight;
+            maxY = FishTankTrigger04.bounds.max.y - fishheight;
+        }
     }
 
     private void MoveFish(Transform movespot)

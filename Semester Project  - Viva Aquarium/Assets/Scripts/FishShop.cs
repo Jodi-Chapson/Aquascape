@@ -41,6 +41,7 @@ public class FishShop : MonoBehaviour
             targettank = manager.tanks[0];
             targetspawnpoint = Tank01SpawnPoint;
             targetpanel = tank01fishgroup;
+
         }
         else
         {
@@ -59,13 +60,13 @@ public class FishShop : MonoBehaviour
         {
             //targettank = manager.tanks[2];
             targetspawnpoint = Tank03SpawnPoint;
-            targetpanel = tank02fishgroup;
+            targetpanel = tank03fishgroup;
         }
         if (manager.CurrentTankID == 4)
         {
             //targettank = manager.tanks[4];
             targetspawnpoint = Tank04SpawnPoint;
-            targetpanel = tank02fishgroup;
+            targetpanel = tank04fishgroup;
         }
 
             ////NB ADD THIS LATER ^^ WHEN YOUVE BROUGHT IN ALL THE TANKS
