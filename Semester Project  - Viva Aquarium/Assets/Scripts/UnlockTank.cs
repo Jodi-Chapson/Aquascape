@@ -23,10 +23,6 @@ public class UnlockTank : MonoBehaviour
     public GameObject Tank04_LockedSprite;
     public GameObject Tank04_InfoButton;
 
-
-
-
-
     public void Tank02()
     {
         Price = 1000;
@@ -51,8 +47,8 @@ public class UnlockTank : MonoBehaviour
         TankNumber = 4;
     }
 
-    public void Yes() 
-    { 
+    public void Yes()
+    {
         //Color newColor;
         //ColorUtility.TryParseHtmlString("#18A1DB", out newColor);
 
@@ -61,35 +57,36 @@ public class UnlockTank : MonoBehaviour
         {
             Panel.SetActive(true);
         }
-        else if(BubblesGenerated.bubbles > Price)
+        else if (BubblesGenerated.bubbles > Price)
         {
             BubblesGenerated.bubbles -= Price;
             Panel.SetActive(false);
 
-            if (TankNumber == 2)                              
+            if (TankNumber == 2)
             {
-              Tank02_LockButton.SetActive(false);                   //Here we deactive the lock symbols and everything else on the tanks
-              Tank02_LockedSprite.SetActive(false);
+                Tank02_LockButton.SetActive(false);                   //Here we deactive the lock symbols and everything else on the tanks
+                Tank02_LockedSprite.SetActive(false);
                 Tank02_InfoButton.SetActive(true);
+                GameObject.Find("Tank02").GetComponent<InfoTankManager>().Unlocked = true;
             }
 
-            if (TankNumber == 3)                             
+            if (TankNumber == 3)
             {
                 Tank03_LockButton.SetActive(false);
                 Tank03_LockedSprite.SetActive(false);
                 Tank03_InfoButton.SetActive(true);
-
+                GameObject.Find("Tank03").GetComponent<InfoTankManager>().Unlocked = true;
             }
 
-            if (TankNumber == 4)                              
+            if (TankNumber == 4)
             {
                 Tank04_LockButton.SetActive(false);
                 Tank04_LockedSprite.SetActive(false);
                 Tank04_InfoButton.SetActive(true);
-
+                GameObject.Find("Tank04").GetComponent<InfoTankManager>().Unlocked = true;
             }
 
-       
+
         }
     }
 

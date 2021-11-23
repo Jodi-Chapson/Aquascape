@@ -5,14 +5,15 @@ using UnityEngine;
 [System.Serializable]
 public class TankData
 {
-    public int TankLevel;
-    public int TankCapacity;
+    public float TankLevel;
+    public float TankCapacity;
+    public bool Unlocked;
 
-    /* 
-     * public TankData (Tank tank)
-     * {
-     *    TankLevel = tank.level;
-     *    TankCapacity = tank.capacity;
-     * }
-     */
+     
+      public TankData (InfoTankManager infotankmanager)
+      {
+        //TankLevel = infotankmanager.TankLevel;
+        //TankCapacity = infotankmanager.FishInTank;
+        Unlocked = infotankmanager.Unlocked;
+      }
 }

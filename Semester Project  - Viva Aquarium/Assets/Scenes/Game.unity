@@ -1441,6 +1441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 133022842}
   - component: {fileID: 133022843}
+  - component: {fileID: 133022844}
   m_Layer: 0
   m_Name: Tank03
   m_TagString: Untagged
@@ -1491,6 +1492,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.970808, y: 6.3886795}
   m_EdgeRadius: 0
+--- !u!114 &133022844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133022841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fbb96d7190b90a4597be4c91557419d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TankLevelText: {fileID: 0}
+  CapacityText: {fileID: 0}
+  UpgradePrice: {fileID: 0}
+  TankLevel: 1
+  TankProductionModifer: 0
+  UpgradeTankPrice: 20
+  FishInTank: 0
+  FishAllowed: 0
+  FishFoodPrefab: {fileID: 0}
+  FoodSpawnPoint: {fileID: 0}
+  moveSpots: {fileID: 0}
+  Unlocked: 0
 --- !u!1 &137800494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,15 +2567,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PriceText: {fileID: 1025358136}
   Panel: {fileID: 973119434}
-  Tank02_LockButton: {fileID: 0}
-  Tank02_LockedSprite: {fileID: 0}
-  Tank02_InfoButton: {fileID: 0}
-  Tank03_LockButton: {fileID: 0}
-  Tank03_LockedSprite: {fileID: 0}
-  Tank03_InfoButton: {fileID: 0}
-  Tank04_LockButton: {fileID: 0}
-  Tank04_LockedSprite: {fileID: 0}
-  Tank04_InfoButton: {fileID: 0}
+  Tank02_LockButton: {fileID: 615447452}
+  Tank02_LockedSprite: {fileID: 972676172}
+  Tank02_InfoButton: {fileID: 579854269}
+  Tank03_LockButton: {fileID: 1038472562}
+  Tank03_LockedSprite: {fileID: 408929348}
+  Tank03_InfoButton: {fileID: 2040607414}
+  Tank04_LockButton: {fileID: 1674631972}
+  Tank04_LockedSprite: {fileID: 2008958982}
+  Tank04_InfoButton: {fileID: 1598436942}
 --- !u!1 &243789262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,6 +2738,7 @@ MonoBehaviour:
     type: 3}
   FoodSpawnPoint: {fileID: 386430601}
   moveSpots: {fileID: 0}
+  Unlocked: 1
 --- !u!1 &253310353
 GameObject:
   m_ObjectHideFlags: 0
@@ -5236,6 +5262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 509612769}
   - component: {fileID: 509612770}
+  - component: {fileID: 509612771}
   m_Layer: 0
   m_Name: Tank04
   m_TagString: Untagged
@@ -5286,6 +5313,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16.00281, y: 6.3886795}
   m_EdgeRadius: 0
+--- !u!114 &509612771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509612768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fbb96d7190b90a4597be4c91557419d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TankLevelText: {fileID: 0}
+  CapacityText: {fileID: 0}
+  UpgradePrice: {fileID: 0}
+  TankLevel: 1
+  TankProductionModifer: 0
+  UpgradeTankPrice: 20
+  FishInTank: 0
+  FishAllowed: 0
+  FishFoodPrefab: {fileID: 0}
+  FoodSpawnPoint: {fileID: 0}
+  moveSpots: {fileID: 0}
+  Unlocked: 0
 --- !u!1 &518454466
 GameObject:
   m_ObjectHideFlags: 0
@@ -6283,6 +6334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 583073071}
   - component: {fileID: 583073072}
+  - component: {fileID: 583073073}
   m_Layer: 0
   m_Name: Tank02
   m_TagString: Untagged
@@ -6333,6 +6385,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.97081, y: 6.3886795}
   m_EdgeRadius: 0
+--- !u!114 &583073073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583073070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fbb96d7190b90a4597be4c91557419d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TankLevelText: {fileID: 0}
+  CapacityText: {fileID: 0}
+  UpgradePrice: {fileID: 0}
+  TankLevel: 1
+  TankProductionModifer: 0
+  UpgradeTankPrice: 20
+  FishInTank: 0
+  FishAllowed: 0
+  FishFoodPrefab: {fileID: 0}
+  FoodSpawnPoint: {fileID: 0}
+  moveSpots: {fileID: 0}
+  Unlocked: 0
 --- !u!1 &595897379
 GameObject:
   m_ObjectHideFlags: 0
@@ -8685,6 +8761,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ec1aff7d995c2428bd8dff33018a04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FishTanks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Gold_Fish: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
     type: 3}
   Red_Tailed_Shark: {fileID: 8509304733263675962, guid: e82b451d1d9183d45aec2dfe5051f5ce,

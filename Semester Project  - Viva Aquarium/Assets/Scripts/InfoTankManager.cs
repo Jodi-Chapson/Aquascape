@@ -24,6 +24,7 @@ public class InfoTankManager : MonoBehaviour
 
     public GameObject moveSpots;                 //This is for feeding the fish depending on where you click on the tank
 
+    public bool Unlocked; //Set in the unity project
 
 
     public void Start()

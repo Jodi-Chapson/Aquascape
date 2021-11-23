@@ -8,8 +8,11 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class SaveManager: MonoBehaviour
 {
     public static List<Fish> Fish = new List<Fish>();
+    public GameObject[] FishTanks = new GameObject[3];
+
     const string FISH_SUB_PATH = "/fish";
     const string FISH_COUNT_PATH = "/fish.count";
+
     const string BUBBLES_PATH = "/bubbles";
     const string TANK_SUB_PATH = "/tank";
 
@@ -17,8 +20,10 @@ public class SaveManager: MonoBehaviour
     [SerializeField] Fish Red_Tailed_Shark;
     [SerializeField] Fish Exodon;
     [SerializeField] Fish Neon_Tetra;
+
     public BoxCollider2D FishTankCollider;
     public GameObject FishTank;
+
     /// <summary>
     /// Functions to save and load a fishes necessary data.
     /// </summary>
@@ -26,6 +31,9 @@ public class SaveManager: MonoBehaviour
 
     private void Awake()
     {
+        for (int i = 0; i < FishTanks.Length; i++)
+            FishTanks[i] = GameObject.Find("Tank0" + (i + 2));
+
         LoadFishData();
         LoadNumberOfBubbles();
         LoadTankData();
@@ -170,9 +178,14 @@ public class SaveManager: MonoBehaviour
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string savepath = Application.persistentDataPath + TANK_SUB_PATH;
-        FileStream fstream = new FileStream(savepath, FileMode.Create);
-        formatter.Serialize(fstream, FishTank.GetComponent<InfoTankManager>().FishInTank);
-        fstream.Close();
+
+        for (int i = 0; i < FishTanks.Length; i++)
+        {
+            FileStream fstream = new FileStream(savepath + i, FileMode.Create);
+            TankData data = new TankData(FishTanks[i].GetComponent<InfoTankManager>());
+            formatter.Serialize(fstream, data);                                    
+            fstream.Close();
+        }
     }
 
     public void LoadTankData()
@@ -180,15 +193,50 @@ public class SaveManager: MonoBehaviour
         BinaryFormatter formatter = new BinaryFormatter();
         string savepath = Application.persistentDataPath + TANK_SUB_PATH;
 
-        if (File.Exists(savepath))
+        //if (File.Exists(savepath))
+        //{
+        //    FileStream fstream = new FileStream(savepath, FileMode.Open);
+        //    FishTank.GetComponent<InfoTankManager>().FishInTank = (float)formatter.Deserialize(fstream);
+        //    fstream.Close();
+        //}
+        //else
+        //{
+        //    Debug.Log("The file does not exist at " + TANK_SUB_PATH);
+        //}
+
+        for (int i = 0; i < FishTanks.Length; i++)
         {
-            FileStream fstream = new FileStream(savepath, FileMode.Open);
-            FishTank.GetComponent<InfoTankManager>().FishInTank = (float)formatter.Deserialize(fstream);
-            fstream.Close();
-        }
-        else
-        {
-            Debug.Log("The file does not exist at " + TANK_SUB_PATH);
+            if (File.Exists(savepath + i))
+            {
+                FileStream fstream = new FileStream(savepath + i, FileMode.Open);
+                TankData data = formatter.Deserialize(fstream) as TankData;
+                fstream.Close();
+
+                FishTanks[i].GetComponent<InfoTankManager>().Unlocked = data.Unlocked;
+
+                if (i == 0 && FishTanks[0].GetComponent<InfoTankManager>().Unlocked)
+                {
+                    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_LockButton.SetActive(false);
+                    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_LockedSprite.SetActive(false);
+                    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_InfoButton.SetActive(true);
+                }
+                else if (i == 1 && FishTanks[1].GetComponent<InfoTankManager>().Unlocked)
+                {
+                    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank03_LockButton.SetActive(false);
+                    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank03_LockedSprite.SetActive(false);
+                    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank03_InfoButton.SetActive(true);
+                }
+                else if (i == 2 && FishTanks[2].GetComponent<InfoTankManager>().Unlocked)
+                {
+                    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank04_LockButton.SetActive(false);
+                    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank04_LockedSprite.SetActive(false);
+                    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank04_InfoButton.SetActive(true);
+                }
+            }
+            else
+            {
+                Debug.Log("The file does not exist at " + TANK_SUB_PATH);
+            }
         }
     }
 
