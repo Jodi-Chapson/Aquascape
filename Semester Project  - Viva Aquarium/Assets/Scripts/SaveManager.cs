@@ -8,7 +8,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class SaveManager: MonoBehaviour
 {
     public static List<Fish> Fish = new List<Fish>();
-    public GameObject[] FishTanks = new GameObject[3];
+    public GameObject[] FishTanks = new GameObject[4];
 
     const string FISH_SUB_PATH = "/fish";
     const string FISH_COUNT_PATH = "/fish.count";
@@ -32,7 +32,7 @@ public class SaveManager: MonoBehaviour
     private void Awake()
     {
         for (int i = 0; i < FishTanks.Length; i++)
-            FishTanks[i] = GameObject.Find("Tank0" + (i + 2));
+            FishTanks[i] = GameObject.Find("Tank0" + (i + 1));
 
         LoadFishData();
         LoadNumberOfBubbles();
@@ -193,17 +193,6 @@ public class SaveManager: MonoBehaviour
         BinaryFormatter formatter = new BinaryFormatter();
         string savepath = Application.persistentDataPath + TANK_SUB_PATH;
 
-        //if (File.Exists(savepath))
-        //{
-        //    FileStream fstream = new FileStream(savepath, FileMode.Open);
-        //    FishTank.GetComponent<InfoTankManager>().FishInTank = (float)formatter.Deserialize(fstream);
-        //    fstream.Close();
-        //}
-        //else
-        //{
-        //    Debug.Log("The file does not exist at " + TANK_SUB_PATH);
-        //}
-
         for (int i = 0; i < FishTanks.Length; i++)
         {
             if (File.Exists(savepath + i))
@@ -213,20 +202,23 @@ public class SaveManager: MonoBehaviour
                 fstream.Close();
 
                 FishTanks[i].GetComponent<InfoTankManager>().Unlocked = data.Unlocked;
+                FishTanks[i].GetComponent<InfoTankManager>().FishInTank = data.TankCapacity;
+                FishTanks[i].GetComponent<InfoTankManager>().TankLevel = data.TankLevel;
+                Debug.Log(data.TankCapacity);
 
-                if (i == 0 && FishTanks[0].GetComponent<InfoTankManager>().Unlocked)
+                if (i == 1 && FishTanks[1].GetComponent<InfoTankManager>().Unlocked)
                 {
                     GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_LockButton.SetActive(false);
                     GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_LockedSprite.SetActive(false);
                     GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_InfoButton.SetActive(true);
                 }
-                else if (i == 1 && FishTanks[1].GetComponent<InfoTankManager>().Unlocked)
+                else if (i == 2 && FishTanks[2].GetComponent<InfoTankManager>().Unlocked)
                 {
                     GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank03_LockButton.SetActive(false);
                     GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank03_LockedSprite.SetActive(false);
                     GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank03_InfoButton.SetActive(true);
                 }
-                else if (i == 2 && FishTanks[2].GetComponent<InfoTankManager>().Unlocked)
+                else if (i == 3 && FishTanks[3].GetComponent<InfoTankManager>().Unlocked)
                 {
                     GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank04_LockButton.SetActive(false);
                     GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank04_LockedSprite.SetActive(false);
@@ -239,45 +231,4 @@ public class SaveManager: MonoBehaviour
             }
         }
     }
-
-
-
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-    /// <summary>
-    /// Functions to save the data for the tank and load the tanks data
-    /// </summary>
-
-    //public static void SaveTankData(InfoTank01 tank)
-    //{
-    //    BinaryFormatter formatter = new BinaryFormatter();
-    //    string savepath = Application.persistentDataPath + "/tank.txt";
-    //    FileStream fstream = new FileStream(savepath, FileMode.Create);
-    //    TankData data = new TankData(tank);
-    //    formatter.Serialize(fstream, data);
-    //    fstream.Close();
-    //}
-
-    //public static TankData LoadTankData()
-    //{
-    //    string savepath = Application.persistentDataPath + "/tank.txt";
-
-    //    if (File.Exists(savepath))
-    //    {
-    //        BinaryFormatter formatter = new BinaryFormatter();
-    //        FileStream fstream = new FileStream(savepath, FileMode.Open);
-    //        TankData data = formatter.Deserialize(fstream) as TankData;
-    //        fstream.Close();
-    //        return data;
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("File does not exist.");
-    //        return null;
-    //    }
-    //}
-
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 }

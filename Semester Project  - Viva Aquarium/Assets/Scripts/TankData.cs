@@ -12,8 +12,8 @@ public class TankData
      
       public TankData (InfoTankManager infotankmanager)
       {
-        //TankLevel = infotankmanager.TankLevel;
-        //TankCapacity = infotankmanager.FishInTank;
+        TankLevel = infotankmanager.TankLevel;
+        TankCapacity = infotankmanager.FishInTank;
         Unlocked = infotankmanager.Unlocked;
       }
 }
