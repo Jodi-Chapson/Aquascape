@@ -1518,7 +1518,6 @@ MonoBehaviour:
   Unlocked: 0
   panelprefab: {fileID: 0}
   targetpanel: {fileID: 0}
-  TankNumber: 3
 --- !u!1 &137800494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,8 +2743,7 @@ MonoBehaviour:
   Unlocked: 1
   panelprefab: {fileID: 4726926383902962973, guid: f7c64a76c3ed4994189338d39b8f4788,
     type: 3}
-  targetpanel: {fileID: 0}
-  TankNumber: 1
+  targetpanel: {fileID: 319612273}
 --- !u!1 &253310353
 GameObject:
   m_ObjectHideFlags: 0
@@ -5346,7 +5344,6 @@ MonoBehaviour:
   Unlocked: 0
   panelprefab: {fileID: 0}
   targetpanel: {fileID: 0}
-  TankNumber: 4
 --- !u!1 &518454466
 GameObject:
   m_ObjectHideFlags: 0
@@ -6421,7 +6418,6 @@ MonoBehaviour:
   Unlocked: 0
   panelprefab: {fileID: 0}
   targetpanel: {fileID: 0}
-  TankNumber: 2
 --- !u!1 &595897379
 GameObject:
   m_ObjectHideFlags: 0
@@ -8587,8 +8583,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1120083838}
   m_HandleRect: {fileID: 1120083837}
   m_Direction: 0
-  m_Value: 0.96901923
-  m_Size: 0.020000001
+  m_Value: 0.9690191
+  m_Size: 0.019999998
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
