@@ -18,14 +18,11 @@ public class FishShop : MonoBehaviour
     public GameObject tank03fishgroup;
     public GameObject tank04fishgroup;
 
-
-
     public Text CapacityText;
 
     public void Start()
     {
-        manager = GameObject.Find("Bubble_Manager").GetComponent<GameManager>();
-        
+        manager = GameObject.Find("Bubble_Manager").GetComponent<GameManager>();   
     }
 
     public void BuyFish(int type)
@@ -111,25 +108,12 @@ public class FishShop : MonoBehaviour
 
             
             //instantiates associated fish panel
-            GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity) as GameObject;
+            GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
             panel.transform.SetParent(targetpanel.transform);
             panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
             panel.GetComponent<FishPanelInfo>().LoadInfo(fish);
-
-
-
-                
-            
-
-
         }
-
-
-
-
     }
-
-
 
     //public void FishSelect() //This function is for the first fish
     //{

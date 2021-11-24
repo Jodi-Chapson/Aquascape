@@ -43,14 +43,10 @@ public class Fish : MonoBehaviour
     public float Happiness;
     public string Species;
 
-
-
     void Awake()
     {
         SaveManager.Fish.Add(this);
     }
-
-   
 
     void Start()
     {
@@ -72,8 +68,6 @@ public class Fish : MonoBehaviour
 
         DetermineMoveSpot(MoveSpotTransform);
         FlipFish(MoveSpotTransform);
-        
-
     }
 
     void OnMouseOver()
@@ -88,7 +82,7 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
-        
+
         if (speedTime <= 0)
         {
             VarySpeed();
@@ -98,10 +92,8 @@ public class Fish : MonoBehaviour
             speedTime -= Time.deltaTime;
         }
 
-
         //moves fish
         MoveFish(MoveSpotTransform);
-
 
         //checks if fish is new movespot position
         if (Vector2.Distance(transform.position, MoveSpotTransform.position) < 0.3f)
@@ -109,7 +101,7 @@ public class Fish : MonoBehaviour
             if (waitTime <= 0)
             {
                 Destroy(MoveSpot);
-                
+
                 MoveSpot = new GameObject();
                 MoveSpotTransform = MoveSpot.transform;
 
@@ -128,10 +120,9 @@ public class Fish : MonoBehaviour
             }
         }
 
-
         CheckCursor();
 
-        if(this.transform.position.x >= -7.5 && this.transform.position.x <= 7.3)
+        if (this.transform.position.x >= -7.5 && this.transform.position.x <= 7.3)
         {
 
             minX = FishTankTrigger.bounds.min.x + fishlength;
@@ -180,8 +171,8 @@ public class Fish : MonoBehaviour
 
     private Transform DetermineMoveSpot(Transform movespot)
     {
-       //choose a position within the range of the home tank
-       
+        //choose a position within the range of the home tank
+
         float xPos = Random.Range(minX, maxX);
         float yPos = Random.Range(minY, maxY);
         movespot.position = new Vector2(xPos, yPos);
@@ -191,7 +182,7 @@ public class Fish : MonoBehaviour
     public void FlipFish(Transform movespot)
     {
         //flips the fish gameobject based on their position in relation to the movespot position
-        
+
         if (movespot.position.x < this.transform.position.x) //the new location is towards the left of the fish
         {
             this.transform.localScale = new Vector3(scaleX, this.transform.localScale.y, this.transform.localScale.z);
@@ -224,14 +215,11 @@ public class Fish : MonoBehaviour
             currentSpeed = maxspeed;
             FlipFish(MoveSpotTransform);
         }
-
-
     }
 
     public void VarySpeed()
     {
         //ramdomly increasing or decreasing speed
-
 
         int random;
         float speed;
@@ -271,8 +259,4 @@ public class Fish : MonoBehaviour
 
         speedTime = Random.Range(MinSpeedTime, MaxSpeedTime);
     }
-
-
-
- 
 }

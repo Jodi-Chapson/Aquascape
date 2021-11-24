@@ -1516,6 +1516,9 @@ MonoBehaviour:
   FoodSpawnPoint: {fileID: 0}
   moveSpots: {fileID: 0}
   Unlocked: 0
+  panelprefab: {fileID: 0}
+  targetpanel: {fileID: 0}
+  TankNumber: 3
 --- !u!1 &137800494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2739,6 +2742,10 @@ MonoBehaviour:
   FoodSpawnPoint: {fileID: 386430601}
   moveSpots: {fileID: 0}
   Unlocked: 1
+  panelprefab: {fileID: 4726926383902962973, guid: f7c64a76c3ed4994189338d39b8f4788,
+    type: 3}
+  targetpanel: {fileID: 0}
+  TankNumber: 1
 --- !u!1 &253310353
 GameObject:
   m_ObjectHideFlags: 0
@@ -5337,6 +5344,9 @@ MonoBehaviour:
   FoodSpawnPoint: {fileID: 0}
   moveSpots: {fileID: 0}
   Unlocked: 0
+  panelprefab: {fileID: 0}
+  targetpanel: {fileID: 0}
+  TankNumber: 4
 --- !u!1 &518454466
 GameObject:
   m_ObjectHideFlags: 0
@@ -6409,6 +6419,9 @@ MonoBehaviour:
   FoodSpawnPoint: {fileID: 0}
   moveSpots: {fileID: 0}
   Unlocked: 0
+  panelprefab: {fileID: 0}
+  targetpanel: {fileID: 0}
+  TankNumber: 2
 --- !u!1 &595897379
 GameObject:
   m_ObjectHideFlags: 0
@@ -8762,6 +8775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FishTanks:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -21196,6 +21210,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Panel01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726926383902962973, guid: f7c64a76c3ed4994189338d39b8f4788,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4726926383902962974, guid: f7c64a76c3ed4994189338d39b8f4788,
         type: 3}

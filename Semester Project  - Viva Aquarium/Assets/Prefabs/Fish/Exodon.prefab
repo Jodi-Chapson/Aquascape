@@ -52,6 +52,11 @@ PrefabInstance:
       propertyPath: hometankID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5565318386594651653, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 780711293047101201, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_Name
@@ -61,6 +66,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 780711293047101201, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fish
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101204, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
