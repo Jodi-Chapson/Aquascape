@@ -95,7 +95,7 @@ public class FishShop : MonoBehaviour
         }
         else
         {
-            fishprice = 10000; //obviously edit this later
+            fishprice = 1500; //obviously edit this later
             targetfish = manager.fishtypes[3];
         }
 
