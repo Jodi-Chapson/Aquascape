@@ -26,17 +26,13 @@ public class InfoTankManager : MonoBehaviour
 
     public bool Unlocked; //Set in the unity project
 
+    public GameObject panelprefab;
+    public GameObject targetpanel;
 
     public void Start()
     {
         UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
         FishAllowed = 8f;
-        //FishInnTank = 1f;
-    }
-
-    public void Update()
-    {
-        
     }
 
     public void UpgradeTank()
@@ -55,8 +51,19 @@ public class InfoTankManager : MonoBehaviour
 
             UpgradeTankPrice = (int)(UpgradeTankPrice * 1.5f);
             UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
+        }
+    }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Fish")
+        {
+            Debug.Log("This collider should be working");
+            GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
+            panel.GetComponent<FishPanelInfo>().targetfish = collision.gameObject;
+            panel.transform.SetParent(targetpanel.transform);
+            panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
+            panel.GetComponent<FishPanelInfo>().LoadInfo(collision.gameObject);
         }
     }
 
