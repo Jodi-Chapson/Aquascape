@@ -157,6 +157,7 @@ public class Fish : MonoBehaviour
             minY = FishTankTrigger04.bounds.min.y + fishheight;
             maxY = FishTankTrigger04.bounds.max.y - fishheight;
         }
+
     }
 
     private void MoveFish(Transform movespot)

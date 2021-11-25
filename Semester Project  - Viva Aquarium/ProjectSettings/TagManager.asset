@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fish
+  - Exodon
+  - GoldFish
+  - NeonTetra
+  - RedTailed
   layers:
   - Default
   - TransparentFX

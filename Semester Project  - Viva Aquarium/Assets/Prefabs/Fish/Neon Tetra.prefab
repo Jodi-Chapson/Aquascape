@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: -3506836471260517438}
   m_Layer: 0
   m_Name: Neon Tetra
-  m_TagString: Fish
+  m_TagString: NeonTetra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,10 +104,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpotTransform: {fileID: 0}
-  minX: -8.5
-  maxX: -4.6
-  maxY: 3.76
-  minY: -4
+  minX: 0
+  maxX: 0
+  maxY: 0
+  minY: 0
   fishheight: 0.2
   fishlength: 0.4
   minspeed: 0.5
@@ -609,7 +609,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 4dd6a39d09286214995af59e3529b0ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
