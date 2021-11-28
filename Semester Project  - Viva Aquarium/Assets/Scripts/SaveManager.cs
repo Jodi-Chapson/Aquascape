@@ -204,7 +204,6 @@ public class SaveManager: MonoBehaviour
                 FishTanks[i].GetComponent<InfoTankManager>().Unlocked = data.Unlocked;
                 FishTanks[i].GetComponent<InfoTankManager>().FishInTank = data.TankCapacity;
                 FishTanks[i].GetComponent<InfoTankManager>().TankLevel = data.TankLevel;
-                Debug.Log(data.TankCapacity);
 
                 if (i == 1 && FishTanks[1].GetComponent<InfoTankManager>().Unlocked)
                 {

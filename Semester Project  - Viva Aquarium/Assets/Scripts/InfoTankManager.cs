@@ -33,6 +33,7 @@ public class InfoTankManager : MonoBehaviour
     {
         UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
         CapacityText.text = "Capacity : " + FishInTank + "/" + FishAllowed;
+        TankLevelText.text = "Tank Level : " + TankLevel;
         FishAllowed = 8f;
     }
 
@@ -59,7 +60,6 @@ public class InfoTankManager : MonoBehaviour
     {
         if (collision.tag == "Fish")
         {
-            Debug.Log("This collider should be working");
             GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
             panel.GetComponent<FishPanelInfo>().targetfish = collision.gameObject;
             panel.transform.SetParent(targetpanel.transform);
