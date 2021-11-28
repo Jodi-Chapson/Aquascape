@@ -32,6 +32,7 @@ public class InfoTankManager : MonoBehaviour
     public void Start()
     {
         UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
+        CapacityText.text = "Capacity : " + FishInTank + "/" + FishAllowed;
         FishAllowed = 8f;
     }
 
