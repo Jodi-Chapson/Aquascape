@@ -34,6 +34,9 @@ public class InfoTankManager : MonoBehaviour
     public float Timer;
     public bool BubbleSpawned = false;
 
+    public GameObject PopPrefab;
+    public Transform PopPosition;
+
     public void Start()
     {
         UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;

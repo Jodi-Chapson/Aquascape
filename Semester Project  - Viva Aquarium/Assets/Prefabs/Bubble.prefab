@@ -117,6 +117,9 @@ MonoBehaviour:
   speed: 0.5
   LifeTime: 5
   rb: {fileID: 2056189807464691351}
+  PopPrefab: {fileID: 6253377704054269623, guid: 4d3c41adf460d354f97b86eadf31d867,
+    type: 3}
+  PopPosition: {fileID: 2056189807464691350}
 --- !u!50 &2056189807464691351
 Rigidbody2D:
   serializedVersion: 4

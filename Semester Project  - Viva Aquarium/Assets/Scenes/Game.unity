@@ -1522,6 +1522,8 @@ MonoBehaviour:
   RandomBubble: {fileID: 1425525064}
   Timer: 0
   BubbleSpawned: 0
+  PopPrefab: {fileID: 0}
+  PopPosition: {fileID: 0}
 --- !u!1 &137800494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2837,6 +2839,8 @@ MonoBehaviour:
     type: 3}
   Timer: 0
   BubbleSpawned: 0
+  PopPrefab: {fileID: 0}
+  PopPosition: {fileID: 0}
 --- !u!1 &253310353
 GameObject:
   m_ObjectHideFlags: 0
@@ -5443,6 +5447,8 @@ MonoBehaviour:
   RandomBubble: {fileID: 1425525064}
   Timer: 0
   BubbleSpawned: 0
+  PopPrefab: {fileID: 0}
+  PopPosition: {fileID: 0}
 --- !u!1 &518454466
 GameObject:
   m_ObjectHideFlags: 0
@@ -6538,6 +6544,8 @@ MonoBehaviour:
   RandomBubble: {fileID: 1425525064}
   Timer: 0
   BubbleSpawned: 0
+  PopPrefab: {fileID: 0}
+  PopPosition: {fileID: 0}
 --- !u!1 &595897379
 GameObject:
   m_ObjectHideFlags: 0

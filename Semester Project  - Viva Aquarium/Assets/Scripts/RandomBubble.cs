@@ -8,9 +8,14 @@ public class RandomBubble : MonoBehaviour
     public float LifeTime = 5f;
     public Rigidbody2D rb;
 
-    void OnMouseOver()
+  //  public GameObject PopPrefab;
+   // public Transform PopPosition;
+
+    void OnMouseDown()
     {
-        Debug.Log("HEYYYYYYYYYYYYYy");
+        // Instantiate(PopPrefab, PopPosition.position, Quaternion.identity);
+        DestroyBubble();
+        BubblesGenerated.bubbles += 250f;
     }
 
     void Start()
