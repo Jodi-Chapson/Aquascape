@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1948600179815838669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7269933901818935627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1cc2b80fc9f7349b306cf731eed2f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RedTailedSharkPrefab: {fileID: 7269933901818935627}
 --- !u!1001 &7941634590794968666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -208,3 +221,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
+--- !u!1 &7269933901818935627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 780711293047101201, guid: c2c52e390a74ed843aa122478ea2f85a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7941634590794968666}
+  m_PrefabAsset: {fileID: 0}
