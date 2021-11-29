@@ -14,8 +14,12 @@ public class NeonTetra : MonoBehaviour
     {
         if (Count >= 2)
         {
-            //Insert code to mkae the fish more happy.
+            //Insert code to make the fish more happy.
             //Code to change their movement so that they swim together.
+        }
+        else
+        {
+            //Insert the code to decrease the fish happiness.
         }
     }
 

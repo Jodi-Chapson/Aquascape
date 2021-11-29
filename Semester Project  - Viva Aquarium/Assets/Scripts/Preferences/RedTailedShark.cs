@@ -16,7 +16,11 @@ public class RedTailedShark : MonoBehaviour
     {
         if (Count >= 1)
         {
-            //Insert code to decrease the fishes happiness. This can be done anywhere as long as we check if the count variable is greater or equal to 1.
+            //Insert code to decrease the fish happiness. This can be done anywhere as long as we check if the count variable is greater or equal to 1.
+        }
+        else
+        {
+            //Insert code to increase happiness.
         }
     }
 

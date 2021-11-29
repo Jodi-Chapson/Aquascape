@@ -34,7 +34,7 @@ public class InfoTankManager : MonoBehaviour
         UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
         CapacityText.text = "Capacity : " + FishInTank + "/" + FishAllowed;
         TankLevelText.text = "Tank Level : " + TankLevel;
-        FishAllowed = 8f;
+        //FishAllowed = 8f;
 
         for (int i = 0; i < GameManager.fish.Count; i++)
         {

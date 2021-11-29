@@ -16,7 +16,11 @@ public class GoldFish : MonoBehaviour
     {
         if (NumOfFish >= 2)
         {
-            //Insert code to decrease the fishes happiness. (Increases happiness)
+            //Insert code to increase the fish happiness.
+        }
+        else
+        {
+            //Insert code to decrease the fish happiness 
         }
     }
 }
