@@ -46,6 +46,7 @@ public class Fish : MonoBehaviour
     void Awake()
     {
         SaveManager.Fish.Add(this);
+        GameManager.fish.Add(this.gameObject);
     }
 
     void Start()

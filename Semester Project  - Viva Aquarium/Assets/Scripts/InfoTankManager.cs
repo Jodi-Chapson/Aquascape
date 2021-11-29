@@ -43,6 +43,15 @@ public class InfoTankManager : MonoBehaviour
         CapacityText.text = "Capacity : " + FishInTank + "/" + FishAllowed;
         TankLevelText.text = "Tank Level : " + TankLevel;
         FishAllowed = 8f;
+
+        for (int i = 0; i < GameManager.fish.Count; i++)
+        {
+            GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
+            panel.GetComponent<FishPanelInfo>().targetfish = GameManager.fish[i].gameObject;
+            panel.transform.SetParent(targetpanel.transform);
+            panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
+            panel.GetComponent<FishPanelInfo>().LoadInfo(GameManager.fish[i].gameObject);
+        }
     }
 
     public void Update()
@@ -74,17 +83,17 @@ public class InfoTankManager : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Fish")
-        {
-            GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
-            panel.GetComponent<FishPanelInfo>().targetfish = collision.gameObject;
-            panel.transform.SetParent(targetpanel.transform);
-            panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
-            panel.GetComponent<FishPanelInfo>().LoadInfo(collision.gameObject);
-        }
-    }
+    //private void /OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Fish")
+    //    {
+    //        GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
+    //        panel.GetComponent<FishPanelInfo>().targetfish = collision.gameObject;
+    //        panel.transform.SetParent(targetpanel.transform);
+    //        panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
+    //        panel.GetComponent<FishPanelInfo>().LoadInfo(collision.gameObject);
+    //    }
+    //}
 
     public void SpawnBubble()
     {
