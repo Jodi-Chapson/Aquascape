@@ -10,6 +10,8 @@ public class Fish : MonoBehaviour
     private BoxCollider2D FishTankTrigger03;
     private BoxCollider2D FishTankTrigger04;
 
+    private BoxCollider2D SwimmingArea;
+
     private GameObject MoveSpot;
     public Transform MoveSpotTransform;
 
@@ -58,6 +60,20 @@ public class Fish : MonoBehaviour
         FishTankTrigger02 = GameObject.Find("Tank02").GetComponent<BoxCollider2D>();
         FishTankTrigger03 = GameObject.Find("Tank03").GetComponent<BoxCollider2D>();
         FishTankTrigger04 = GameObject.Find("Tank04").GetComponent<BoxCollider2D>();
+
+        if (Species == "Gold Fish")
+        {
+            SwimmingArea = GameObject.Find("Gold Fish Swimming Area").GetComponent<BoxCollider2D>();
+        } 
+        else if (Species == "Red Tailed Shark")
+        {
+            SwimmingArea = GameObject.Find("Red Tailed Shark Swimming Area").GetComponent<BoxCollider2D>();
+        } 
+        else if (Species == "Neon Tetra")
+        {
+            SwimmingArea = GameObject.Find("Neon Tetra Swimming Area").GetComponent<BoxCollider2D>();
+        }
+
 
         speedTime = Random.Range(MinSpeedTime, MaxSpeedTime);
         waitTime = StartWaitTime;
@@ -175,8 +191,10 @@ public class Fish : MonoBehaviour
     {
         //choose a position within the range of the home tank
 
-        float xPos = Random.Range(minX, maxX);
-        float yPos = Random.Range(minY, maxY);
+        //float xPos = Random.Range(minX, maxX);
+        //float yPos = Random.Range(minY, maxY);
+        float xPos = Random.Range(SwimmingArea.bounds.min.x, SwimmingArea.bounds.max.x);
+        float yPos = Random.Range(SwimmingArea.bounds.min.y, SwimmingArea.bounds.max.y);
         movespot.position = new Vector2(xPos, yPos);
         return movespot;
     }
