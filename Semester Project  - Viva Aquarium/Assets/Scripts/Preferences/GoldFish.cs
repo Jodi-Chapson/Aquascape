@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class GoldFish : MonoBehaviour
 {
-    private void Update()
+    public static int NumOfFish = 0; //Value must decrease when a fish is sold.
+    private void Start()
     {
         if (GameManager.fish.Count >= 2)
         {
-            //insert code to make the gold fish more happy.
+            NumOfFish = GameManager.fish.Count;
+        }
+    }
+    private void Update()
+    {
+        if (NumOfFish >= 2)
+        {
+            //Insert code to decrease the fishes happiness. (Increases happiness)
         }
     }
 }
