@@ -19,26 +19,30 @@ public class NeonTetra : MonoBehaviour
 
         if (NeonTetraInTank.Count >= 2)
         {
-            //if (fish.Happiness < 10f)
-            //{
-            //    fish.Happiness += 0.00005f;
-            //}
-            //else
-            //{
-            //    fish.Happiness = 10f;
-            //}
+            if (fish.Happiness < 10f)
+            {
+                fish.Happiness += 0.00005f;
+            }
+            else
+            {
+                fish.Happiness = 10f;
+            }
 
             //Code to change their movement so that they swim together.
         }
         else
         {
-            if (fish.Happiness > 0.2f)
+            if (fish.Happiness > 4f)
             {
-                fish.Happiness -= -0.00004f;
+                fish.Happiness -= 0.00004f;
+            }
+            else if (fish.Happiness <= 4f && fish.Happiness > 0f)
+            {
+                fish.Happiness -= 0.000002f;
             }
             else
             {
-                fish.Happiness = 0.2f;
+                fish.Happiness = 0f;
             }
         }
     }
