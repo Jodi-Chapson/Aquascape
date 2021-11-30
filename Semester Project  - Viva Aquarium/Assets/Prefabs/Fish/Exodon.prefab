@@ -39,6 +39,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
+      propertyPath: Happiness
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
       propertyPath: fishheight
       value: 0.5
       objectReference: {fileID: 0}

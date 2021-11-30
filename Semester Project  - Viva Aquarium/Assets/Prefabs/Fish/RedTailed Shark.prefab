@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RedTailedSharkPrefab: {fileID: 7269933901818935627}
+  fish: {fileID: 0}
 --- !u!1001 &7941634590794968666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49,6 +50,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Species
       value: Red Tailed Shark
+      objectReference: {fileID: 0}
+    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: Happiness
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
@@ -220,6 +226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 8128264464736618542, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
 --- !u!1 &7269933901818935627 stripped
 GameObject:

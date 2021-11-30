@@ -81,7 +81,7 @@ public class Fish : MonoBehaviour
         MoveSpot = new GameObject();
         MoveSpotTransform = MoveSpot.transform;
         scaleX = this.transform.localScale.x;
-        Happiness = HappinessLevel.GetComponent<Slider>().value;
+        HappinessLevel.GetComponent<Slider>().value = Happiness;
 
         DetermineMoveSpot(MoveSpotTransform);
         FlipFish(MoveSpotTransform);
@@ -135,7 +135,10 @@ public class Fish : MonoBehaviour
                 waitTime -= Time.deltaTime;
                 currentSpeed = minspeed;
             }
+
         }
+
+        HappinessLevel.GetComponent<Slider>().value = Happiness;
 
         CheckCursor();
 

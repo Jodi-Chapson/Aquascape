@@ -206,12 +206,12 @@ public class SaveManager: MonoBehaviour
                 FishTanks[i].GetComponent<InfoTankManager>().TankLevel = data.TankLevel;
                 FishTanks[i].GetComponent<InfoTankManager>().UpgradeTankPrice = data.UpgradePrice;
                 FishTanks[i].GetComponent<InfoTankManager>().FishAllowed = data.FishAllowed;
-                //if (i == 1 && FishTanks[1].GetComponent<InfoTankManager>().Unlocked)
-                //{
-                //    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_LockButton.SetActive(false);
-                //    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_LockedSprite.SetActive(false);
-                //    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_InfoButton.SetActive(true);
-                //}
+                if (i == 1 && FishTanks[1].GetComponent<InfoTankManager>().Unlocked)
+                {
+                    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_LockButton.SetActive(false);
+                    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_LockedSprite.SetActive(false);
+                    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_InfoButton.SetActive(true);
+                }
                 //else if (i == 2 && FishTanks[2].GetComponent<InfoTankManager>().Unlocked)
                 //{
                 //    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank03_LockButton.SetActive(false);

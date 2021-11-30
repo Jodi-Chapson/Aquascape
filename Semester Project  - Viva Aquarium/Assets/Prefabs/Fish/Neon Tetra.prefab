@@ -89,9 +89,11 @@ MonoBehaviour:
   baseproduction: 4
   level: 0
   levelmodifier: 1
+  happinessmodifier: 0
   hometankID: 0
   hometank: {fileID: 0}
   tankmodifier: 0
+  fish: {fileID: 0}
 --- !u!114 &1176685205805307522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +125,7 @@ MonoBehaviour:
   canMove: 0
   HappinessLevel: {fileID: 609439447958069065}
   Level: 0
-  Happiness: 0
+  Happiness: 10
   Species: Neon Tetra
 --- !u!61 &4229211670273743641
 BoxCollider2D:
@@ -211,6 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b1fb6bbbad13349be0417ef892d32f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NeonTetraPrefab: {fileID: 189306466236919283}
+  fish: {fileID: 0}
 --- !u!1 &609439446388639775
 GameObject:
   m_ObjectHideFlags: 0

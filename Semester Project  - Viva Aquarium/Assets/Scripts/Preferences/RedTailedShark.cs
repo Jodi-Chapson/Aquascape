@@ -5,22 +5,39 @@ using UnityEngine;
 public class RedTailedShark : MonoBehaviour
 {
     public GameObject RedTailedSharkPrefab;
-    [SerializeField] public static int Count = 0; //This value will have to decrease when one is sold.
+    [SerializeField] public static List<GameObject> RedTailedFishInTank =  new List<GameObject>(); 
+    public Fish fish;
 
     private void Start()
     {
+        fish = this.GetComponent<Fish>();
         CheckTankForOtherRedTailedSharks();
     }
 
     private void Update()
     {
-        if (Count >= 1)
+        if (RedTailedFishInTank.Count >= 2)
         {
-            //Insert code to decrease the fish happiness. This can be done anywhere as long as we check if the count variable is greater or equal to 1.
+            if (fish.Happiness > 0f)
+            {
+                fish.Happiness -= 0.00004f;
+            }
+            else
+            {
+                fish.Happiness = 0f;
+            }
+            
         }
         else
         {
-            //Insert code to increase happiness.
+            if (fish.Happiness < 10f)
+            {
+                fish.Happiness += 0.00005f;
+            }
+            else
+            {
+                fish.Happiness = 10f;
+            }
         }
     }
 
@@ -32,16 +49,7 @@ public class RedTailedShark : MonoBehaviour
         {
             if (GameManager.fish[i] == RedTailedSharkPrefab)
             {
-                if (Count == 0)
-                {
-                    Count++;
-                    Debug.Log("one red tailed shark is in there");
-                }
-                else
-                {
-                    Count++;
-                    Debug.Log("Multiple red tailed sharks");
-                }
+                RedTailedFishInTank.Add(this.gameObject);
             }
         }
     }

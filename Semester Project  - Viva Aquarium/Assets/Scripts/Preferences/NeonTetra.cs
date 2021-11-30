@@ -4,22 +4,42 @@ using UnityEngine;
 
 public class NeonTetra : MonoBehaviour
 {
-    public static int Count = 0;
+    public static List<GameObject> NeonTetraInTank = new List<GameObject>();
+    public GameObject NeonTetraPrefab;
+    public Fish fish;
     private void Start()
     {
+        fish = this.GetComponent<Fish>();
         CheckForOtherNeonTetras();
     }
 
     private void Update()
     {
-        if (Count >= 2)
+        Debug.Log(NeonTetraInTank.Count);
+
+        if (NeonTetraInTank.Count >= 2)
         {
-            //Insert code to make the fish more happy.
+            //if (fish.Happiness < 10f)
+            //{
+            //    fish.Happiness += 0.00005f;
+            //}
+            //else
+            //{
+            //    fish.Happiness = 10f;
+            //}
+
             //Code to change their movement so that they swim together.
         }
         else
         {
-            //Insert the code to decrease the fish happiness.
+            if (fish.Happiness > 0.2f)
+            {
+                fish.Happiness -= -0.00004f;
+            }
+            else
+            {
+                fish.Happiness = 0.2f;
+            }
         }
     }
 
@@ -27,18 +47,10 @@ public class NeonTetra : MonoBehaviour
     {
         for (int i = 0; i < GameManager.fish.Count; i++)
         {
-            if (GameManager.fish[i])
+            if (GameManager.fish[i] == NeonTetraPrefab)
             {
-                if (Count == 0)
-                {
-                    Count++;
-                    Debug.Log("Only one tetra");
-                }
-                else
-                {
-                    Count++;
-                    Debug.Log(Count + " tetra");
-                }
+                NeonTetraInTank.Add(this.gameObject);
+                Debug.Log(NeonTetraInTank.Count);
             }
         }
     }

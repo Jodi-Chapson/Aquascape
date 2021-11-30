@@ -12,33 +12,33 @@ public class BubblesGenerated : MonoBehaviour
     public Transform SpawnPoint;
     public GameObject BubblePrefab;
 
-
-
     public int bubbleproduction;
     public int baseproduction;
     public int level;
     public int levelmodifier = 1;
+    public float happinessmodifier;
     public int hometankID;
     public InfoTankManager hometank;
     public float tankmodifier;
 
+    public Fish fish;
 
     void Start()
     {
         ResetTimer = false;
-
+        fish = this.GetComponent<Fish>();
         hometank = GameObject.Find("Tank01").GetComponent<InfoTankManager>();
         tankmodifier = hometank.TankProductionModifer;
+        
        
     }
 
 
     void Update()
     {
-
-
+        happinessmodifier = fish.Happiness / 10;
         tankmodifier = hometank.TankProductionModifer;
-        bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier);
+        bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier);
         seconds += Time.deltaTime;
 
         
