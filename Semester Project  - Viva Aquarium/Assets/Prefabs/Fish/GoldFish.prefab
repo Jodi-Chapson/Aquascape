@@ -511,9 +511,11 @@ MonoBehaviour:
   baseproduction: 1
   level: 0
   levelmodifier: 1
+  happinessmodifier: 0
   hometankID: 0
   hometank: {fileID: 0}
   tankmodifier: 0
+  fish: {fileID: 0}
 --- !u!114 &-7484625207602008992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,7 +547,7 @@ MonoBehaviour:
   canMove: 0
   HappinessLevel: {fileID: 1345299883}
   Level: 0
-  Happiness: 0
+  Happiness: 10
   Species: Gold Fish
 --- !u!61 &-5565318386594651653
 BoxCollider2D:
@@ -633,3 +635,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1025dfd0c33b58949a7cf26fc1e5daca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fish: {fileID: 0}
+  bubblesgenerated: {fileID: 0}

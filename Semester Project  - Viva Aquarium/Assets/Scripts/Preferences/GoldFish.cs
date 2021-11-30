@@ -5,9 +5,11 @@ using UnityEngine;
 public class GoldFish : MonoBehaviour
 {
     public Fish fish;
+    public BubblesGenerated bubblesgenerated;
     private void Start()
     {
         fish = this.GetComponent<Fish>();
+        bubblesgenerated = this.GetComponent<BubblesGenerated>();
     }
     private void Update()
     {
@@ -26,12 +28,17 @@ public class GoldFish : MonoBehaviour
         {
             if (fish.Happiness > 0f)
             {
-                fish.Happiness -= 0.00004f;
+                fish.Happiness -= 0.00000001f;
             }
             else
             {
                 fish.Happiness = 0f;
             }
+        }
+
+        if (fish.Happiness < 3f)
+        {
+           bubblesgenerated.bubbleproduction = 0.5f;
         }
     }
 }
