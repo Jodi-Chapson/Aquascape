@@ -10,7 +10,7 @@ public class Fish : MonoBehaviour
     private BoxCollider2D FishTankTrigger03;
     private BoxCollider2D FishTankTrigger04;
 
-    private BoxCollider2D SwimmingArea;
+    public BoxCollider2D SwimmingArea;
 
     private GameObject MoveSpot;
     public Transform MoveSpotTransform;
@@ -60,6 +60,22 @@ public class Fish : MonoBehaviour
         FishTankTrigger03 = GameObject.Find("Tank03").GetComponent<BoxCollider2D>();
         FishTankTrigger04 = GameObject.Find("Tank04").GetComponent<BoxCollider2D>();
 
+
+
+        speedTime = Random.Range(MinSpeedTime, MaxSpeedTime);
+        waitTime = StartWaitTime;
+        currentSpeed = Random.Range(minspeed, maxspeed);
+        MoveSpot = new GameObject();
+        MoveSpotTransform = MoveSpot.transform;
+        scaleX = this.transform.localScale.x;
+        HappinessLevel.GetComponent<Slider>().value = Happiness;
+
+        DetermineMoveSpot(MoveSpotTransform);
+        FlipFish(MoveSpotTransform);
+    }
+
+    private void LateUpdate()
+    {
         if (Species == "Gold Fish" && hometankID == 1)
         {
             SwimmingArea = GameObject.Find("Gold Fish Swimming Area 1").GetComponent<BoxCollider2D>();
@@ -80,21 +96,10 @@ public class Fish : MonoBehaviour
         {
             SwimmingArea = GameObject.Find("Red Tailed Shark Swimming Area 2").GetComponent<BoxCollider2D>();
         }
-        else if (Species == "Neon Tetra Swimming Area" && hometankID == 2)
+        else if (Species == "Neon Tetra" && hometankID == 2)
         {
             SwimmingArea = GameObject.Find("Neon Tetra Swimming Area 2").GetComponent<BoxCollider2D>();
         }
-
-        speedTime = Random.Range(MinSpeedTime, MaxSpeedTime);
-        waitTime = StartWaitTime;
-        currentSpeed = Random.Range(minspeed, maxspeed);
-        MoveSpot = new GameObject();
-        MoveSpotTransform = MoveSpot.transform;
-        scaleX = this.transform.localScale.x;
-        HappinessLevel.GetComponent<Slider>().value = Happiness;
-
-        DetermineMoveSpot(MoveSpotTransform);
-        FlipFish(MoveSpotTransform);
     }
 
     void OnMouseOver()

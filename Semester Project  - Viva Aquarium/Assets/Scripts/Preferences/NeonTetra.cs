@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class NeonTetra : MonoBehaviour
 {
-    public static List<GameObject> NeonTetraInTank = new List<GameObject>();
+    public static List<GameObject> NeonTetraInTankOne = new List<GameObject>();
+    public static List<GameObject> NeonTetraInTankTwo = new List<GameObject>();
     public GameObject NeonTetraPrefab;
     public Fish fish;
     private void Start()
@@ -15,9 +16,7 @@ public class NeonTetra : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(NeonTetraInTank.Count);
-
-        if (NeonTetraInTank.Count >= 2)
+        if (NeonTetraInTankOne.Count >= 2)
         {
             if (fish.Happiness < 10f)
             {
@@ -51,10 +50,14 @@ public class NeonTetra : MonoBehaviour
     {
         for (int i = 0; i < GameManager.fish.Count; i++)
         {
-            if (GameManager.fish[i] == NeonTetraPrefab)
+            if (GameManager.fish[i] == NeonTetraPrefab && fish.hometankID == 1)
             {
-                NeonTetraInTank.Add(this.gameObject);
-                Debug.Log(NeonTetraInTank.Count);
+                NeonTetraInTankOne.Add(GameManager.fish[i]);
+                Debug.Log(NeonTetraInTankOne.Count);
+            } 
+            else if (GameManager.fish[i] == NeonTetraPrefab)
+            {
+                NeonTetraInTankTwo.Add(GameManager.fish[i]);
             }
         }
     }
