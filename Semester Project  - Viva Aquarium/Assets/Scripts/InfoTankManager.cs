@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class InfoTankManager : MonoBehaviour
 {
 
+
     public Text TankLevelText;
     public Text CapacityText;
     public Text UpgradePrice;
@@ -29,6 +30,13 @@ public class InfoTankManager : MonoBehaviour
     public GameObject panelprefab;
     public GameObject targetpanel;
 
+    public GameObject RandomBubble;
+    public float Timer;
+    public bool BubbleSpawned = false;
+
+    public GameObject PopPrefab;
+    public Transform PopPosition;
+
     public void Start()
     {
         UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
@@ -43,6 +51,16 @@ public class InfoTankManager : MonoBehaviour
             panel.transform.SetParent(targetpanel.transform);
             panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
             panel.GetComponent<FishPanelInfo>().LoadInfo(GameManager.fish[i].gameObject);
+        }
+    }
+
+    public void Update()
+    {
+        Timer += Time.deltaTime;
+
+        if(Timer >= 300)
+        {
+            SpawnBubble();
         }
     }
 
@@ -76,6 +94,16 @@ public class InfoTankManager : MonoBehaviour
     //        panel.GetComponent<FishPanelInfo>().LoadInfo(collision.gameObject);
     //    }
     //}
+
+    public void SpawnBubble()
+    {
+        Vector3 bubblePosition = new Vector3(Random.Range(-7f,7f), Random.Range(-3f,2.5f), 0f);
+        Instantiate(RandomBubble, bubblePosition, Quaternion.identity);
+        BubbleSpawned = true;
+
+        Timer = 0;
+        
+    }
 
     //    void OnMouseOver()
     //    {

@@ -27,7 +27,7 @@ public class TimeMaster : MonoBehaviour
 
         string tempString = PlayerPrefs.GetString(saveLocation, "1");
 
-        //Grab old tiem from the player prefs as a long 
+        //Grab old time from the player prefs as a long 
 
         long tempLong = Convert.ToInt64(tempString);
 
