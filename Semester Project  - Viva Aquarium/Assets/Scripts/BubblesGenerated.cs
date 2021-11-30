@@ -38,7 +38,7 @@ public class BubblesGenerated : MonoBehaviour
     {
         happinessmodifier = fish.Happiness / 10;
         tankmodifier = hometank.TankProductionModifer;
-        bubbleproduction = baseproduction + ((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier);
+        bubbleproduction = ((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier);
         seconds += Time.deltaTime;
 
         
