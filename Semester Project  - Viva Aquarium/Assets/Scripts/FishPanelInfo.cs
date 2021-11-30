@@ -73,6 +73,7 @@ public class FishPanelInfo : MonoBehaviour
             
             UpgradePrice.text = "Price: " + UpgradeFishPrice;
 
+            targetfish.GetComponent<Fish>().Level += 1;
             targetfish.GetComponent<BubblesGenerated>().levelmodifier += 1;
             targetfish.GetComponent<BubblesGenerated>().level += 1;
             currentlevel = targetfish.GetComponent<BubblesGenerated>().level;
