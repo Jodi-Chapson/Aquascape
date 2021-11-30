@@ -17,5 +17,13 @@ public class DestroyBubble : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void Update()
+    {
+        if (this.transform.position.y >= 2f)
+        {
+            Destroy();
+        }
+    }
+
    
 }
