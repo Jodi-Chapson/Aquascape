@@ -35,10 +35,5 @@ public class GoldFish : MonoBehaviour
                 fish.Happiness = 0f;
             }
         }
-
-        if (fish.Happiness < 3f)
-        {
-           bubblesgenerated.bubbleproduction = 0.5f;
-        }
     }
 }

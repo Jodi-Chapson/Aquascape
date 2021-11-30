@@ -14,7 +14,7 @@ public class BubbleManager : MonoBehaviour
     {
 
         Count = BubblesGenerated.bubbles;
-        KeepCount.text = Count + "";
+        KeepCount.text = Count.ToString("0") + "";
 
         if (Count >= 1000)
         {
