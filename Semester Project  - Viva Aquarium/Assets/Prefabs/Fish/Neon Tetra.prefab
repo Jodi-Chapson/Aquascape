@@ -127,6 +127,7 @@ MonoBehaviour:
   Level: 0
   Happiness: 10
   Species: Neon Tetra
+  hometankID: 0
 --- !u!61 &4229211670273743641
 BoxCollider2D:
   m_ObjectHideFlags: 0

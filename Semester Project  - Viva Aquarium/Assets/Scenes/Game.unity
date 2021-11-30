@@ -1524,6 +1524,7 @@ MonoBehaviour:
   BubbleSpawned: 0
   PopPrefab: {fileID: 0}
   PopPosition: {fileID: 0}
+  TankID: 0
 --- !u!1 &137800494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,7 +2798,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0043358803, y: -0.37279463}
+  m_Offset: {x: -0.053937435, y: -0.37279463}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2808,7 +2809,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.970811, y: 6.2912865}
+  m_Size: {x: 14.533389, y: 6.2912865}
   m_EdgeRadius: 0
 --- !u!114 &246969935
 MonoBehaviour:
@@ -2844,6 +2845,7 @@ MonoBehaviour:
   BubbleSpawned: 0
   PopPrefab: {fileID: 0}
   PopPosition: {fileID: 0}
+  TankID: 1
 --- !u!1 &253310353
 GameObject:
   m_ObjectHideFlags: 0
@@ -4562,7 +4564,7 @@ GameObject:
   - component: {fileID: 417210231}
   - component: {fileID: 417210232}
   m_Layer: 0
-  m_Name: Red Tailed Shark Swimming Area
+  m_Name: Red Tailed Shark Swimming Area 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5509,6 +5511,7 @@ MonoBehaviour:
   BubbleSpawned: 0
   PopPrefab: {fileID: 0}
   PopPosition: {fileID: 0}
+  TankID: 0
 --- !u!1 &518454466
 GameObject:
   m_ObjectHideFlags: 0
@@ -6545,6 +6548,10 @@ Transform:
   - {fileID: 1606166602}
   - {fileID: 699770746}
   - {fileID: 542529920}
+  - {fileID: 879200653}
+  - {fileID: 1140332676}
+  - {fileID: 906407930}
+  - {fileID: 983020963}
   m_Father: {fileID: 240329221}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6606,6 +6613,7 @@ MonoBehaviour:
   BubbleSpawned: 0
   PopPrefab: {fileID: 0}
   PopPosition: {fileID: 0}
+  TankID: 2
 --- !u!1 &595897379
 GameObject:
   m_ObjectHideFlags: 0
@@ -7810,7 +7818,7 @@ GameObject:
   - component: {fileID: 687366700}
   - component: {fileID: 687366701}
   m_Layer: 0
-  m_Name: Gold Fish Swimming Area
+  m_Name: Gold Fish Swimming Area 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9044,8 +9052,8 @@ MonoBehaviour:
   Exodon: {fileID: 5794334053201423468, guid: add29cae57aa86b419ba2eb1d0bbd603, type: 3}
   Neon_Tetra: {fileID: 1176685205805307522, guid: 751b3276fc4fa714287057e1fffe6421,
     type: 3}
-  FishTankCollider: {fileID: 246969933}
-  FishTank: {fileID: 246969931}
+  FishTankOneCollider: {fileID: 246969933}
+  FishTankTwoCollider: {fileID: 583073072}
 --- !u!4 &761694662
 Transform:
   m_ObjectHideFlags: 0
@@ -10420,6 +10428,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873887570}
   m_CullTransparentMesh: 1
+--- !u!1 &879200652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 879200653}
+  - component: {fileID: 879200654}
+  m_Layer: 0
+  m_Name: SandCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &879200653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879200652}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.01, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 583073071}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &879200654
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879200652}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0075855255, y: -3.2618122}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.004333, y: 0.75726056}
+  m_EdgeRadius: 0
 --- !u!1 &887479434
 GameObject:
   m_ObjectHideFlags: 0
@@ -10860,6 +10925,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903665125}
   m_CullTransparentMesh: 1
+--- !u!1 &906407929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906407930}
+  - component: {fileID: 906407931}
+  m_Layer: 0
+  m_Name: Red Tailed Shark Swimming Area 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &906407930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906407929}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.07, y: -2.0214, z: 0}
+  m_LocalScale: {x: 16, y: 3.21875, z: 1}
+  m_Children: []
+  m_Father: {fileID: 583073071}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &906407931
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906407929}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0025363117, y: 0.027736545}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.96652114, y: 0.9445269}
+  m_EdgeRadius: 0
 --- !u!1 &911007160
 GameObject:
   m_ObjectHideFlags: 0
@@ -12237,6 +12359,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979112595}
   m_CullTransparentMesh: 1
+--- !u!1 &983020962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 983020963}
+  - component: {fileID: 983020964}
+  m_Layer: 0
+  m_Name: Neon Tetra Swimming Area 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &983020963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983020962}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.07, y: 1.7, z: 0}
+  m_LocalScale: {x: 16, y: 3.21875, z: 1}
+  m_Children: []
+  m_Father: {fileID: 583073071}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &983020964
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983020962}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00050729513, y: -0.06555918}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9726082, y: 0.7478495}
+  m_EdgeRadius: 0
 --- !u!1 &990095616
 GameObject:
   m_ObjectHideFlags: 0
@@ -13976,6 +14155,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128878101}
   m_CullTransparentMesh: 1
+--- !u!1 &1140332675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1140332676}
+  - component: {fileID: 1140332677}
+  m_Layer: 0
+  m_Name: Gold Fish Swimming Area 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1140332676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140332675}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.01, y: 0, z: 0}
+  m_LocalScale: {x: 16.339989, y: 7.2276998, z: 0}
+  m_Children: []
+  m_Father: {fileID: 583073071}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1140332677
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140332675}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0009934306, y: -0.03930205}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.95827687, y: 0.8899542}
+  m_EdgeRadius: 0
 --- !u!1 &1142727749
 GameObject:
   m_ObjectHideFlags: 0
@@ -20630,7 +20866,7 @@ GameObject:
   - component: {fileID: 1848219815}
   - component: {fileID: 1848219816}
   m_Layer: 0
-  m_Name: Neon Tetra Swimming Area
+  m_Name: Neon Tetra Swimming Area 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25213,6 +25449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fishlength
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: hometankID
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2060002001, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
       propertyPath: m_Camera

@@ -37,6 +37,8 @@ public class InfoTankManager : MonoBehaviour
     public GameObject PopPrefab;
     public Transform PopPosition;
 
+    public int TankID;
+
     public void Start()
     {
         UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
@@ -83,18 +85,6 @@ public class InfoTankManager : MonoBehaviour
         }
     }
 
-    //private void /OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.tag == "Fish")
-    //    {
-    //        GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
-    //        panel.GetComponent<FishPanelInfo>().targetfish = collision.gameObject;
-    //        panel.transform.SetParent(targetpanel.transform);
-    //        panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
-    //        panel.GetComponent<FishPanelInfo>().LoadInfo(collision.gameObject);
-    //    }
-    //}
-
     public void SpawnBubble()
     {
         Vector3 bubblePosition = new Vector3(Random.Range(-7f,7f), Random.Range(-3f,2.5f), 0f);
@@ -121,4 +111,24 @@ public class InfoTankManager : MonoBehaviour
     //        }
     //    }
     //}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "GoldFish" && TankID == 1)
+        {
+            collision.GetComponent<Fish>().hometankID = 1;
+        }
+        else if (collision.tag == "RedTailed" && TankID == 1)
+        {
+            collision.GetComponent<Fish>().hometankID = 1;
+        }
+        else if (collision.tag == "NeonTetra" && TankID == 1)
+        {
+            collision.GetComponent<Fish>().hometankID = 1;
+        }
+        else
+        {
+            collision.GetComponent<Fish>().hometankID = 2;
+        }
+    }
 }

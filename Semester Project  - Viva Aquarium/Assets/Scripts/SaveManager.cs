@@ -5,10 +5,10 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 
-public class SaveManager: MonoBehaviour
+public class SaveManager : MonoBehaviour
 {
     public static List<Fish> Fish = new List<Fish>();
-    public GameObject[] FishTanks = new GameObject[4];
+    public GameObject[] FishTanks = new GameObject[2];
 
     const string FISH_SUB_PATH = "/fish";
     const string FISH_COUNT_PATH = "/fish.count";
@@ -21,8 +21,10 @@ public class SaveManager: MonoBehaviour
     [SerializeField] Fish Exodon;
     [SerializeField] Fish Neon_Tetra;
 
-    public BoxCollider2D FishTankCollider;
-    public GameObject FishTank;
+    public BoxCollider2D FishTankOneCollider;
+    public BoxCollider2D FishTankTwoCollider;
+    float xPos;
+    float yPos;
 
     /// <summary>
     /// Functions to save and load a fishes necessary data.
@@ -43,9 +45,9 @@ public class SaveManager: MonoBehaviour
 
     private void OnApplicationQuit()
     {
-       SaveFishData();
-       SaveNumberOfBubbles();
-       SaveTankData();
+        SaveFishData();
+        SaveNumberOfBubbles();
+        SaveTankData();
     }
 
     public void SaveFishData()
@@ -99,11 +101,21 @@ public class SaveManager: MonoBehaviour
                     StartFish.GetComponent<Fish>().Level = data.Level;
                     StartFish.GetComponent<Fish>().Species = data.Species;
                     StartFish.GetComponent<Fish>().Happiness = data.Happiness;
+                    StartFish.GetComponent<Fish>().hometankID = data.HomeTankID;
                 }
                 else
                 {
-                    float xPos = Random.Range(FishTankCollider.bounds.min.x, FishTankCollider.bounds.max.x);
-                    float yPos = Random.Range(FishTankCollider.bounds.min.y, FishTankCollider.bounds.max.y);
+                    if (data.HomeTankID == 1)
+                    {
+                        xPos = Random.Range(FishTankOneCollider.bounds.min.x, FishTankOneCollider.bounds.max.x);
+                        yPos = Random.Range(FishTankOneCollider.bounds.min.y, FishTankOneCollider.bounds.max.y);
+                    }
+                    else
+                    {
+                        xPos = Random.Range(FishTankTwoCollider.bounds.min.x, FishTankTwoCollider.bounds.max.x);
+                        yPos = Random.Range(FishTankTwoCollider.bounds.min.y, FishTankTwoCollider.bounds.max.y);
+                    }
+
 
                     Vector2 Pos = new Vector2(xPos, yPos);
 
@@ -113,13 +125,16 @@ public class SaveManager: MonoBehaviour
                         fish.Level = data.Level;
                         fish.Species = data.Species;
                         fish.Happiness = data.Happiness;
-                    } 
+                        fish.hometankID = data.HomeTankID;
+                    }
                     else if (data.Species == "Red Tailed Shark")
                     {
                         Fish fish = Instantiate(Red_Tailed_Shark, Pos, Quaternion.identity);
                         fish.Level = data.Level;
                         fish.Species = data.Species;
                         fish.Happiness = data.Happiness;
+                        fish.hometankID = data.HomeTankID;
+                        Debug.Log("SPawning RTS");
                     }
                     else if (data.Species == "Exodon")
                     {
@@ -127,6 +142,7 @@ public class SaveManager: MonoBehaviour
                         fish.Level = data.Level;
                         fish.Species = data.Species;
                         fish.Happiness = data.Happiness;
+                        fish.hometankID = data.HomeTankID;
                     }
                     else if (data.Species == "Neon Tetra")
                     {
@@ -134,6 +150,7 @@ public class SaveManager: MonoBehaviour
                         fish.Level = data.Level;
                         fish.Species = data.Species;
                         fish.Happiness = data.Happiness;
+                        fish.hometankID = data.HomeTankID;
                     }
                 }
             }
@@ -183,7 +200,7 @@ public class SaveManager: MonoBehaviour
         {
             FileStream fstream = new FileStream(savepath + i, FileMode.Create);
             TankData data = new TankData(FishTanks[i].GetComponent<InfoTankManager>());
-            formatter.Serialize(fstream, data);                                    
+            formatter.Serialize(fstream, data);
             fstream.Close();
         }
     }
@@ -206,24 +223,14 @@ public class SaveManager: MonoBehaviour
                 FishTanks[i].GetComponent<InfoTankManager>().TankLevel = data.TankLevel;
                 FishTanks[i].GetComponent<InfoTankManager>().UpgradeTankPrice = data.UpgradePrice;
                 FishTanks[i].GetComponent<InfoTankManager>().FishAllowed = data.FishAllowed;
+                FishTanks[i].GetComponent<InfoTankManager>().TankID = data.TankID;
+
                 if (i == 1 && FishTanks[1].GetComponent<InfoTankManager>().Unlocked)
                 {
                     GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_LockButton.SetActive(false);
                     GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_LockedSprite.SetActive(false);
                     GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank02_InfoButton.SetActive(true);
                 }
-                //else if (i == 2 && FishTanks[2].GetComponent<InfoTankManager>().Unlocked)
-                //{
-                //    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank03_LockButton.SetActive(false);
-                //    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank03_LockedSprite.SetActive(false);
-                //    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank03_InfoButton.SetActive(true);
-                //}
-                //else if (i == 3 && FishTanks[3].GetComponent<InfoTankManager>().Unlocked)
-                //{
-                //    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank04_LockButton.SetActive(false);
-                //    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank04_LockedSprite.SetActive(false);
-                //    GameObject.Find("Tanks").GetComponent<UnlockTank>().Tank04_InfoButton.SetActive(true);
-                //}
             }
             else
             {

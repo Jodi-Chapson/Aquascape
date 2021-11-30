@@ -10,6 +10,7 @@ public class TankData
     public bool Unlocked;
     public float UpgradePrice;
     public float FishAllowed;
+    public int TankID;
 
      
       public TankData (InfoTankManager infotankmanager)
@@ -19,5 +20,6 @@ public class TankData
         FishAllowed = infotankmanager.FishAllowed;
         Unlocked = infotankmanager.Unlocked;
         UpgradePrice = infotankmanager.UpgradeTankPrice;
+        TankID = infotankmanager.TankID;
       }
 }
