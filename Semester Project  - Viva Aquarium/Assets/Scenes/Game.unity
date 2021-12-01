@@ -2829,7 +2829,7 @@ MonoBehaviour:
   TankLevel: 1
   TankProductionModifer: 1
   UpgradeTankPrice: 250
-  FishInTank: 0
+  FishInTank: 1
   FishAllowed: 8
   FishFoodPrefab: {fileID: 5788731206443467250, guid: 15a30baaa8e0e47418b583dba075192f,
     type: 3}
@@ -6610,14 +6610,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fbb96d7190b90a4597be4c91557419d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TankLevelText: {fileID: 0}
-  CapacityText: {fileID: 0}
-  UpgradePrice: {fileID: 0}
+  TankLevelText: {fileID: 1219267582}
+  CapacityText: {fileID: 19728185}
+  UpgradePrice: {fileID: 1285003959}
   TankLevel: 1
   TankProductionModifer: 0
   UpgradeTankPrice: 20
   FishInTank: 0
-  FishAllowed: 0
+  FishAllowed: 8
   FishFoodPrefab: {fileID: 0}
   FoodSpawnPoint: {fileID: 0}
   moveSpots: {fileID: 0}
