@@ -12,7 +12,7 @@ public class Fish : MonoBehaviour
 
     public BoxCollider2D SwimmingArea;
 
-    private GameObject MoveSpot;
+    public GameObject MoveSpot;
     public Transform MoveSpotTransform;
 
     public float minX;
