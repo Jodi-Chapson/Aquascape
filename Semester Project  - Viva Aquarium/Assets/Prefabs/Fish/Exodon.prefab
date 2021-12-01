@@ -98,7 +98,7 @@ MonoBehaviour:
   Level: 0
   Happiness: 10
   Species: Exodon
-  hometankID: 1
+  hometankID: 0
 --- !u!61 &8830676449618092535
 BoxCollider2D:
   m_ObjectHideFlags: 0

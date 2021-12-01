@@ -13,57 +13,13 @@ public class RedTailedShark : MonoBehaviour
     {
         fish = this.GetComponent<Fish>();
         CheckTankForOtherRedTailedSharks();
+
+
     }
 
     private void Update()
     {
-        if (RedTailedFishInTankOne.Count >= 2 && fish.hometankID == 1)
-        {
-            if (fish.Happiness > 0f)
-            {
-                fish.Happiness -= 0.0004f;
-                Debug.Log("Decresing happiness");
-            }
-            else
-            {
-                fish.Happiness = 0f;
-            }
-            
-        }
-        else
-        {
-            if (fish.Happiness < 10f)
-            {
-                fish.Happiness += 0.00005f;
-            }
-            else
-            {
-                fish.Happiness = 10f;
-            }
-        }
-
-        if (RedTailedFishInTankTwo.Count >= 2 && fish.hometankID == 2)
-        {
-            if (fish.Happiness > 0f)
-            {
-                fish.Happiness -= 0.00004f;
-            }
-            else
-            {
-                fish.Happiness = 0f;
-            }
-        }
-        else
-        {
-            if (fish.Happiness < 10f)
-            {
-                fish.Happiness += 0.00005f;
-            }
-            else
-            {
-                fish.Happiness = 10f;
-            }
-        }
+        //this.gameObject.GetComponent<Fish>().SwimmingArea = GameObject.Find("Red Tailed Shark Swimming Area " + this.gameObject.GetComponent<Fish>().hometankID).GetComponent<BoxCollider2D>();
     }
 
     public void CheckTankForOtherRedTailedSharks()

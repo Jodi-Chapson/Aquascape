@@ -8,44 +8,22 @@ public class NeonTetra : MonoBehaviour
     public static List<GameObject> NeonTetraInTankTwo = new List<GameObject>();
     public GameObject NeonTetraPrefab;
     public Fish fish;
+
+    private void Awake()
+    {
+        //this.gameObject.GetComponent<Fish>().SwimmingArea = GameObject.Find("Neon Tetra Swimming Area " + this.gameObject.GetComponent<Fish>().hometankID).GetComponent<BoxCollider2D>();
+    }
     private void Start()
     {
         fish = this.GetComponent<Fish>();
         CheckForOtherNeonTetras();
+
     }
 
     private void Update()
     {
-        if (NeonTetraInTankOne.Count >= 2)
-        {
-            if (fish.Happiness < 10f)
-            {
-                fish.Happiness += 0.00005f;
-            }
-            else
-            {
-                fish.Happiness = 10f;
-            }
-
-            //Code to change their movement so that they swim together.
-        }
-        else
-        {
-            if (fish.Happiness > 4f)
-            {
-                fish.Happiness -= 0.00004f;
-            }
-            else if (fish.Happiness <= 4f && fish.Happiness > 0f)
-            {
-                fish.Happiness -= 0.000002f;
-            }
-            else
-            {
-                fish.Happiness = 0f;
-            }
-        }
+        //this.gameObject.GetComponent<Fish>().SwimmingArea = GameObject.Find("Neon Tetra Swimming Area " + this.gameObject.GetComponent<Fish>().hometankID).GetComponent<BoxCollider2D>();
     }
-
     public void CheckForOtherNeonTetras()
     {
         for (int i = 0; i < GameManager.fish.Count; i++)

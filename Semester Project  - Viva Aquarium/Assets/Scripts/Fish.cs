@@ -12,7 +12,7 @@ public class Fish : MonoBehaviour
 
     public BoxCollider2D SwimmingArea;
 
-    private GameObject MoveSpot;
+    public GameObject MoveSpot;
     public Transform MoveSpotTransform;
 
     public float minX;
@@ -38,9 +38,6 @@ public class Fish : MonoBehaviour
 
     public GameObject HappinessLevel;            //This is the happiness level indicator
 
-    private Image Colour;                        //These two variables are for the happiness colours
-    private Image ColourBoarder;
-
     //Save File stuff
     public int Level;
     public float Happiness;
@@ -56,32 +53,13 @@ public class Fish : MonoBehaviour
     void Start()
     {
         canMove = true;
-       // HappinessLevel.SetActive(false);
+        HappinessLevel.SetActive(false);
 
         FishTankTrigger = GameObject.Find("Tank01").GetComponent<BoxCollider2D>();
         FishTankTrigger02 = GameObject.Find("Tank02").GetComponent<BoxCollider2D>();
         FishTankTrigger03 = GameObject.Find("Tank03").GetComponent<BoxCollider2D>();
         FishTankTrigger04 = GameObject.Find("Tank04").GetComponent<BoxCollider2D>();
 
-
-
-        speedTime = Random.Range(MinSpeedTime, MaxSpeedTime);
-        waitTime = StartWaitTime;
-        currentSpeed = Random.Range(minspeed, maxspeed);
-        MoveSpot = new GameObject();
-        MoveSpotTransform = MoveSpot.transform;
-        scaleX = this.transform.localScale.x;
-        HappinessLevel.GetComponent<Slider>().value = Happiness;
-
-        Colour = GameObject.Find("Fill").GetComponent<Image>();
-        ColourBoarder = GameObject.Find("Boarder").GetComponent<Image>();
-
-        DetermineMoveSpot(MoveSpotTransform);
-        FlipFish(MoveSpotTransform);
-    }
-
-    private void LateUpdate()
-    {
         if (Species == "Gold Fish" && hometankID == 1)
         {
             SwimmingArea = GameObject.Find("Gold Fish Swimming Area 1").GetComponent<BoxCollider2D>();
@@ -107,38 +85,38 @@ public class Fish : MonoBehaviour
         {
             SwimmingArea = GameObject.Find("Neon Tetra Swimming Area 2").GetComponent<BoxCollider2D>();
         }
+
+        speedTime = Random.Range(MinSpeedTime, MaxSpeedTime);
+        waitTime = StartWaitTime;
+        currentSpeed = Random.Range(minspeed, maxspeed);
+        scaleX = this.transform.localScale.x;
+        HappinessLevel.GetComponent<Slider>().value = Happiness;
+
+        MoveSpot = new GameObject();
+        MoveSpot.transform.position = new Vector2(Random.Range(SwimmingArea.bounds.min.x, SwimmingArea.bounds.max.x), Random.Range(SwimmingArea.bounds.min.y, SwimmingArea.bounds.max.y));
+        MoveSpotTransform = MoveSpot.transform;
+        DetermineMoveSpot(MoveSpotTransform);
+        FlipFish(MoveSpotTransform);
+        //Debug.Log( "Movespot transform = " + MoveSpot.transform.position);
+        //Debug.Log("Movespottransform transform = " + MoveSpotTransform.transform.position);
+
+
+
+
     }
 
     void OnMouseOver()
     {
-        Color FullAlpha = Colour.color;                     //Show the Happiness Bar when mouse hovers over fish
-        FullAlpha.a = 100f;
-
-        Colour.GetComponent<Image>().color = FullAlpha;         
-        ColourBoarder.GetComponent<Image>().color = FullAlpha;
+        HappinessLevel.SetActive(true);         // Only Appear when mouse hovers over the fish
     }
 
-    void OnMouseExit()                                      //Hide the Happiness Bar when mouse moves off the fish
+    void OnMouseExit()
     {
-        Color ZeroAlpha = Colour.color;
-        ZeroAlpha.a = 0f;
-
-        Colour.GetComponent<Image>().color = ZeroAlpha;
-        ColourBoarder.GetComponent<Image>().color = ZeroAlpha;
+        HappinessLevel.SetActive(false);
     }
 
     void Update()
     {
-        if (GameObject.Find("TimeManager").GetComponent<RealTimeCounter>().Hungry)              //If Fish is Hungry, Happiness Bar needs to be red
-        {
-            Colour.GetComponent<Image>().color = Color.red;
-        }
-        else                                                                                    //If Fish is not Hungry, Happiness Bar needs to be green
-        {
-            Colour.GetComponent<Image>().color = Color.green;
-        }
-
-
 
         if (speedTime <= 0)
         {
@@ -233,8 +211,8 @@ public class Fish : MonoBehaviour
     private Transform DetermineMoveSpot(Transform movespot)
     {
         //choose a position within the range of the home tank
-        float xPos = Random.Range(SwimmingArea.bounds.min.x, SwimmingArea.bounds.max.x);
-        float yPos = Random.Range(SwimmingArea.bounds.min.y, SwimmingArea.bounds.max.y);
+        float xPos = Random.Range(SwimmingArea.bounds.min.x + fishlength, SwimmingArea.bounds.max.x - fishlength);
+        float yPos = Random.Range(SwimmingArea.bounds.min.y + fishheight, SwimmingArea.bounds.max.y - fishheight);
         movespot.position = new Vector2(xPos, yPos);
         return movespot;
     }

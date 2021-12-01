@@ -23,6 +23,8 @@ public class SaveManager : MonoBehaviour
 
     public BoxCollider2D FishTankOneCollider;
     public BoxCollider2D FishTankTwoCollider;
+    public int Count = 0;
+    Vector2 Pos;
     float xPos;
     float yPos;
 
@@ -95,32 +97,37 @@ public class SaveManager : MonoBehaviour
                 FishData data = formatter.Deserialize(fstream) as FishData;
                 fstream.Close();
 
-                if (i == 0)
+                if (Count == 0 && data.Species == "Gold Fish")
                 {
+                    Debug.Log(data.Species);
                     GameObject StartFish = GameObject.Find("Fish");
                     StartFish.GetComponent<Fish>().Level = data.Level;
                     StartFish.GetComponent<Fish>().Species = data.Species;
                     StartFish.GetComponent<Fish>().Happiness = data.Happiness;
                     StartFish.GetComponent<Fish>().hometankID = data.HomeTankID;
+                    Count++;
                 }
                 else
                 {
+                    Debug.Log(data.Species);
+
                     if (data.HomeTankID == 1)
                     {
                         xPos = Random.Range(FishTankOneCollider.bounds.min.x, FishTankOneCollider.bounds.max.x);
                         yPos = Random.Range(FishTankOneCollider.bounds.min.y, FishTankOneCollider.bounds.max.y);
                     }
-                    else
+                    else if (data.HomeTankID == 2)
                     {
                         xPos = Random.Range(FishTankTwoCollider.bounds.min.x, FishTankTwoCollider.bounds.max.x);
-                        yPos = Random.Range(FishTankTwoCollider.bounds.min.y, FishTankTwoCollider.bounds.max.y);
+                        yPos = Random.Range(FishTankTwoCollider.bounds.min.y, FishTankTwoCollider.bounds.max.y);                  
                     }
 
+                    Pos = new Vector2(xPos, yPos);
 
-                    Vector2 Pos = new Vector2(xPos, yPos);
 
                     if (data.Species == "Gold Fish")
                     {
+                        Debug.Log("Spawning gold fish");
                         Fish fish = Instantiate(Gold_Fish, Pos, Quaternion.identity);
                         fish.Level = data.Level;
                         fish.Species = data.Species;
@@ -129,6 +136,7 @@ public class SaveManager : MonoBehaviour
                     }
                     else if (data.Species == "Red Tailed Shark")
                     {
+                        Debug.Log("Spawning RTS");
                         Fish fish = Instantiate(Red_Tailed_Shark, Pos, Quaternion.identity);
                         fish.Level = data.Level;
                         fish.Species = data.Species;
