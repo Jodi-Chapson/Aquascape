@@ -70,8 +70,8 @@ public class Fish : MonoBehaviour
         scaleX = this.transform.localScale.x;
         HappinessLevel.GetComponent<Slider>().value = Happiness;
 
-        //DetermineMoveSpot(MoveSpotTransform);
-        //FlipFish(MoveSpotTransform);
+        DetermineMoveSpot(MoveSpotTransform);
+        FlipFish(MoveSpotTransform);
     }
 
     private void LateUpdate()
