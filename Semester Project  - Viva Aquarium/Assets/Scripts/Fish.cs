@@ -37,6 +37,7 @@ public class Fish : MonoBehaviour
     public bool canMove;
 
     public GameObject HappinessLevel;            //This is the happiness level indicator
+    public GameObject FishPanelGO;
 
     //Save File stuff
     public int Level;
@@ -97,12 +98,6 @@ public class Fish : MonoBehaviour
         MoveSpotTransform = MoveSpot.transform;
         DetermineMoveSpot(MoveSpotTransform);
         FlipFish(MoveSpotTransform);
-        //Debug.Log( "Movespot transform = " + MoveSpot.transform.position);
-        //Debug.Log("Movespottransform transform = " + MoveSpotTransform.transform.position);
-
-
-
-
     }
 
     void OnMouseOver()

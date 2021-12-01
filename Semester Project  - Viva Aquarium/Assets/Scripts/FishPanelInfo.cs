@@ -13,7 +13,7 @@ public class FishPanelInfo : MonoBehaviour
     public GameObject Upgradebutton;
     public int UpgradeFishPrice;
     public int currentlevel;
-
+    public GameObject FishID;
 
     public void Start()
     {
@@ -27,7 +27,6 @@ public class FishPanelInfo : MonoBehaviour
         targetfish = fish;
         currentlevel = fish.GetComponent<BubblesGenerated>().level;
         FishSpecies.text = fish.GetComponent<Fish>().Species.ToString();
-
 
         if (fish.GetComponent<Fish>().Species == "Gold Fish")
         {
@@ -48,11 +47,9 @@ public class FishPanelInfo : MonoBehaviour
         {
             fishsprite.GetComponent<Image>().sprite = manager.panelsprites[3];
             
-        }
-        
+        }    
         
         UpdateStarSprites(fish.GetComponent<Fish>());
-
     }
 
     
@@ -76,7 +73,6 @@ public class FishPanelInfo : MonoBehaviour
             targetfish.GetComponent<Fish>().Level += 1;
             targetfish.GetComponent<BubblesGenerated>().levelmodifier += 1;
             targetfish.GetComponent<BubblesGenerated>().level += 1;
-            Debug.Log(targetfish.GetComponent<BubblesGenerated>().level);
             currentlevel = targetfish.GetComponent<BubblesGenerated>().level;
 
             UpdateStarSprites(targetfish.GetComponent<Fish>());

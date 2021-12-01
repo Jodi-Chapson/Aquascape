@@ -246,4 +246,14 @@ public class SaveManager : MonoBehaviour
             }
         }
     }
+
+    public void SaveDecorationData()
+    {
+
+    }
+
+    public void LoadDecorationData()
+    {
+
+    }
 }
