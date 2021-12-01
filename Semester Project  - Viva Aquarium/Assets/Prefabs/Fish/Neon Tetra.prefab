@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f60514192f341d40a23472dede0ea16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SwimmingArea: {fileID: 0}
   MoveSpotTransform: {fileID: 0}
   minX: 0
   maxX: 0
@@ -127,7 +128,7 @@ MonoBehaviour:
   Level: 0
   Happiness: 10
   Species: Neon Tetra
-  hometankID: 0
+  hometankID: 1
 --- !u!61 &4229211670273743641
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -570,7 +570,7 @@ MonoBehaviour:
   Level: 0
   Happiness: 10
   Species: Gold Fish
-  hometankID: 0
+  hometankID: 1
 --- !u!61 &-5565318386594651653
 BoxCollider2D:
   m_ObjectHideFlags: 0
