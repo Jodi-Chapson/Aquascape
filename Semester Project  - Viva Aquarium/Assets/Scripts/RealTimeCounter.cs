@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RealTimeCounter : MonoBehaviour
 {
@@ -9,10 +10,9 @@ public class RealTimeCounter : MonoBehaviour
 
     public bool Hungry;
 
-
     void Start()
     {
-        timer = 12; //43200; //This is 12 hours
+        timer = 86400;          //This is 24 hours
 
         timer -= TimeMaster.instance.CheckDate();
 
@@ -23,21 +23,27 @@ public class RealTimeCounter : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-       // Debug.Log(timer);
 
-        if(timer <= 0)
+        if(timer <= 43200)             //This is 12 hours    
+        {
+            Hungry = true;       
+        }
+        else
+        {
+            Hungry = false;
+        }
+
+        if(timer <= 0)                  //If Fish gets fed, reset timer
         {
             ResetTimer();
-            Hungry = true;
         }
     }
 
     void ResetTimer()
     {
         TimeMaster.instance.SaveDate();
-        timer = 12; //43200;
+        timer = 86400;
         timer -= TimeMaster.instance.CheckDate();
-
     }
 
    

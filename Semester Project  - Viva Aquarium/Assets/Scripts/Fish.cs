@@ -38,6 +38,9 @@ public class Fish : MonoBehaviour
 
     public GameObject HappinessLevel;            //This is the happiness level indicator
 
+    private Image Colour;                        //These two variables are for the happiness colours
+    private Image ColourBoarder;
+
     //Save File stuff
     public int Level;
     public float Happiness;
@@ -53,7 +56,7 @@ public class Fish : MonoBehaviour
     void Start()
     {
         canMove = true;
-        HappinessLevel.SetActive(false);
+       // HappinessLevel.SetActive(false);
 
         FishTankTrigger = GameObject.Find("Tank01").GetComponent<BoxCollider2D>();
         FishTankTrigger02 = GameObject.Find("Tank02").GetComponent<BoxCollider2D>();
@@ -69,6 +72,9 @@ public class Fish : MonoBehaviour
         MoveSpotTransform = MoveSpot.transform;
         scaleX = this.transform.localScale.x;
         HappinessLevel.GetComponent<Slider>().value = Happiness;
+
+        Colour = GameObject.Find("Fill").GetComponent<Image>();
+        ColourBoarder = GameObject.Find("Boarder").GetComponent<Image>();
 
         DetermineMoveSpot(MoveSpotTransform);
         FlipFish(MoveSpotTransform);
@@ -105,16 +111,34 @@ public class Fish : MonoBehaviour
 
     void OnMouseOver()
     {
-        HappinessLevel.SetActive(true);         // Only Appear when mouse hovers over the fish
+        Color FullAlpha = Colour.color;                     //Show the Happiness Bar when mouse hovers over fish
+        FullAlpha.a = 100f;
+
+        Colour.GetComponent<Image>().color = FullAlpha;         
+        ColourBoarder.GetComponent<Image>().color = FullAlpha;
     }
 
-    void OnMouseExit()
+    void OnMouseExit()                                      //Hide the Happiness Bar when mouse moves off the fish
     {
-        HappinessLevel.SetActive(false);
+        Color ZeroAlpha = Colour.color;
+        ZeroAlpha.a = 0f;
+
+        Colour.GetComponent<Image>().color = ZeroAlpha;
+        ColourBoarder.GetComponent<Image>().color = ZeroAlpha;
     }
 
     void Update()
     {
+        if (GameObject.Find("TimeManager").GetComponent<RealTimeCounter>().Hungry)              //If Fish is Hungry, Happiness Bar needs to be red
+        {
+            Colour.GetComponent<Image>().color = Color.red;
+        }
+        else                                                                                    //If Fish is not Hungry, Happiness Bar needs to be green
+        {
+            Colour.GetComponent<Image>().color = Color.green;
+        }
+
+
 
         if (speedTime <= 0)
         {
