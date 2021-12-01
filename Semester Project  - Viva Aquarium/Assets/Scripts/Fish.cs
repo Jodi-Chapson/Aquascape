@@ -88,6 +88,7 @@ public class Fish : MonoBehaviour
         {
             SwimmingArea = GameObject.Find("Neon Tetra Swimming Area 1").GetComponent<BoxCollider2D>();
         }
+
         else if (Species == "Gold Fish" && hometankID == 2)
         {
             SwimmingArea = GameObject.Find("Gold Fish Swimming Area 2").GetComponent<BoxCollider2D>();

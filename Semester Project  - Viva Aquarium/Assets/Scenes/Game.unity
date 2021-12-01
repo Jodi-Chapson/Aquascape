@@ -1479,7 +1479,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00433445, y: -0.42149115}
+  m_Offset: {x: -0.040049553, y: -0.28834486}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1490,7 +1490,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.970808, y: 6.3886795}
+  m_Size: {x: 15.384962, y: 6.122387}
   m_EdgeRadius: 0
 --- !u!114 &133022844
 MonoBehaviour:
@@ -2798,7 +2798,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.053937435, y: -0.37279463}
+  m_Offset: {x: -0.018431664, y: -0.37279463}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2809,7 +2809,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.533389, y: 6.2912865}
+  m_Size: {x: 15.172491, y: 6.2912865}
   m_EdgeRadius: 0
 --- !u!114 &246969935
 MonoBehaviour:
@@ -5466,7 +5466,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.020335197, y: -0.42149115}
+  m_Offset: {x: -0.03292656, y: -0.093063354}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5477,7 +5477,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16.00281, y: 6.3886795}
+  m_Size: {x: 15.186184, y: 6.1933975}
   m_EdgeRadius: 0
 --- !u!114 &509612771
 MonoBehaviour:
@@ -6568,7 +6568,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0043354034, y: -0.42149115}
+  m_Offset: {x: -0.07555246, y: -0.08418703}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6579,7 +6579,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.97081, y: 6.3886795}
+  m_Size: {x: 15.278447, y: 6.424185}
   m_EdgeRadius: 0
 --- !u!114 &583073073
 MonoBehaviour:
@@ -19398,6 +19398,30 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 780711293183376674}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1647712821 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+    type: 3}
+  m_PrefabInstance: {fileID: 780711293183376674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647712815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f60514192f341d40a23472dede0ea16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1647712822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 780711293047101204, guid: c2c52e390a74ed843aa122478ea2f85a,
+    type: 3}
+  m_PrefabInstance: {fileID: 780711293183376674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647712815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3756ad1f9876ce34dbfa0a2247254c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &1647712823
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25455,6 +25479,11 @@ PrefabInstance:
       propertyPath: hometankID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: SwimmingArea
+      value: 
+      objectReference: {fileID: 687366701}
     - target: {fileID: 2060002001, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
       propertyPath: m_Camera
       value: 
@@ -25464,6 +25493,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish
       objectReference: {fileID: 0}
+    - target: {fileID: 780711293047101204, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: fish
+      value: 
+      objectReference: {fileID: 1647712821}
     - target: {fileID: 780711293047101206, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_RootOrder
@@ -25519,6 +25553,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8128264464736618542, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: fish
+      value: 
+      objectReference: {fileID: 1647712821}
+    - target: {fileID: 8128264464736618542, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: bubblesgenerated
+      value: 
+      objectReference: {fileID: 1647712822}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
 --- !u!1001 &2056189806182006746
