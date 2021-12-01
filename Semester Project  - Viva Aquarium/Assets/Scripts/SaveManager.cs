@@ -134,7 +134,7 @@ public class SaveManager : MonoBehaviour
                         fish.Species = data.Species;
                         fish.Happiness = data.Happiness;
                         fish.hometankID = data.HomeTankID;
-                        Debug.Log("SPawning RTS");
+
                     }
                     else if (data.Species == "Exodon")
                     {

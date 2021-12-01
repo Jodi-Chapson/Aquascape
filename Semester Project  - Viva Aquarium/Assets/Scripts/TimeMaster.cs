@@ -34,12 +34,12 @@ public class TimeMaster : MonoBehaviour
         //comnvert the old time binary to a DateTime variable 
 
         DateTime oldDate = DateTime.FromBinary(tempLong);
-        print("Old Date : " + oldDate);
+        //print("Old Date : " + oldDate);
 
         //use the subtract method and store the result as a timespan
 
         TimeSpan difference = currentDate.Subtract(oldDate);
-        print("Difference: " + difference);
+        //print("Difference: " + difference);
 
         return (float)difference.TotalSeconds;
     }
@@ -50,6 +50,6 @@ public class TimeMaster : MonoBehaviour
 
         PlayerPrefs.SetString(saveLocation, System.DateTime.Now.ToBinary().ToString());
 
-        print("Saving this date to player prefs: " + System.DateTime.Now);
+        //print("Saving this date to player prefs: " + System.DateTime.Now);
     }
 }

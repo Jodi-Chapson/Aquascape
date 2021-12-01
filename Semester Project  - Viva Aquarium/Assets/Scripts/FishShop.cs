@@ -40,30 +40,24 @@ public class FishShop : MonoBehaviour
             targetpanel = tank01fishgroup;
 
         }
-        else 
-        {
-            targettank = manager.tanks[0]; //remove this later
-            targetspawnpoint = Tank01SpawnPoint;
-            targetpanel = tank01fishgroup;
-        }
-
-         if (manager.CurrentTankID == 2)
+        else if (manager.CurrentTankID == 2)
         {
             //targettank = manager.tanks[1];
+            targettank = manager.tanks[1];
             targetspawnpoint = Tank02SpawnPoint;
             targetpanel = tank02fishgroup;
         }
-
         else if (manager.CurrentTankID == 3)
         {
             //targettank = manager.tanks[2];
+            targettank = manager.tanks[2];
             targetspawnpoint = Tank03SpawnPoint;
             targetpanel = tank03fishgroup;
         }
-
-        if (manager.CurrentTankID == 4)
+        else
         {
             //targettank = manager.tanks[4];
+            targettank = manager.tanks[3];
             targetspawnpoint = Tank04SpawnPoint;
             targetpanel = tank04fishgroup;
         }
@@ -100,6 +94,8 @@ public class FishShop : MonoBehaviour
         if (BubbleManager.Count >= fishprice) //Players can only buy fish once they have this amount of bubbles
         {
             //instantiates fish
+
+            Debug.Log("nani");
             
             GameObject fish = Instantiate(targetfish, targetspawnpoint.position, Quaternion.identity);
             BubblesGenerated.bubbles -= fishprice;

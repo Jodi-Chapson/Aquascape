@@ -32,22 +32,22 @@ public class FishPanelInfo : MonoBehaviour
         if (fish.GetComponent<Fish>().Species == "Gold Fish")
         {
             fishsprite.GetComponent<Image>().sprite = manager.panelsprites[0];
-            Debug.Log("nani1");
+            
         }
         else if (fish.GetComponent<Fish>().Species == "Red Tailed Shark")
         {
             fishsprite.GetComponent<Image>().sprite = manager.panelsprites[1];
-            Debug.Log("nani2");
+            
         }
         else if (fish.GetComponent<Fish>().Species == "Neon Tetra")
         {
             fishsprite.GetComponent<Image>().sprite = manager.panelsprites[2];
-            Debug.Log("nani3");
+            
         }
         else
         {
             fishsprite.GetComponent<Image>().sprite = manager.panelsprites[3];
-            Debug.Log("nani4");
+            
         }
         
         
@@ -93,7 +93,7 @@ public class FishPanelInfo : MonoBehaviour
     {
         if (currentlevel == 0)
         {
-            Debug.Log("nani");
+            
         }
         else if (currentlevel == 1)
         {
