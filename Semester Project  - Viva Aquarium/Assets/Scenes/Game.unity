@@ -24882,51 +24882,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111372379}
   m_CullTransparentMesh: 1
---- !u!1 &2111632399
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2111632401}
-  - component: {fileID: 2111632400}
-  m_Layer: 0
-  m_Name: Change Tanks Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2111632400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111632399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d3c770396ddb5349b313b865aef4026, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TankOneTransform: {fileID: 0}
-  TankTwoTransform: {fileID: 0}
---- !u!4 &2111632401
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111632399}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.354333, y: -0.19830598, z: -0.73158276}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2114769168
 GameObject:
   m_ObjectHideFlags: 0
@@ -25351,6 +25306,11 @@ PrefabInstance:
       propertyPath: SwimmingArea
       value: 
       objectReference: {fileID: 687366701}
+    - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
+        type: 3}
+      propertyPath: UpgradePrice
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2060002001, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
       propertyPath: m_Camera
       value: 
