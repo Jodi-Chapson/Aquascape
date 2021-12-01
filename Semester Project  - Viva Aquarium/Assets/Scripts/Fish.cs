@@ -44,6 +44,7 @@ public class Fish : MonoBehaviour
     public float Happiness;
     public string Species;
     public int hometankID;
+    public int UpgradePrice;
 
     void Awake()
     {
@@ -112,7 +113,6 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
-
         if (speedTime <= 0)
         {
             VarySpeed();

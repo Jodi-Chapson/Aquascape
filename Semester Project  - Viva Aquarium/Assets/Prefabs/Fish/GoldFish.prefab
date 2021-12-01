@@ -549,6 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SwimmingArea: {fileID: 0}
+  MoveSpot: {fileID: 0}
   MoveSpotTransform: {fileID: 0}
   minX: 0
   maxX: 0
@@ -567,10 +568,12 @@ MonoBehaviour:
   scaleX: 0
   canMove: 0
   HappinessLevel: {fileID: 1345299883}
+  FishPanelGO: {fileID: 0}
   Level: 0
   Happiness: 10
   Species: Gold Fish
   hometankID: 0
+  UpgradePrice: 100
 --- !u!61 &-5565318386594651653
 BoxCollider2D:
   m_ObjectHideFlags: 0

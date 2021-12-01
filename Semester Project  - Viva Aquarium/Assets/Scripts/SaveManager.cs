@@ -105,6 +105,7 @@ public class SaveManager : MonoBehaviour
                     StartFish.GetComponent<Fish>().Species = data.Species;
                     StartFish.GetComponent<Fish>().Happiness = data.Happiness;
                     StartFish.GetComponent<Fish>().hometankID = data.HomeTankID;
+                    StartFish.GetComponent<Fish>().UpgradePrice = data.UpgradePrice;
                     Count++;
                 }
                 else
@@ -133,6 +134,7 @@ public class SaveManager : MonoBehaviour
                         fish.Species = data.Species;
                         fish.Happiness = data.Happiness;
                         fish.hometankID = data.HomeTankID;
+                        fish.UpgradePrice = data.UpgradePrice;
                     }
                     else if (data.Species == "Red Tailed Shark")
                     {
@@ -142,7 +144,7 @@ public class SaveManager : MonoBehaviour
                         fish.Species = data.Species;
                         fish.Happiness = data.Happiness;
                         fish.hometankID = data.HomeTankID;
-
+                        fish.UpgradePrice = data.UpgradePrice;
                     }
                     else if (data.Species == "Exodon")
                     {
@@ -151,6 +153,7 @@ public class SaveManager : MonoBehaviour
                         fish.Species = data.Species;
                         fish.Happiness = data.Happiness;
                         fish.hometankID = data.HomeTankID;
+                        fish.UpgradePrice = data.UpgradePrice;
                     }
                     else if (data.Species == "Neon Tetra")
                     {
@@ -159,6 +162,7 @@ public class SaveManager : MonoBehaviour
                         fish.Species = data.Species;
                         fish.Happiness = data.Happiness;
                         fish.hometankID = data.HomeTankID;
+                        fish.UpgradePrice = data.UpgradePrice;
                     }
                 }
             }

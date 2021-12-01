@@ -18,6 +18,7 @@ public class FishPanelInfo : MonoBehaviour
     public void Start()
     {
         manager = GameObject.Find("Bubble_Manager").GetComponent<GameManager>();
+        UpgradeFishPrice = FishID.GetComponent<Fish>().UpgradePrice;
         UpgradePrice.text = "Price: " + UpgradeFishPrice;
     }
 
@@ -73,6 +74,7 @@ public class FishPanelInfo : MonoBehaviour
             targetfish.GetComponent<Fish>().Level += 1;
             targetfish.GetComponent<BubblesGenerated>().levelmodifier += 1;
             targetfish.GetComponent<BubblesGenerated>().level += 1;
+            targetfish.GetComponent<Fish>().UpgradePrice = UpgradeFishPrice;
             currentlevel = targetfish.GetComponent<BubblesGenerated>().level;
 
             UpdateStarSprites(targetfish.GetComponent<Fish>());

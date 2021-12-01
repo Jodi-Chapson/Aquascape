@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SwimmingArea: {fileID: 0}
+  MoveSpot: {fileID: 0}
   MoveSpotTransform: {fileID: 0}
   minX: 0
   maxX: 0
@@ -125,10 +126,12 @@ MonoBehaviour:
   scaleX: 0
   canMove: 0
   HappinessLevel: {fileID: 609439447958069065}
+  FishPanelGO: {fileID: 0}
   Level: 0
   Happiness: 10
   Species: Neon Tetra
   hometankID: 0
+  UpgradePrice: 100
 --- !u!61 &4229211670273743641
 BoxCollider2D:
   m_ObjectHideFlags: 0
