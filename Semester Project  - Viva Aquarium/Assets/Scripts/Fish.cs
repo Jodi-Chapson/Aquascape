@@ -89,14 +89,20 @@ public class Fish : MonoBehaviour
         speedTime = Random.Range(MinSpeedTime, MaxSpeedTime);
         waitTime = StartWaitTime;
         currentSpeed = Random.Range(minspeed, maxspeed);
-        MoveSpot = new GameObject();
-        MoveSpot.transform.position = new Vector2(Random.Range(SwimmingArea.bounds.min.x, SwimmingArea.bounds.max.x), Random.Range(SwimmingArea.bounds.min.y, SwimmingArea.bounds.max.y));
-        MoveSpotTransform = MoveSpot.transform;
         scaleX = this.transform.localScale.x;
         HappinessLevel.GetComponent<Slider>().value = Happiness;
 
+        MoveSpot = new GameObject();
+        MoveSpot.transform.position = new Vector2(Random.Range(SwimmingArea.bounds.min.x, SwimmingArea.bounds.max.x), Random.Range(SwimmingArea.bounds.min.y, SwimmingArea.bounds.max.y));
+        MoveSpotTransform = MoveSpot.transform;
         DetermineMoveSpot(MoveSpotTransform);
         FlipFish(MoveSpotTransform);
+        //Debug.Log( "Movespot transform = " + MoveSpot.transform.position);
+        //Debug.Log("Movespottransform transform = " + MoveSpotTransform.transform.position);
+
+
+
+
     }
 
     void OnMouseOver()
@@ -205,8 +211,8 @@ public class Fish : MonoBehaviour
     private Transform DetermineMoveSpot(Transform movespot)
     {
         //choose a position within the range of the home tank
-        float xPos = Random.Range(SwimmingArea.bounds.min.x, SwimmingArea.bounds.max.x);
-        float yPos = Random.Range(SwimmingArea.bounds.min.y, SwimmingArea.bounds.max.y);
+        float xPos = Random.Range(SwimmingArea.bounds.min.x + fishlength, SwimmingArea.bounds.max.x - fishlength);
+        float yPos = Random.Range(SwimmingArea.bounds.min.y + fishheight, SwimmingArea.bounds.max.y - fishheight);
         movespot.position = new Vector2(xPos, yPos);
         return movespot;
     }

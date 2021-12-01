@@ -98,7 +98,7 @@ MonoBehaviour:
   Level: 0
   Happiness: 10
   Species: Red Tailed Shark
-  hometankID: 1
+  hometankID: 0
 --- !u!61 &6697520034850967457
 BoxCollider2D:
   m_ObjectHideFlags: 0

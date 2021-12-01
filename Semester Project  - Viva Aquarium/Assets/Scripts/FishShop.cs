@@ -64,10 +64,10 @@ public class FishShop : MonoBehaviour
 
             ////NB ADD THIS LATER ^^ WHEN YOUVE BROUGHT IN ALL THE TANKS
 
-            if (targettank.FishInTank >= targettank.FishAllowed) //the tank is full :D
-        {
-            return;
-        }
+        //    if (targettank.FishInTank >= targettank.FishAllowed) //the tank is full :D
+        //{
+        //    return;
+        //}
 
         if (type == 1)
         {
@@ -96,7 +96,6 @@ public class FishShop : MonoBehaviour
             //instantiates fish
 
             Debug.Log("nani");
-            
             GameObject fish = Instantiate(targetfish, targetspawnpoint.position, Quaternion.identity);
             BubblesGenerated.bubbles -= fishprice;
             targettank.FishInTank += 1;
@@ -104,10 +103,10 @@ public class FishShop : MonoBehaviour
 
             
             //instantiates associated fish panel
-            GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
-            panel.transform.SetParent(targetpanel.transform);
-            panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
-            panel.GetComponent<FishPanelInfo>().LoadInfo(fish);
+            //GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
+            //panel.transform.SetParent(targetpanel.transform);
+            //panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
+            //panel.GetComponent<FishPanelInfo>().LoadInfo(fish);
         }
     }
 
