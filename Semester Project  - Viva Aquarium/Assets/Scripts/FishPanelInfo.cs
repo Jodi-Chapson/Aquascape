@@ -51,7 +51,7 @@ public class FishPanelInfo : MonoBehaviour
         }
         
         
-        UpdateStarSprites();
+        UpdateStarSprites(fish.GetComponent<Fish>());
 
     }
 
@@ -76,9 +76,10 @@ public class FishPanelInfo : MonoBehaviour
             targetfish.GetComponent<Fish>().Level += 1;
             targetfish.GetComponent<BubblesGenerated>().levelmodifier += 1;
             targetfish.GetComponent<BubblesGenerated>().level += 1;
+            Debug.Log(targetfish.GetComponent<BubblesGenerated>().level);
             currentlevel = targetfish.GetComponent<BubblesGenerated>().level;
 
-            UpdateStarSprites();
+            UpdateStarSprites(targetfish.GetComponent<Fish>());
             
         }
 
@@ -89,25 +90,25 @@ public class FishPanelInfo : MonoBehaviour
         }
     }
 
-    public void UpdateStarSprites()
+    public void UpdateStarSprites(Fish fish)
     {
-        if (currentlevel == 0)
+        if (fish.Level == 0)
         {
             
         }
-        else if (currentlevel == 1)
+        else if (fish.Level == 1)
         {
             onestar.SetActive(true);
         }
-        else if (currentlevel == 2)
+        else if (fish.Level == 2)
         {
             twostar.SetActive(true);
         }
-        else if (currentlevel == 3)
+        else if (fish.Level == 3)
         {
             threestar.SetActive(true);
         }
-        else if (currentlevel == 4)
+        else if (fish.Level == 4)
         {
             fourstar.SetActive(true);
         }
