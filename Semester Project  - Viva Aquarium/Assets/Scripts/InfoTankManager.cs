@@ -45,30 +45,6 @@ public class InfoTankManager : MonoBehaviour
         CapacityText.text = "Capacity : " + FishInTank + "/" + FishAllowed;
         TankLevelText.text = "Tank Level : " + TankLevel;
         //FishAllowed = 8f;
-
-        //for (int i = 0; i < GameManager.fish.Count; i++)
-        //{
-        //    if (GameManager.fish[i].GetComponent<Fish>().hometankID == 1)
-        //    {
-        //        targetpanel = GameObject.Find("Vertical Layout Group 01");
-        //        Debug.Log(targetpanel);
-        //        GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
-        //        panel.GetComponent<FishPanelInfo>().targetfish = GameManager.fish[i].gameObject;
-        //        panel.transform.SetParent(targetpanel.transform);
-        //        panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
-        //        panel.GetComponent<FishPanelInfo>().LoadInfo(GameManager.fish[i].gameObject);
-        //    }
-        //    else
-        //    {
-        //        targetpanel = GameObject.Find("Vertical Layout Group 02");
-        //        Debug.Log(targetpanel);
-        //        GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
-        //        panel.GetComponent<FishPanelInfo>().targetfish = GameManager.fish[i].gameObject;
-        //        panel.transform.SetParent(targetpanel.transform);
-        //        panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
-        //        panel.GetComponent<FishPanelInfo>().LoadInfo(GameManager.fish[i].gameObject);
-        //    }
-        //}
     }
 
     public void Update()
@@ -119,8 +95,7 @@ public class InfoTankManager : MonoBehaviour
         Instantiate(RandomBubble, bubblePosition, Quaternion.identity);
         BubbleSpawned = true;
 
-        Timer = 0;
-        
+        Timer = 0;   
     }
 
  /*  void OnMouseOver()
@@ -144,6 +119,7 @@ public class InfoTankManager : MonoBehaviour
             panel.transform.SetParent(targetpanel.transform);
             panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
             panel.GetComponent<FishPanelInfo>().LoadInfo(collision.gameObject);
+            panel.GetComponent<FishPanelInfo>().FishID = collision.gameObject;
         }
         else if (collision.tag == "RedTailed" && TankID == 1)
         {
@@ -153,6 +129,7 @@ public class InfoTankManager : MonoBehaviour
             panel.transform.SetParent(targetpanel.transform);
             panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
             panel.GetComponent<FishPanelInfo>().LoadInfo(collision.gameObject);
+            panel.GetComponent<FishPanelInfo>().FishID = collision.gameObject;
         }
         else if (collision.tag == "NeonTetra" && TankID == 1)
         {
@@ -162,6 +139,7 @@ public class InfoTankManager : MonoBehaviour
             panel.transform.SetParent(targetpanel.transform);
             panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
             panel.GetComponent<FishPanelInfo>().LoadInfo(collision.gameObject);
+            panel.GetComponent<FishPanelInfo>().FishID = collision.gameObject;
         }
         else
         {
@@ -171,6 +149,7 @@ public class InfoTankManager : MonoBehaviour
             panel.transform.SetParent(targetpanel.transform);
             panel.GetComponent<RectTransform>().localScale = new Vector3(0.25f, 0.3f, 1);
             panel.GetComponent<FishPanelInfo>().LoadInfo(collision.gameObject);
+            panel.GetComponent<FishPanelInfo>().FishID = collision.gameObject;
         }
     }
 }

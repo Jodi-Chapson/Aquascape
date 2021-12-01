@@ -37,12 +37,14 @@ public class Fish : MonoBehaviour
     public bool canMove;
 
     public GameObject HappinessLevel;            //This is the happiness level indicator
+    public GameObject FishPanelGO;
 
     //Save File stuff
     public int Level;
     public float Happiness;
     public string Species;
     public int hometankID;
+    public int UpgradePrice;
 
     void Awake()
     {
@@ -97,12 +99,6 @@ public class Fish : MonoBehaviour
         MoveSpotTransform = MoveSpot.transform;
         DetermineMoveSpot(MoveSpotTransform);
         FlipFish(MoveSpotTransform);
-        //Debug.Log( "Movespot transform = " + MoveSpot.transform.position);
-        //Debug.Log("Movespottransform transform = " + MoveSpotTransform.transform.position);
-
-
-
-
     }
 
     void OnMouseOver()
@@ -117,7 +113,6 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
-
         if (speedTime <= 0)
         {
             VarySpeed();
