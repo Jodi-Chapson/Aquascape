@@ -7,13 +7,15 @@ public class RealTimeCounter : MonoBehaviour
 {
 
     public float timer;
-    public bool Hungry;
 
+    public bool Hungry;
 
     void Start()
     {
         timer = 86400;          //This is 24 hours
+
         timer -= TimeMaster.instance.CheckDate();
+
         Hungry = false;
     }
 
@@ -35,9 +37,6 @@ public class RealTimeCounter : MonoBehaviour
         {
             ResetTimer();
         }
-
-
-
     }
 
     void ResetTimer()
