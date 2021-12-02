@@ -133,7 +133,7 @@ public class GameManager : MonoBehaviour
             }
             else if (themeID == 3)
             {
-                tank2.sprite = tankthemes[3];
+                tank1.sprite = tankthemes[3];
 
                 tank1decor0.GetComponent<Image>().sprite = block;
                 tank1decor1.GetComponent<Image>().sprite = block;
