@@ -10,6 +10,7 @@ public class InfoTankManager : MonoBehaviour
     public Text TankLevelText;
     public Text CapacityText;
     public Text UpgradePrice;
+    public GameObject UpgradeButton;
 
     public float TankLevel = 1f;
     public float TankProductionModifer; //a percentage?
@@ -74,18 +75,30 @@ public class InfoTankManager : MonoBehaviour
     {
         if (BubbleManager.Count >= UpgradeTankPrice)  //Players can only upgrade fish tank once they only have this amount
         {
-            BubblesGenerated.bubbles -= (int)UpgradeTankPrice;
 
-            FishAllowed += 2;
-            CapacityText.text = "Capacity : " + FishInTank + "/" + FishAllowed;
+                BubblesGenerated.bubbles -= (int)UpgradeTankPrice;
 
-            TankLevel += 1;
-            TankProductionModifer++;
-            TankLevelText.text = "Tank Level : " + TankLevel;
+                FishAllowed += 2;
+                CapacityText.text = "Capacity : " + FishInTank + "/" + FishAllowed;
+
+                TankLevel += 1;
+                TankProductionModifer++;
+                TankLevelText.text = "Tank Level : " + TankLevel;
 
 
-            UpgradeTankPrice = (int)(UpgradeTankPrice * 1.5f);
-            UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
+                UpgradeTankPrice = (int)(UpgradeTankPrice * 1.5f);
+                UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
+
+            if (TankLevel == 3)
+            {
+                UpgradeButton.SetActive(false);
+                UpgradePrice.gameObject.SetActive(false);
+                TankLevelText.text = "Tank Level : 3 (MAX)";
+
+            }
+
+            
+
         }
     }
 
