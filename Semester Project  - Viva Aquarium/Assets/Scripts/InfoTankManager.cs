@@ -71,6 +71,8 @@ public class InfoTankManager : MonoBehaviour
             Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Instantiate(FishFoodPrefab, new Vector3(cursorPos.x, cursorPos.y, 0), Quaternion.identity);
         }*/
+
+
     }
 
     public void UpgradeTank()
