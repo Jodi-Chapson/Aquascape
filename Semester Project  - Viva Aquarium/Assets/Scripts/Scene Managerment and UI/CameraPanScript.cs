@@ -50,7 +50,7 @@ public class CameraPanScript : MonoBehaviour
             LeftScrollButton.gameObject.SetActive(true);
         }
 
-        if (manager.CurrentTankID == 4)
+        if (manager.CurrentTankID == 2)
         {
             RightScrollButton.gameObject.SetActive(false);
         }

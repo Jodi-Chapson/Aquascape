@@ -1448,7 +1448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &133022842
 Transform:
   m_ObjectHideFlags: 0
@@ -1513,7 +1513,6 @@ MonoBehaviour:
   FishInTank: 0
   FishAllowed: 0
   FishFoodPrefab: {fileID: 0}
-  FoodSpawnPoint: {fileID: 0}
   moveSpots: {fileID: 0}
   Unlocked: 0
   panelprefab: {fileID: 4726926383902962973, guid: f7c64a76c3ed4994189338d39b8f4788,
@@ -1525,6 +1524,7 @@ MonoBehaviour:
   PopPrefab: {fileID: 0}
   PopPosition: {fileID: 0}
   TankID: 0
+  MouseOverTank: 0
 --- !u!1 &137800494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,7 +2833,6 @@ MonoBehaviour:
   FishAllowed: 8
   FishFoodPrefab: {fileID: 5788731206443467250, guid: 15a30baaa8e0e47418b583dba075192f,
     type: 3}
-  FoodSpawnPoint: {fileID: 386430601}
   moveSpots: {fileID: 0}
   Unlocked: 1
   panelprefab: {fileID: 4726926383902962973, guid: f7c64a76c3ed4994189338d39b8f4788,
@@ -2846,6 +2845,7 @@ MonoBehaviour:
   PopPrefab: {fileID: 0}
   PopPosition: {fileID: 0}
   TankID: 1
+  MouseOverTank: 0
 --- !u!1 &253310353
 GameObject:
   m_ObjectHideFlags: 0
@@ -5451,7 +5451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &509612769
 Transform:
   m_ObjectHideFlags: 0
@@ -5516,7 +5516,6 @@ MonoBehaviour:
   FishInTank: 0
   FishAllowed: 0
   FishFoodPrefab: {fileID: 0}
-  FoodSpawnPoint: {fileID: 0}
   moveSpots: {fileID: 0}
   Unlocked: 0
   panelprefab: {fileID: 4726926383902962973, guid: f7c64a76c3ed4994189338d39b8f4788,
@@ -5528,6 +5527,7 @@ MonoBehaviour:
   PopPrefab: {fileID: 0}
   PopPosition: {fileID: 0}
   TankID: 0
+  MouseOverTank: 0
 --- !u!1 &518454466
 GameObject:
   m_ObjectHideFlags: 0
@@ -6618,7 +6618,6 @@ MonoBehaviour:
   FishInTank: 0
   FishAllowed: 8
   FishFoodPrefab: {fileID: 0}
-  FoodSpawnPoint: {fileID: 0}
   moveSpots: {fileID: 0}
   Unlocked: 0
   panelprefab: {fileID: 4726926383902962973, guid: f7c64a76c3ed4994189338d39b8f4788,
@@ -6630,6 +6629,7 @@ MonoBehaviour:
   PopPrefab: {fileID: 0}
   PopPosition: {fileID: 0}
   TankID: 2
+  MouseOverTank: 0
 --- !u!1 &595897379
 GameObject:
   m_ObjectHideFlags: 0
