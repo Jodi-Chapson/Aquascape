@@ -32,6 +32,12 @@ public class BubblesGenerated : MonoBehaviour
         hometank = GameObject.Find("Tank01").GetComponent<InfoTankManager>();
         tankmodifier = hometank.TankProductionModifer;
 
+        if (fish.Level != 0)
+        {
+            level = fish.Level;
+            levelmodifier = fish.Level + 1;
+        }
+
       
     }
 
