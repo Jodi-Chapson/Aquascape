@@ -19,6 +19,9 @@ public class DestroyBubble : MonoBehaviour
 
     void Update()
     {
+
+        
+
         if (this.transform.position.y >= 2f)
         {
             Destroy();

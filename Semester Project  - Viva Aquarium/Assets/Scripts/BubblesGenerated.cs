@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BubblesGenerated : MonoBehaviour
 {
     float seconds = 0f;
     public static double bubbles = 0;
+   
 
     private bool ResetTimer;
 
@@ -38,7 +40,7 @@ public class BubblesGenerated : MonoBehaviour
     {
         happinessmodifier = fish.Happiness / 10;
         tankmodifier = hometank.TankProductionModifer;
-        bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier);
+        bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
         seconds += Time.deltaTime;
 
         
@@ -47,7 +49,7 @@ public class BubblesGenerated : MonoBehaviour
             bubbles += bubbleproduction;      //+1 each time a bubble spawns
             
             ResetTimer = true;
-            StartCoroutine(GenerateBubble());
+            StartCoroutine(GenerateBubble(bubbleproduction));
         }
 
         if (ResetTimer)
@@ -59,12 +61,13 @@ public class BubblesGenerated : MonoBehaviour
     }
 
     
-    public IEnumerator GenerateBubble()
+    public IEnumerator GenerateBubble(int production)
     {
         float random = Random.Range(0,1);
         
         yield return new WaitForSeconds(random);
         
-        Instantiate(BubblePrefab, SpawnPoint.position, SpawnPoint.rotation);
+        GameObject bubble = Instantiate(BubblePrefab, SpawnPoint.position, SpawnPoint.rotation);
+        bubble.GetComponentInChildren<Text>().text = "+" + production;
     }
 }

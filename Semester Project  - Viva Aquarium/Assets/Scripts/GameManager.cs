@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     public static List<GameObject> fish = new List<GameObject>();
     public int CurrentTankID;
 
+    public static int GameSpeed;
+    public GameObject circle;
+    public GameObject x1, x2, x3;
+
     public void ChangeThemeToInt (int themeID)
     {
         if (CurrentTankID == 1)
@@ -79,6 +83,35 @@ public class GameManager : MonoBehaviour
             }
 
         }
+    }
+
+    public void Start()
+    {
+        if (GameSpeed == 0)
+        {
+            GameSpeed = 1;
+        }
+    }
+
+
+    public void ChangeGameSpeed(int speed)
+    {
+        if (speed == 1)
+        {
+            circle.GetComponent<RectTransform>().localPosition = x1.GetComponent<RectTransform>().localPosition += new Vector3(0, 1, 0);
+            
+        }
+        else if (speed == 2)
+        {
+            circle.GetComponent<RectTransform>().localPosition = x2.GetComponent<RectTransform>().localPosition += new Vector3(0, 1, 0);
+        }
+        else if (speed == 3)
+        {
+            circle.GetComponent<RectTransform>().localPosition = x3.GetComponent<RectTransform>().localPosition += new Vector3(0, 1, 0);
+        }
+        
+        
+        GameSpeed = speed;
     }
 
 }
