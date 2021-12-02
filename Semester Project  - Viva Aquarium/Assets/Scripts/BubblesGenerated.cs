@@ -40,11 +40,10 @@ public class BubblesGenerated : MonoBehaviour
     {
         happinessmodifier = fish.Happiness / 10;
         tankmodifier = hometank.TankProductionModifer;
-        bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
-        seconds += Time.deltaTime;
+        
 
         
-        if (seconds >= 4)
+        if (seconds >= 6)
         {
             bubbles += bubbleproduction;      //+1 each time a bubble spawns
             
@@ -60,11 +59,15 @@ public class BubblesGenerated : MonoBehaviour
 
         if(GameObject.Find("Dirt01").GetComponent<Dirt>().Dirty == true)
         {
+            //fish need to stop producing bubbles
             bubbleproduction = 0;
+            seconds = 0;
         }
-        else
+       else if (GameObject.Find("Dirt01").GetComponent<Dirt>().Dirty == false)
         {
+            //continue
             bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
+            seconds += Time.deltaTime;
         }
 
     }
