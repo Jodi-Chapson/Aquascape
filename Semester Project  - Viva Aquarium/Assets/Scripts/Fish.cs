@@ -47,8 +47,11 @@ public class Fish : MonoBehaviour
 
     void Awake()
     {
-        SaveManager.Fish.Add(this);
-        GameManager.fish.Add(this.gameObject);
+        if (!SaveManager.Fish.Contains(this))
+        {
+            SaveManager.Fish.Add(this);
+            GameManager.fish.Add(this.gameObject);
+        }
     }
 
     void Start()

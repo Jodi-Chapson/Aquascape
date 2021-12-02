@@ -46,12 +46,12 @@ public class SaveManager : MonoBehaviour
         LoadTankData();
     }
 
-    private void OnApplicationQuit()
-    {
-        SaveFishData();
-        SaveNumberOfBubbles();
-        SaveTankData();
-    }
+    //private void OnApplicationQuit()
+    //{
+    //    SaveFishData();
+    //    SaveNumberOfBubbles();
+    //    SaveTankData();
+    //}
 
     public void SaveFishData()
     {
