@@ -41,6 +41,8 @@ public class InfoTankManager : MonoBehaviour
     public int TankID;
     public bool MouseOverTank;
 
+    public int DecorationInt;
+
     public void Start()
     {
         
