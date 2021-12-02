@@ -2431,6 +2431,7 @@ MonoBehaviour:
   BubbleSpawned: 0
   PopPrefab: {fileID: 0}
   PopPosition: {fileID: 0}
+  DecorationInt: 0
   TankID: 1
   MouseOverTank: 0
 --- !u!1 &282408403
@@ -6220,6 +6221,7 @@ MonoBehaviour:
   BubbleSpawned: 0
   PopPrefab: {fileID: 0}
   PopPosition: {fileID: 0}
+  DecorationInt: 0
   TankID: 2
   MouseOverTank: 0
 --- !u!1 &595897379
@@ -8582,6 +8584,7 @@ MonoBehaviour:
   Exodon: {fileID: 5794334053201423468, guid: add29cae57aa86b419ba2eb1d0bbd603, type: 3}
   Neon_Tetra: {fileID: 1176685205805307522, guid: 751b3276fc4fa714287057e1fffe6421,
     type: 3}
+  gamemanager: {fileID: 1463591276}
   FishTankOneCollider: {fileID: 246969933}
   FishTankTwoCollider: {fileID: 583073072}
   Count: 0
