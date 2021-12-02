@@ -38,6 +38,8 @@ public class Fish : MonoBehaviour
     public GameObject FishPanelGO;
     public bool hasSwimmingArea;
 
+    public string TankName;
+
     //Save File stuff
     public int Level;
     public float Happiness;
@@ -138,7 +140,7 @@ public class Fish : MonoBehaviour
 
         if (this.transform.position.x >= -7.5 && this.transform.position.x <= 7.3)
         {
-
+            TankName = "Tank01";
             minX = FishTankTrigger.bounds.min.x + fishlength;
             maxX = FishTankTrigger.bounds.max.x - fishlength;
             minY = FishTankTrigger.bounds.min.y + fishheight;
@@ -147,7 +149,7 @@ public class Fish : MonoBehaviour
 
         else if (this.transform.position.x >= 9 && this.transform.position.x <= 23)
         {
-
+            TankName = "Tank02";
             minX = FishTankTrigger02.bounds.min.x + fishlength;
             maxX = FishTankTrigger02.bounds.max.x - fishlength;
             minY = FishTankTrigger02.bounds.min.y + fishheight;

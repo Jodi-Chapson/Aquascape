@@ -14,6 +14,7 @@ public class UnlockTank : MonoBehaviour
     public GameObject Tank02_LockButton;
     public GameObject Tank02_LockedSprite;
     public GameObject Tank02_InfoButton;
+    public GameObject Tank02_Dirt;
 
     public GameObject Tank03_LockButton;
     public GameObject Tank03_LockedSprite;
@@ -67,6 +68,7 @@ public class UnlockTank : MonoBehaviour
                 Tank02_LockButton.SetActive(false);                   //Here we deactive the lock symbols and everything else on the tanks
                 Tank02_LockedSprite.SetActive(false);
                 Tank02_InfoButton.SetActive(true);
+                Tank02_Dirt.SetActive(true);
                 GameObject.Find("Tank02").GetComponent<InfoTankManager>().Unlocked = true;
             }
 

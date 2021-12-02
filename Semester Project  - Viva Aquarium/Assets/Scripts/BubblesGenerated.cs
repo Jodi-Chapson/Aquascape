@@ -31,8 +31,8 @@ public class BubblesGenerated : MonoBehaviour
         fish = this.GetComponent<Fish>();
         hometank = GameObject.Find("Tank01").GetComponent<InfoTankManager>();
         tankmodifier = hometank.TankProductionModifer;
-        
-       
+
+      
     }
 
 
@@ -57,13 +57,39 @@ public class BubblesGenerated : MonoBehaviour
             ResetTimer = false;
         }
 
+
+        //For Tank 01
         if(GameObject.Find("Dirt01").GetComponent<Dirt>().Dirty == true)
         {
-            //fish need to stop producing bubbles
-            bubbleproduction = 0;
-            seconds = 0;
+            string name = GetComponent<Fish>().TankName;
+            if (name == "Tank01")
+            {
+                //fish need to stop producing bubbles
+                bubbleproduction = 0;
+                seconds = 0;
+            }  
         }
        else if (GameObject.Find("Dirt01").GetComponent<Dirt>().Dirty == false)
+        {
+            //continue
+            bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
+            seconds += Time.deltaTime;
+        }
+
+
+
+        //For Tank02
+        if (GameObject.Find("Dirt02").GetComponent<Dirt>().Dirty == true)
+        {
+            string name = GetComponent<Fish>().TankName;
+            if (name == "Tank02")
+            {
+                //fish need to stop producing bubbles
+                bubbleproduction = 0;
+                seconds = 0;
+            }
+        }
+        else if (GameObject.Find("Dirt02").GetComponent<Dirt>().Dirty == false)
         {
             //continue
             bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
