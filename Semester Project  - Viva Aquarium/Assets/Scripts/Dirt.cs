@@ -47,7 +47,7 @@ public class Dirt : MonoBehaviour
         yield return new WaitForSeconds(10f);
     }
 
-    public void CleanTank()
+    public void CleanTank()                         //This goes on the button in the Tank UI
     {
         ResetTimer();
         Anim.SetTrigger("Clean");
