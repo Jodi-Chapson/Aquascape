@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class InfoTankManager : MonoBehaviour
 {
-
+    public GameManager manager;
 
     public Text TankLevelText;
     public Text CapacityText;
     public Text UpgradePrice;
     public GameObject UpgradeButton;
+    public GameObject Decor2_button, Decor3_button;
 
     public float TankLevel = 1f;
     public float TankProductionModifer; //a percentage?
@@ -42,6 +43,7 @@ public class InfoTankManager : MonoBehaviour
 
     public void Start()
     {
+        
         UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
         CapacityText.text = "Capacity : " + FishInTank + "/" + FishAllowed;
         TankLevelText.text = "Tank Level : " + TankLevel;
@@ -89,12 +91,17 @@ public class InfoTankManager : MonoBehaviour
                 UpgradeTankPrice = (int)(UpgradeTankPrice * 1.5f);
                 UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
 
+            if (TankLevel == 2)
+            {
+                Decor2_button.SetActive(true);
+            }
+            
             if (TankLevel == 3)
             {
                 UpgradeButton.SetActive(false);
                 UpgradePrice.gameObject.SetActive(false);
                 TankLevelText.text = "Tank Level : 3 (MAX)";
-
+                Decor3_button.SetActive(true);
             }
 
             
