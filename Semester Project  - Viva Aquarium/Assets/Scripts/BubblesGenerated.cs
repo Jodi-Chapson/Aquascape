@@ -58,6 +58,15 @@ public class BubblesGenerated : MonoBehaviour
             ResetTimer = false;
         }
 
+        if(GameObject.Find("Dirt01").GetComponent<Dirt>().Dirty == true)
+        {
+            bubbleproduction = 0;
+        }
+        else
+        {
+            bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
+        }
+
     }
 
     
