@@ -95,7 +95,7 @@ public class FishShop : MonoBehaviour
         {
             //instantiates fish
 
-            Debug.Log("nani");
+            
             GameObject fish = Instantiate(targetfish, targetspawnpoint.position, Quaternion.identity);
             BubblesGenerated.bubbles -= fishprice;
             targettank.FishInTank += 1;
@@ -110,56 +110,5 @@ public class FishShop : MonoBehaviour
         }
     }
 
-    //public void FishSelect() //This function is for the first fish
-    //{
-    //    if (GameObject.Find("Tank01").GetComponent<InfoTank01>().FishInnTank < GameObject.Find("Tank01").GetComponent<InfoTank01>().FishAllowed)
-    //    {
-    //        if (BubbleManager.Count >= 60)  //Players can only buy Fish1 once they have this amount of bubbles
-    //        {
-    //            Instantiate(FishType01, Tank01SpawnPoint.position, Tank01SpawnPoint.rotation);
-    //            BubblesGenerated.bubbles -= 60;
-
-    //            GameObject.Find("Tank01").GetComponent<InfoTank01>().FishInnTank += 1;
-    //            CapacityText.text = "Capacity : " + GameObject.Find("Tank01").GetComponent<InfoTank01>().FishInnTank + "/" + GameObject.Find("Tank01").GetComponent<InfoTank01>().FishAllowed;
-    //        }
-    //    }
-       
-        
-    //}
-
-
-    //public void FishSelect02() //Function for the second fish
-    //{
-    //    if (GameObject.Find("Tank01").GetComponent<InfoTank01>().FishInnTank < GameObject.Find("Tank01").GetComponent<InfoTank01>().FishAllowed)
-    //    {
-    //        if (BubbleManager.Count >= 350)
-    //        {
-    //            Instantiate(FishType02, Tank02SpawnPoint.position, Tank02SpawnPoint.rotation);
-    //            BubblesGenerated.bubbles -= 350;
-
-    //            GameObject.Find("Tank01").GetComponent<InfoTank01>().FishInnTank += 1;
-    //            CapacityText.text = "Capacity : " + GameObject.Find("Tank01").GetComponent<InfoTank01>().FishInnTank + "/" + GameObject.Find("Tank01").GetComponent<InfoTank01>().FishAllowed;
-    //        }
-    //    }
-        
-
-    //}
-
-
-    //public void FishSelect03() //Function for the third fish
-    //{
-    //    if (GameObject.Find("Tank01").GetComponent<InfoTank01>().FishInnTank < GameObject.Find("Tank01").GetComponent<InfoTank01>().FishAllowed)
-    //    {
-    //        if (BubbleManager.Count >= 900)
-    //        {
-    //            Instantiate(FishType03, Tank03SpawnPoint.position, Tank03SpawnPoint.rotation);
-    //            BubblesGenerated.bubbles -= 900;
-
-    //            GameObject.Find("Tank01").GetComponent<InfoTank01>().FishInnTank += 1;
-    //            CapacityText.text = "Capacity : " + GameObject.Find("Tank01").GetComponent<InfoTank01>().FishInnTank + "/" + GameObject.Find("Tank01").GetComponent<InfoTank01>().FishAllowed;
-    //        }
-    //    }
-       
-
-    //}
+   
 }
