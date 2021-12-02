@@ -38,6 +38,8 @@ public class InfoTankManager : MonoBehaviour
     public GameObject PopPrefab;
     public Transform PopPosition;
 
+    public int DecorationInt;
+
     public int TankID;
     public bool MouseOverTank;
 
@@ -59,18 +61,18 @@ public class InfoTankManager : MonoBehaviour
             SpawnBubble();
         }
 
-      /*  if (Input.GetMouseButtonDown(0) && MouseOverTank)
-        {
-            //Feed Fish and increase happiness levels
-            GameObject.Find("Fish").GetComponent<RealTimeCounter>().Hungry = false;
-            GameObject.Find("Fish").GetComponent<RealTimeCounter>().timer = 12;        //Reseting the Timer;
+        /*  if (Input.GetMouseButtonDown(0) && MouseOverTank)
+          {
+              //Feed Fish and increase happiness levels
+              GameObject.Find("Fish").GetComponent<RealTimeCounter>().Hungry = false;
+              GameObject.Find("Fish").GetComponent<RealTimeCounter>().timer = 12;        //Reseting the Timer;
 
 
-            // Instantiate(FishFoodPrefab, FoodSpawnPoint.position, FoodSpawnPoint.rotation);
+              // Instantiate(FishFoodPrefab, FoodSpawnPoint.position, FoodSpawnPoint.rotation);
 
-            Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Instantiate(FishFoodPrefab, new Vector3(cursorPos.x, cursorPos.y, 0), Quaternion.identity);
-        }*/
+              Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+              Instantiate(FishFoodPrefab, new Vector3(cursorPos.x, cursorPos.y, 0), Quaternion.identity);
+          }*/
     }
 
     public void UpgradeTank()
@@ -103,9 +105,6 @@ public class InfoTankManager : MonoBehaviour
                 TankLevelText.text = "Tank Level : 3 (MAX)";
                 Decor3_button.SetActive(true);
             }
-
-            
-
         }
     }
 

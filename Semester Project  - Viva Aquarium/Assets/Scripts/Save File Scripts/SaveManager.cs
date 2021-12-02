@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -20,6 +21,8 @@ public class SaveManager : MonoBehaviour
     [SerializeField] Fish Red_Tailed_Shark;
     [SerializeField] Fish Exodon;
     [SerializeField] Fish Neon_Tetra;
+
+    [SerializeField] GameManager gamemanager;
 
     public BoxCollider2D FishTankOneCollider;
     public BoxCollider2D FishTankTwoCollider;
@@ -41,8 +44,6 @@ public class SaveManager : MonoBehaviour
         LoadFishData();
         LoadNumberOfBubbles();
         LoadTankData();
-
-        Debug.Log(Application.persistentDataPath);
     }
 
     private void OnApplicationQuit()
@@ -235,6 +236,79 @@ public class SaveManager : MonoBehaviour
                 FishTanks[i].GetComponent<InfoTankManager>().UpgradeTankPrice = data.UpgradePrice;
                 FishTanks[i].GetComponent<InfoTankManager>().FishAllowed = data.FishAllowed;
                 FishTanks[i].GetComponent<InfoTankManager>().TankID = data.TankID;
+                FishTanks[i].GetComponent<InfoTankManager>().DecorationInt = data.DecorationInt;
+
+                                if (FishTanks[i].GetComponent<InfoTankManager>().TankLevel == 2)
+                {
+                    FishTanks[i].GetComponent<InfoTankManager>().Decor2_button.SetActive(true);
+                }
+
+                else if (FishTanks[i].GetComponent<InfoTankManager>().TankLevel == 3)
+                {
+                    FishTanks[i].GetComponent<InfoTankManager>().UpgradeButton.SetActive(false);
+                    FishTanks[i].GetComponent<InfoTankManager>().UpgradePrice.gameObject.SetActive(false);
+                    FishTanks[i].GetComponent<InfoTankManager>().TankLevelText.text = "Tank Level : 3 (MAX)";
+                    FishTanks[i].GetComponent<InfoTankManager>().Decor2_button.SetActive(true);
+                    FishTanks[i].GetComponent<InfoTankManager>().Decor3_button.SetActive(true);
+                }
+
+                if (FishTanks[i].name == "Tank01")
+                {
+                    if (FishTanks[i].GetComponent<InfoTankManager>().DecorationInt == 0)
+                    {
+                        gamemanager.tank1.sprite = gamemanager.tankthemes[0];
+
+                        gamemanager.tank1decor1.GetComponent<Image>().sprite = gamemanager.tick_block;
+                        gamemanager.tank1decor2.GetComponent<Image>().sprite = gamemanager.block;
+                        gamemanager.tank1decor3.GetComponent<Image>().sprite = gamemanager.block;
+
+                    }
+                    else if (FishTanks[i].GetComponent<InfoTankManager>().DecorationInt == 1)
+                    {
+                        gamemanager.tank1.sprite = gamemanager.tankthemes[1];
+
+                        gamemanager.tank1decor1.GetComponent<Image>().sprite = gamemanager.tick_block;
+                        gamemanager.tank1decor2.GetComponent<Image>().sprite = gamemanager.block;
+                        gamemanager.tank1decor3.GetComponent<Image>().sprite = gamemanager.block;
+                    }
+                    else if (FishTanks[i].GetComponent<InfoTankManager>().DecorationInt == 2)
+                    {
+                        gamemanager.tank1.sprite = gamemanager.tankthemes[2];
+
+                        gamemanager.tank1decor1.GetComponent<Image>().sprite = gamemanager.tick_block;
+                        gamemanager.tank1decor2.GetComponent<Image>().sprite = gamemanager.block;
+                        gamemanager.tank1decor3.GetComponent<Image>().sprite = gamemanager.block;
+                    }
+                }
+                else
+                {
+
+                    if (FishTanks[i].GetComponent<InfoTankManager>().DecorationInt == 0)
+                    {
+                        gamemanager.tank2.sprite = gamemanager.tankthemes[0];
+
+                        gamemanager.tank2decor1.GetComponent<Image>().sprite = gamemanager.tick_block;
+                        gamemanager.tank2decor2.GetComponent<Image>().sprite = gamemanager.block;
+                        gamemanager.tank2decor3.GetComponent<Image>().sprite = gamemanager.block;
+                    }
+                    else if (FishTanks[i].GetComponent<InfoTankManager>().DecorationInt == 1)
+                    {
+                        gamemanager.tank2.sprite = gamemanager.tankthemes[1];
+
+                        gamemanager.tank2decor1.GetComponent<Image>().sprite = gamemanager.tick_block;
+                        gamemanager.tank2decor2.GetComponent<Image>().sprite = gamemanager.block;
+                        gamemanager.tank2decor3.GetComponent<Image>().sprite = gamemanager.block;
+                    }
+                    else if (FishTanks[i].GetComponent<InfoTankManager>().DecorationInt == 2)
+                    {
+                        ; gamemanager.tank2.sprite = gamemanager.tankthemes[2];
+
+                        gamemanager.tank2decor1.GetComponent<Image>().sprite = gamemanager.tick_block;
+                        gamemanager.tank2decor2.GetComponent<Image>().sprite = gamemanager.block;
+                        gamemanager.tank2decor3.GetComponent<Image>().sprite = gamemanager.block;
+                    }
+
+                }
 
                 if (i == 1 && FishTanks[1].GetComponent<InfoTankManager>().Unlocked)
                 {
@@ -248,15 +322,5 @@ public class SaveManager : MonoBehaviour
                 Debug.Log("The file does not exist at " + TANK_SUB_PATH);
             }
         }
-    }
-
-    public void SaveDecorationData()
-    {
-
-    }
-
-    public void LoadDecorationData()
-    {
-
     }
 }

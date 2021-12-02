@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
                 tank1decor1.GetComponent<Image>().sprite = tick_block;
                 tank1decor2.GetComponent<Image>().sprite = block;
                 tank1decor3.GetComponent<Image>().sprite = block;
-
+                tanks[0].DecorationInt = themeID;
             }
             else if (themeID == 1)
             {
@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
                 tank1decor1.GetComponent<Image>().sprite = block;
                 tank1decor2.GetComponent<Image>().sprite = tick_block;
                 tank1decor3.GetComponent<Image>().sprite = block;
+                tanks[0].DecorationInt = themeID;
             }
             else if (themeID == 2)
             {
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
                 tank1decor1.GetComponent<Image>().sprite = block;
                 tank1decor2.GetComponent<Image>().sprite = block;
                 tank1decor3.GetComponent<Image>().sprite = tick_block;
+                tanks[0].DecorationInt = themeID;
             }
 
 
@@ -66,6 +68,7 @@ public class GameManager : MonoBehaviour
                 tank2decor1.GetComponent<Image>().sprite = tick_block;
                 tank2decor2.GetComponent<Image>().sprite = block;
                 tank2decor3.GetComponent<Image>().sprite = block;
+                tanks[1].DecorationInt = themeID;
             }
             else if (themeID == 1)
             {
@@ -74,7 +77,8 @@ public class GameManager : MonoBehaviour
                 tank2decor1.GetComponent<Image>().sprite = block;
                 tank2decor2.GetComponent<Image>().sprite = tick_block;
                 tank2decor3.GetComponent<Image>().sprite = block;
-                
+                tanks[1].DecorationInt = themeID;
+
             }
             else if (themeID == 2)
             {
@@ -83,6 +87,7 @@ public class GameManager : MonoBehaviour
                 tank2decor1.GetComponent<Image>().sprite = block;
                 tank2decor2.GetComponent<Image>().sprite = block;
                 tank2decor3.GetComponent<Image>().sprite = tick_block;
+                tanks[1].DecorationInt = themeID;
             }
 
         }
