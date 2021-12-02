@@ -487,7 +487,6 @@ GameObject:
   - component: {fileID: 531754706}
   - component: {fileID: 531754707}
   - component: {fileID: -2877874493277735053}
-  - component: {fileID: 8128264464736618542}
   m_Layer: 0
   m_Name: GoldFish
   m_TagString: GoldFish
@@ -569,6 +568,8 @@ MonoBehaviour:
   canMove: 0
   HappinessLevel: {fileID: 1345299883}
   FishPanelGO: {fileID: 0}
+  hasSwimmingArea: 0
+  TankName: 
   Level: 0
   Happiness: 10
   Species: Gold Fish
@@ -648,17 +649,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8128264464736618542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780711293047101201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1025dfd0c33b58949a7cf26fc1e5daca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fish: {fileID: 0}
-  bubblesgenerated: {fileID: 0}

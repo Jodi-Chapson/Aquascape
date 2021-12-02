@@ -19,8 +19,8 @@ public class SaveManager : MonoBehaviour
 
     [SerializeField] Fish Gold_Fish;
     [SerializeField] Fish Red_Tailed_Shark;
-    [SerializeField] Fish Exodon;
     [SerializeField] Fish Neon_Tetra;
+    [SerializeField] Fish Betta;
 
     [SerializeField] GameManager gamemanager;
 
@@ -70,6 +70,8 @@ public class SaveManager : MonoBehaviour
             formatter.Serialize(fstream, data);                                    //Serializes it into binary to protect the data so that a player cannot modify data about the fish.
             fstream.Close();
         }
+
+        Fish.Clear();
     }
 
     public void LoadFishData() //Will load the fishes data.
@@ -146,18 +148,18 @@ public class SaveManager : MonoBehaviour
                         fish.hometankID = data.HomeTankID;
                         fish.UpgradePrice = data.UpgradePrice;
                     }
-                    else if (data.Species == "Exodon")
+                    else if (data.Species == "Neon Tetra")
                     {
-                        Fish fish = Instantiate(Exodon, Pos, Quaternion.identity);
+                        Fish fish = Instantiate(Neon_Tetra, Pos, Quaternion.identity);
                         fish.Level = data.Level;
                         fish.Species = data.Species;
                         fish.Happiness = data.Happiness;
                         fish.hometankID = data.HomeTankID;
                         fish.UpgradePrice = data.UpgradePrice;
                     }
-                    else if (data.Species == "Neon Tetra")
+                    else if (data.Species == "Betta")
                     {
-                        Fish fish = Instantiate(Neon_Tetra, Pos, Quaternion.identity);
+                        Fish fish = Instantiate(Betta, Pos, Quaternion.identity);
                         fish.Level = data.Level;
                         fish.Species = data.Species;
                         fish.Happiness = data.Happiness;

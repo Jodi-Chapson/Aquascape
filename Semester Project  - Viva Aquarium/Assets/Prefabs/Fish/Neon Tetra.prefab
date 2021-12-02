@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 609439446625473584}
   - component: {fileID: 609439446625473585}
   - component: {fileID: -3506836471260517438}
-  - component: {fileID: -7983239362433043089}
   m_Layer: 0
   m_Name: Neon Tetra
   m_TagString: NeonTetra
@@ -127,6 +126,8 @@ MonoBehaviour:
   canMove: 0
   HappinessLevel: {fileID: 609439447958069065}
   FishPanelGO: {fileID: 0}
+  hasSwimmingArea: 0
+  TankName: 
   Level: 0
   Happiness: 10
   Species: Neon Tetra
@@ -206,20 +207,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-7983239362433043089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 189306466236919283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b1fb6bbbad13349be0417ef892d32f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NeonTetraPrefab: {fileID: 189306466236919283}
-  fish: {fileID: 0}
 --- !u!1 &609439446388639775
 GameObject:
   m_ObjectHideFlags: 0

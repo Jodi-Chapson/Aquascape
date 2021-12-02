@@ -15,10 +15,9 @@ GameObject:
   - component: {fileID: 5208651667754872542}
   - component: {fileID: 5208651667754872543}
   - component: {fileID: 1173017816051382143}
-  - component: {fileID: 4072868624530475042}
   m_Layer: 0
-  m_Name: Exodon
-  m_TagString: Exodon
+  m_Name: Betta
+  m_TagString: Betta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +55,7 @@ MonoBehaviour:
   BubblePrefab: {fileID: 3891401958653588265, guid: ac25ff0550131da4f8a633e74c9ea7cb,
     type: 3}
   bubbleproduction: 0
-  baseproduction: 4
+  baseproduction: 6
   level: 0
   levelmodifier: 1
   happinessmodifier: 0
@@ -97,9 +96,11 @@ MonoBehaviour:
   canMove: 0
   HappinessLevel: {fileID: 5208651666439021991}
   FishPanelGO: {fileID: 0}
+  hasSwimmingArea: 0
+  TankName: 
   Level: 0
   Happiness: 10
-  Species: Exodon
+  Species: Betta
   hometankID: 0
   UpgradePrice: 100
 --- !u!61 &8830676449618092535
@@ -176,20 +177,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4072868624530475042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4800131112817055517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1025dfd0c33b58949a7cf26fc1e5daca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fish: {fileID: 0}
-  bubblesgenerated: {fileID: 0}
 --- !u!1 &4800131113695482491
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,7 +619,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: f299935965ec35547b591dbdcae85374, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c656a90ba6f5b7418ee72b7d59a2d92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7941634590789599368}
   - component: {fileID: 7941634590789599369}
   - component: {fileID: 3907408070460578089}
-  - component: {fileID: -1948600179815838669}
   m_Layer: 0
   m_Name: RedTailed Shark
   m_TagString: RedTailed
@@ -97,6 +96,8 @@ MonoBehaviour:
   canMove: 0
   HappinessLevel: {fileID: 7941634589454650353}
   FishPanelGO: {fileID: 0}
+  hasSwimmingArea: 0
+  TankName: 
   Level: 0
   Happiness: 10
   Species: Red Tailed Shark
@@ -176,20 +177,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-1948600179815838669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7269933901818935627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f1cc2b80fc9f7349b306cf731eed2f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RedTailedSharkPrefab: {fileID: 7269933901818935627}
-  fish: {fileID: 0}
 --- !u!1 &7269933902710504493
 GameObject:
   m_ObjectHideFlags: 0
