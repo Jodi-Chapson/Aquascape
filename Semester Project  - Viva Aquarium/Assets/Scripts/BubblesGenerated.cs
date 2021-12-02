@@ -32,11 +32,7 @@ public class BubblesGenerated : MonoBehaviour
         hometank = GameObject.Find("Tank01").GetComponent<InfoTankManager>();
         tankmodifier = hometank.TankProductionModifer;
 
-        if (this.GetComponent<Fish>().Level != 0)
-        {
-            level = this.GetComponent<Fish>().Level;
-            levelmodifier = level;
-        }
+      
     }
 
 
@@ -44,11 +40,10 @@ public class BubblesGenerated : MonoBehaviour
     {
         happinessmodifier = fish.Happiness / 10;
         tankmodifier = hometank.TankProductionModifer;
-        bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
-        seconds += Time.deltaTime;
+        
 
         
-        if (seconds >= 4)
+        if (seconds >= 6)
         {
             bubbles += bubbleproduction;      //+1 each time a bubble spawns
             
@@ -62,13 +57,41 @@ public class BubblesGenerated : MonoBehaviour
             ResetTimer = false;
         }
 
+
+        //If tank 01 is dirty, fish in that tank stop producing bubbles
         if(GameObject.Find("Dirt01").GetComponent<Dirt>().Dirty == true)
         {
-            bubbleproduction = 0;
+            string name = GetComponent<Fish>().TankName;                //accessing string variable in fish script
+            if (name == "Tank01")
+            {
+                bubbleproduction = 0;
+                seconds = 0;
+            }  
         }
-        else
+       else if (GameObject.Find("Dirt01").GetComponent<Dirt>().Dirty == false)
         {
+            //continue
             bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
+            seconds += Time.deltaTime;
+        }
+
+
+
+        //If tank 02 is dirty, fish in that tank stop producing bubbles
+        if (GameObject.Find("Dirt02").GetComponent<Dirt>().Dirty == true)
+        {
+            string name = GetComponent<Fish>().TankName;
+            if (name == "Tank02")
+            {
+                bubbleproduction = 0;
+                seconds = 0;
+            }
+        }
+        else if (GameObject.Find("Dirt02").GetComponent<Dirt>().Dirty == false)
+        {
+            //continue
+            bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
+            seconds += Time.deltaTime;
         }
 
     }

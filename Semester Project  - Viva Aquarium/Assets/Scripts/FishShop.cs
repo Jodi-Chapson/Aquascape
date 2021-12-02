@@ -10,8 +10,6 @@ public class FishShop : MonoBehaviour
     
     public Transform Tank01SpawnPoint;
     public Transform Tank02SpawnPoint;
-    public Transform Tank03SpawnPoint;
-    public Transform Tank04SpawnPoint;
 
     public GameObject tank01fishgroup;
     public GameObject tank02fishgroup;
@@ -38,7 +36,6 @@ public class FishShop : MonoBehaviour
             targettank = manager.tanks[0];
             targetspawnpoint = Tank01SpawnPoint;
             targetpanel = tank01fishgroup;
-
         }
         else
         {
