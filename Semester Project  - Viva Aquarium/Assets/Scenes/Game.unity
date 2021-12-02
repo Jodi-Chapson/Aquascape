@@ -6211,7 +6211,7 @@ MonoBehaviour:
   FishAllowed: 8
   FishFoodPrefab: {fileID: 0}
   moveSpots: {fileID: 0}
-  Unlocked: 1
+  Unlocked: 0
   panelprefab: {fileID: 4726926383902962973, guid: f7c64a76c3ed4994189338d39b8f4788,
     type: 3}
   targetpanel: {fileID: 288937309}
@@ -22828,7 +22828,7 @@ PrefabInstance:
     - target: {fileID: 780711293047101201, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 780711293047101204, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}

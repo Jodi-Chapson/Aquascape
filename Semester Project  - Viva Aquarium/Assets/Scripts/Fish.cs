@@ -7,8 +7,6 @@ public class Fish : MonoBehaviour
 {
     private BoxCollider2D FishTankTrigger;
     private BoxCollider2D FishTankTrigger02;
-    private BoxCollider2D FishTankTrigger03;
-    private BoxCollider2D FishTankTrigger04;
 
     public BoxCollider2D SwimmingArea;
 
@@ -38,6 +36,7 @@ public class Fish : MonoBehaviour
 
     public GameObject HappinessLevel;            //This is the happiness level indicator
     public GameObject FishPanelGO;
+    public bool hasSwimmingArea;
 
     //Save File stuff
     public int Level;
@@ -59,34 +58,6 @@ public class Fish : MonoBehaviour
 
         FishTankTrigger = GameObject.Find("Tank01").GetComponent<BoxCollider2D>();
         FishTankTrigger02 = GameObject.Find("Tank02").GetComponent<BoxCollider2D>();
-        FishTankTrigger03 = GameObject.Find("Tank03").GetComponent<BoxCollider2D>();
-        FishTankTrigger04 = GameObject.Find("Tank04").GetComponent<BoxCollider2D>();
-
-        if (Species == "Gold Fish" && hometankID == 1)
-        {
-            SwimmingArea = GameObject.Find("Gold Fish Swimming Area 1").GetComponent<BoxCollider2D>();
-        }
-        else if (Species == "Red Tailed Shark" && hometankID == 1)
-        {
-            SwimmingArea = GameObject.Find("Red Tailed Shark Swimming Area 1").GetComponent<BoxCollider2D>();
-        }
-        else if (Species == "Neon Tetra" && hometankID == 1)
-        {
-            SwimmingArea = GameObject.Find("Neon Tetra Swimming Area 1").GetComponent<BoxCollider2D>();
-        }
-
-        else if (Species == "Gold Fish" && hometankID == 2)
-        {
-            SwimmingArea = GameObject.Find("Gold Fish Swimming Area 2").GetComponent<BoxCollider2D>();
-        }
-        else if (Species == "Red Tailed Shark" && hometankID == 2)
-        {
-            SwimmingArea = GameObject.Find("Red Tailed Shark Swimming Area 2").GetComponent<BoxCollider2D>();
-        }
-        else if (Species == "Neon Tetra" && hometankID == 2)
-        {
-            SwimmingArea = GameObject.Find("Neon Tetra Swimming Area 2").GetComponent<BoxCollider2D>();
-        }
 
         speedTime = Random.Range(MinSpeedTime, MaxSpeedTime);
         waitTime = StartWaitTime;
@@ -94,11 +65,11 @@ public class Fish : MonoBehaviour
         scaleX = this.transform.localScale.x;
         HappinessLevel.GetComponent<Slider>().value = Happiness;
 
-        MoveSpot = new GameObject();
-        MoveSpot.transform.position = new Vector2(Random.Range(SwimmingArea.bounds.min.x, SwimmingArea.bounds.max.x), Random.Range(SwimmingArea.bounds.min.y, SwimmingArea.bounds.max.y));
-        MoveSpotTransform = MoveSpot.transform;
-        DetermineMoveSpot(MoveSpotTransform);
-        FlipFish(MoveSpotTransform);
+        //MoveSpot = new GameObject();
+        //MoveSpot.transform.position = new Vector2(Random.Range(SwimmingArea.bounds.min.x, SwimmingArea.bounds.max.x), Random.Range(SwimmingArea.bounds.min.y, SwimmingArea.bounds.max.y));
+        //MoveSpotTransform = MoveSpot.transform;
+        //DetermineMoveSpot(MoveSpotTransform);
+        //FlipFish(MoveSpotTransform);
     }
 
     void OnMouseOver()
@@ -122,11 +93,21 @@ public class Fish : MonoBehaviour
             speedTime -= Time.deltaTime;
         }
 
+        if (hasSwimmingArea)
+        {
+            MoveSpot = new GameObject();
+            MoveSpot.transform.position = new Vector2(Random.Range(SwimmingArea.bounds.min.x, SwimmingArea.bounds.max.x), Random.Range(SwimmingArea.bounds.min.y, SwimmingArea.bounds.max.y));
+            MoveSpotTransform = MoveSpot.transform;
+            DetermineMoveSpot(MoveSpotTransform);
+            FlipFish(MoveSpotTransform);
+            hasSwimmingArea = false;
+        }
+
         //moves fish
         MoveFish(MoveSpotTransform);
 
         //checks if fish is new movespot position
-        if (Vector2.Distance(transform.position, MoveSpotTransform.position) < 0.3f)
+        if (Vector2.Distance(transform.position, MoveSpotTransform.position) < 0.3f && !hasSwimmingArea)
         {
             if (waitTime <= 0)
             {
@@ -172,25 +153,6 @@ public class Fish : MonoBehaviour
             minY = FishTankTrigger02.bounds.min.y + fishheight;
             maxY = FishTankTrigger02.bounds.max.y - fishheight;
         }
-
-        else if (this.transform.position.x >= 25 && this.transform.position.x <= 39)
-        {
-
-            minX = FishTankTrigger03.bounds.min.x + fishlength;
-            maxX = FishTankTrigger03.bounds.max.x - fishlength;
-            minY = FishTankTrigger03.bounds.min.y + fishheight;
-            maxY = FishTankTrigger03.bounds.max.y - fishheight;
-        }
-
-        else if (this.transform.position.x >= 42 && this.transform.position.x <= 55)
-        {
-
-            minX = FishTankTrigger04.bounds.min.x + fishlength;
-            maxX = FishTankTrigger04.bounds.max.x - fishlength;
-            minY = FishTankTrigger04.bounds.min.y + fishheight;
-            maxY = FishTankTrigger04.bounds.max.y - fishheight;
-        }
-
     }
 
     private void MoveFish(Transform movespot)
