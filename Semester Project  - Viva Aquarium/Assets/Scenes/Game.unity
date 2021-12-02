@@ -698,7 +698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &79269605
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2182,7 +2182,8 @@ MonoBehaviour:
   UpgradePrice: {fileID: 979112597}
   UpgradeButton: {fileID: 1455039551}
   Decor2_button: {fileID: 79269604}
-  Decor3_button: {fileID: 344162960}
+  Decor3_button: {fileID: 997472060}
+  Decor4_button: {fileID: 344162960}
   TankLevel: 0
   TankProductionModifer: 1
   UpgradeTankPrice: 250
@@ -2677,7 +2678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &339706191
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2862,7 +2863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &344162961
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5507,7 +5508,8 @@ MonoBehaviour:
   UpgradePrice: {fileID: 333584552}
   UpgradeButton: {fileID: 749675310}
   Decor2_button: {fileID: 887353987}
-  Decor3_button: {fileID: 339706190}
+  Decor3_button: {fileID: 726121554}
+  Decor4_button: {fileID: 339706190}
   TankLevel: 0
   TankProductionModifer: 1
   UpgradeTankPrice: 20
@@ -7404,7 +7406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &726121555
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7727,7 +7729,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1120083838}
   m_HandleRect: {fileID: 1120083837}
   m_Direction: 0
-  m_Value: 1.0000082
+  m_Value: 1.0000081
   m_Size: 0.0016008967
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -9515,7 +9517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &887353988
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11322,7 +11324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &997472061
 RectTransform:
   m_ObjectHideFlags: 0
