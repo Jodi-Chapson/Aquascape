@@ -58,13 +58,12 @@ public class BubblesGenerated : MonoBehaviour
         }
 
 
-        //For Tank 01
+        //If tank 01 is dirty, fish in that tank stop producing bubbles
         if(GameObject.Find("Dirt01").GetComponent<Dirt>().Dirty == true)
         {
-            string name = GetComponent<Fish>().TankName;
+            string name = GetComponent<Fish>().TankName;                //accessing string variable in fish script
             if (name == "Tank01")
             {
-                //fish need to stop producing bubbles
                 bubbleproduction = 0;
                 seconds = 0;
             }  
@@ -78,13 +77,12 @@ public class BubblesGenerated : MonoBehaviour
 
 
 
-        //For Tank02
+        //If tank 02 is dirty, fish in that tank stop producing bubbles
         if (GameObject.Find("Dirt02").GetComponent<Dirt>().Dirty == true)
         {
             string name = GetComponent<Fish>().TankName;
             if (name == "Tank02")
             {
-                //fish need to stop producing bubbles
                 bubbleproduction = 0;
                 seconds = 0;
             }
