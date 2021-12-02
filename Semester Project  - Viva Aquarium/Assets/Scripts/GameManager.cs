@@ -141,9 +141,6 @@ public class GameManager : MonoBehaviour
                 tank1decor3.GetComponent<Image>().sprite = tick_block;
                 tanks[0].DecorationInt = themeID;
             }
-
-
-
         }
         else
         {
@@ -187,9 +184,7 @@ public class GameManager : MonoBehaviour
                 tank2decor2.GetComponent<Image>().sprite = block;
                 tank2decor3.GetComponent<Image>().sprite = tick_block;
                 tanks[1].DecorationInt = themeID;
-
             }
-
         }
     }
 
@@ -210,9 +205,7 @@ public class GameManager : MonoBehaviour
         else if (speed == 3)
         {
             circle.GetComponent<RectTransform>().localPosition = x3.GetComponent<RectTransform>().localPosition += new Vector3(0, 1, 0);
-        }
-        
-        
+        }       
         GameSpeed = speed;
     }
 
@@ -229,5 +222,4 @@ public class GameManager : MonoBehaviour
             onoff.GetComponentInChildren<Text>().text = "ON";
         }
     }
-
 }

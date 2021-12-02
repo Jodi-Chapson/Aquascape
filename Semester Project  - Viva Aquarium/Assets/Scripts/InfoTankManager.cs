@@ -11,7 +11,7 @@ public class InfoTankManager : MonoBehaviour
     public Text CapacityText;
     public Text UpgradePrice;
     public GameObject UpgradeButton;
-    public GameObject Decor2_button, Decor3_button;
+    public GameObject Decor2_button, Decor3_button, Decor4_button;
 
     public float TankLevel = 1f;
     public float TankProductionModifer; //a percentage?
@@ -81,7 +81,6 @@ public class InfoTankManager : MonoBehaviour
     {
         if (BubbleManager.Count >= UpgradeTankPrice)  //Players can only upgrade fish tank once they only have this amount
         {
-
                 BubblesGenerated.bubbles -= (int)UpgradeTankPrice;
 
                 FishAllowed += 2;
@@ -95,9 +94,13 @@ public class InfoTankManager : MonoBehaviour
                 UpgradeTankPrice = (int)(UpgradeTankPrice * 1.5f);
                 UpgradePrice.text = "Upgrade Cost: " + UpgradeTankPrice;
 
-            if (TankLevel == 2)
+            if (TankLevel == 1)
             {
                 Decor2_button.SetActive(true);
+            }
+            else if (TankLevel == 2)
+            {
+                Decor3_button.SetActive(true);
             }
             
             if (TankLevel == 3)
@@ -105,11 +108,8 @@ public class InfoTankManager : MonoBehaviour
                 UpgradeButton.SetActive(false);
                 UpgradePrice.gameObject.SetActive(false);
                 TankLevelText.text = "Tank Level : 3 (MAX)";
-                Decor3_button.SetActive(true);
+                Decor4_button.SetActive(true);
             }
-
-            
-
         }
     }
 
@@ -132,7 +132,6 @@ public class InfoTankManager : MonoBehaviour
         MouseOverTank = false;
     }*/
     
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "GoldFish" && TankID == 1)
