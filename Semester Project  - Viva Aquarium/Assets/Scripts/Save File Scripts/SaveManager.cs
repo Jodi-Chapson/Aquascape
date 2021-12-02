@@ -238,7 +238,7 @@ public class SaveManager : MonoBehaviour
                 FishTanks[i].GetComponent<InfoTankManager>().TankID = data.TankID;
                 FishTanks[i].GetComponent<InfoTankManager>().DecorationInt = data.DecorationInt;
 
-                                if (FishTanks[i].GetComponent<InfoTankManager>().TankLevel == 2)
+                if (FishTanks[i].GetComponent<InfoTankManager>().TankLevel == 2)
                 {
                     FishTanks[i].GetComponent<InfoTankManager>().Decor2_button.SetActive(true);
                 }
@@ -309,6 +309,7 @@ public class SaveManager : MonoBehaviour
                     }
 
                 }
+
 
                 if (i == 1 && FishTanks[1].GetComponent<InfoTankManager>().Unlocked)
                 {
