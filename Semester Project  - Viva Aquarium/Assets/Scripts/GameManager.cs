@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     public GameObject circle;
     public GameObject x1, x2, x3;
 
+    public static bool numbers;
+    public GameObject onoff;
+
     public void ChangeThemeToInt (int themeID)
     {
         if (CurrentTankID == 1)
@@ -91,6 +94,11 @@ public class GameManager : MonoBehaviour
         {
             GameSpeed = 1;
         }
+
+
+        //change this later maybe 
+            numbers = true;
+        
     }
 
 
@@ -112,6 +120,20 @@ public class GameManager : MonoBehaviour
         
         
         GameSpeed = speed;
+    }
+
+    public void ToggleNumbers()
+    {
+        if (numbers)
+        {
+            numbers = false;
+            onoff.GetComponentInChildren<Text>().text = "OFF";
+        }
+        else
+        {
+            numbers = true;
+            onoff.GetComponentInChildren<Text>().text = "ON";
+        }
     }
 
 }

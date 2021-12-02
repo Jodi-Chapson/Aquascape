@@ -68,6 +68,11 @@ public class BubblesGenerated : MonoBehaviour
         yield return new WaitForSeconds(random);
         
         GameObject bubble = Instantiate(BubblePrefab, SpawnPoint.position, SpawnPoint.rotation);
-        bubble.GetComponentInChildren<Text>().text = "+" + production;
+
+        if (GameManager.numbers)
+        {
+            bubble.GetComponentInChildren<Text>().text = "+" + production;
+        }
+       
     }
 }
