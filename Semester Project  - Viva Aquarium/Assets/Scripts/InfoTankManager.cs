@@ -38,8 +38,6 @@ public class InfoTankManager : MonoBehaviour
     public GameObject PopPrefab;
     public Transform PopPosition;
 
-    public int DecorationInt;
-
     public int TankID;
     public bool MouseOverTank;
 
@@ -61,18 +59,20 @@ public class InfoTankManager : MonoBehaviour
             SpawnBubble();
         }
 
-        /*  if (Input.GetMouseButtonDown(0) && MouseOverTank)
-          {
-              //Feed Fish and increase happiness levels
-              GameObject.Find("Fish").GetComponent<RealTimeCounter>().Hungry = false;
-              GameObject.Find("Fish").GetComponent<RealTimeCounter>().timer = 12;        //Reseting the Timer;
+      /*  if (Input.GetMouseButtonDown(0) && MouseOverTank)
+        {
+            //Feed Fish and increase happiness levels
+            GameObject.Find("Fish").GetComponent<RealTimeCounter>().Hungry = false;
+            GameObject.Find("Fish").GetComponent<RealTimeCounter>().timer = 12;        //Reseting the Timer;
 
 
-              // Instantiate(FishFoodPrefab, FoodSpawnPoint.position, FoodSpawnPoint.rotation);
+            // Instantiate(FishFoodPrefab, FoodSpawnPoint.position, FoodSpawnPoint.rotation);
 
-              Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-              Instantiate(FishFoodPrefab, new Vector3(cursorPos.x, cursorPos.y, 0), Quaternion.identity);
-          }*/
+            Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Instantiate(FishFoodPrefab, new Vector3(cursorPos.x, cursorPos.y, 0), Quaternion.identity);
+        }*/
+
+
     }
 
     public void UpgradeTank()
@@ -105,6 +105,9 @@ public class InfoTankManager : MonoBehaviour
                 TankLevelText.text = "Tank Level : 3 (MAX)";
                 Decor3_button.SetActive(true);
             }
+
+            
+
         }
     }
 
@@ -133,8 +136,6 @@ public class InfoTankManager : MonoBehaviour
         if (collision.tag == "GoldFish" && TankID == 1)
         {
             collision.GetComponent<Fish>().hometankID = 1;
-            collision.GetComponent<Fish>().SwimmingArea = GameObject.Find("Gold Fish Swimming Area 1").GetComponent<BoxCollider2D>();
-            collision.GetComponent<Fish>().hasSwimmingArea = true;
             GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
             panel.GetComponent<FishPanelInfo>().targetfish = collision.gameObject;
             panel.transform.SetParent(targetpanel.transform);
@@ -145,9 +146,6 @@ public class InfoTankManager : MonoBehaviour
         else if (collision.tag == "RedTailed" && TankID == 1)
         {
             collision.GetComponent<Fish>().hometankID = 1;
-            collision.GetComponent<Fish>().SwimmingArea = GameObject.Find("Red Tailed Shark Swimming Area 1").GetComponent<BoxCollider2D>();
-            collision.GetComponent<Fish>().hasSwimmingArea = true;FishInTank++;
-            CapacityText.text = "Capacity : " + FishInTank + "/" + FishAllowed;
             GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
             panel.GetComponent<FishPanelInfo>().targetfish = collision.gameObject;
             panel.transform.SetParent(targetpanel.transform);
@@ -158,8 +156,6 @@ public class InfoTankManager : MonoBehaviour
         else if (collision.tag == "NeonTetra" && TankID == 1)
         {
             collision.GetComponent<Fish>().hometankID = 1;
-            collision.GetComponent<Fish>().SwimmingArea = GameObject.Find("Neon Tetra Swimming Area 1").GetComponent<BoxCollider2D>();
-            collision.GetComponent<Fish>().hasSwimmingArea = true;
             GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
             panel.GetComponent<FishPanelInfo>().targetfish = collision.gameObject;
             panel.transform.SetParent(targetpanel.transform);
@@ -170,22 +166,6 @@ public class InfoTankManager : MonoBehaviour
         else
         {
             collision.GetComponent<Fish>().hometankID = 2;
-
-            if (collision.tag == "GoldFish")
-            {
-                collision.GetComponent<Fish>().SwimmingArea = GameObject.Find("Gold Fish Swimming Area 2").GetComponent<BoxCollider2D>();
-                collision.GetComponent<Fish>().hasSwimmingArea = true;
-            }
-            else if (collision.tag == "RedTailed")
-            {
-                collision.GetComponent<Fish>().SwimmingArea = GameObject.Find("Red Tailed Shark Swimming Area 2").GetComponent<BoxCollider2D>();
-                collision.GetComponent<Fish>().hasSwimmingArea = true;
-            }
-            else if(collision.tag == "NeonTetra")
-            {
-                collision.GetComponent<Fish>().SwimmingArea = GameObject.Find("Neon Tetra Swimming Area 2").GetComponent<BoxCollider2D>();
-                collision.GetComponent<Fish>().hasSwimmingArea = true;
-            }
             GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
             panel.GetComponent<FishPanelInfo>().targetfish = collision.gameObject;
             panel.transform.SetParent(targetpanel.transform);
