@@ -32,7 +32,7 @@ public class ChangeFishTank : MonoBehaviour
             Destroy(this.GetComponent<FishPanelInfo>().FishID.GetComponent<Fish>().MoveSpot);
             Destroy(this.gameObject);
         }
-        else if (this.GetComponent<FishPanelInfo>().FishID.GetComponent<Fish>().hometankID == 1)
+        else if (this.GetComponent<FishPanelInfo>().FishID.GetComponent<Fish>().hometankID == 1 && tank2.Unlocked)
         {
 
             tank1.FishInTank -= 1;

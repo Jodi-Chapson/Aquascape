@@ -99,7 +99,6 @@ public class SaveManager : MonoBehaviour
 
                 if (Count == 0 && data.Species == "Gold Fish")
                 {
-                    Debug.Log(data.Species);
                     GameObject StartFish = GameObject.Find("Fish");
                     StartFish.GetComponent<Fish>().Level = data.Level;
                     StartFish.GetComponent<Fish>().Species = data.Species;

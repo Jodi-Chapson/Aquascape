@@ -86,6 +86,7 @@ public class FishShop : MonoBehaviour
             GameObject fish = Instantiate(targetfish, targetspawnpoint.position, Quaternion.identity);
             BubblesGenerated.bubbles -= fishprice;
             targettank.FishInTank += 1;
+            targettank.CapacityText.text = "Capacity : " + targettank.FishInTank + "/" + targettank.FishAllowed;
             CapacityText.text = "Capacity : " + targettank.FishInTank + "/" + targettank.FishAllowed;
 
             

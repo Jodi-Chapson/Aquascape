@@ -147,7 +147,8 @@ public class InfoTankManager : MonoBehaviour
         {
             collision.GetComponent<Fish>().hometankID = 1;
             collision.GetComponent<Fish>().SwimmingArea = GameObject.Find("Red Tailed Shark Swimming Area 1").GetComponent<BoxCollider2D>();
-            collision.GetComponent<Fish>().hasSwimmingArea = true;
+            collision.GetComponent<Fish>().hasSwimmingArea = true;FishInTank++;
+            CapacityText.text = "Capacity : " + FishInTank + "/" + FishAllowed;
             GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
             panel.GetComponent<FishPanelInfo>().targetfish = collision.gameObject;
             panel.transform.SetParent(targetpanel.transform);
@@ -186,7 +187,6 @@ public class InfoTankManager : MonoBehaviour
                 collision.GetComponent<Fish>().SwimmingArea = GameObject.Find("Neon Tetra Swimming Area 2").GetComponent<BoxCollider2D>();
                 collision.GetComponent<Fish>().hasSwimmingArea = true;
             }
-
             GameObject panel = Instantiate(panelprefab, Vector3.zero, Quaternion.identity);
             panel.GetComponent<FishPanelInfo>().targetfish = collision.gameObject;
             panel.transform.SetParent(targetpanel.transform);
