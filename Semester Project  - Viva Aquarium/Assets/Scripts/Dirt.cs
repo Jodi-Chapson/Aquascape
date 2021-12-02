@@ -41,10 +41,17 @@ public class Dirt : MonoBehaviour
     }
 
 
-
     IEnumerator StartAnimation()
     {
         Anim.SetTrigger("Dirt");
         yield return new WaitForSeconds(10f);
     }
+
+    public void CleanTank()
+    {
+        ResetTimer();
+        Anim.SetTrigger("Clean");
+
+    }
+
 }
