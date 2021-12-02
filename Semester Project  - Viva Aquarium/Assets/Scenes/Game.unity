@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 63379746}
   - component: {fileID: 63379745}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: MiddlePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -555,8 +555,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.928158, y: -40}
-  m_SizeDelta: {x: -122.8263, y: -200.1019}
+  m_AnchoredPosition: {x: 1.2212067, y: -40}
+  m_SizeDelta: {x: -113.3887, y: -200.1019}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &63379745
 MonoBehaviour:
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3764706, g: 0.6392157, b: 0.7372549, a: 1}
+  m_Color: {r: 0.28627452, g: 0.49803922, b: 0.5764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -698,7 +698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &79269605
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2182,8 +2182,7 @@ MonoBehaviour:
   UpgradePrice: {fileID: 979112597}
   UpgradeButton: {fileID: 1455039551}
   Decor2_button: {fileID: 79269604}
-  Decor3_button: {fileID: 997472060}
-  Decor4_button: {fileID: 344162960}
+  Decor3_button: {fileID: 344162960}
   TankLevel: 0
   TankProductionModifer: 1
   UpgradeTankPrice: 250
@@ -2233,7 +2232,7 @@ RectTransform:
   m_GameObject: {fileID: 282408403}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.122929, y: 2.2637265, z: 1}
+  m_LocalScale: {x: 2.3902016, y: 1.7325921, z: 0.7653716}
   m_Children:
   - {fileID: 535880217}
   - {fileID: 1551192020}
@@ -2282,7 +2281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10a0957949fa87d499c3e19c7c936bcc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 641ec05df7ef8f643b89ee9ec2e0afa5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2863,7 +2862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &344162961
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3059,7 +3058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 123, y: -18.8}
+  m_AnchoredPosition: {x: 138.1, y: -18.8}
   m_SizeDelta: {x: 99.3981, y: 65.5664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &360095551
@@ -5508,8 +5507,7 @@ MonoBehaviour:
   UpgradePrice: {fileID: 333584552}
   UpgradeButton: {fileID: 749675310}
   Decor2_button: {fileID: 887353987}
-  Decor3_button: {fileID: 726121554}
-  Decor4_button: {fileID: 339706190}
+  Decor3_button: {fileID: 339706190}
   TankLevel: 0
   TankProductionModifer: 1
   UpgradeTankPrice: 20
@@ -7729,7 +7727,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1120083838}
   m_HandleRect: {fileID: 1120083837}
   m_Direction: 0
-  m_Value: 1.0000081
+  m_Value: 1.0000082
   m_Size: 0.0016008967
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8150,7 +8148,7 @@ MonoBehaviour:
     type: 3}
   Neon_Tetra: {fileID: 1176685205805307522, guid: 751b3276fc4fa714287057e1fffe6421,
     type: 3}
-  Betta: {fileID: 5794334053201423468, guid: add29cae57aa86b419ba2eb1d0bbd603, type: 3}
+  Betta: {fileID: 0}
   gamemanager: {fileID: 1463591276}
   FishTankOneCollider: {fileID: 246969933}
   FishTankTwoCollider: {fileID: 583073072}
@@ -9480,7 +9478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10a0957949fa87d499c3e19c7c936bcc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 641ec05df7ef8f643b89ee9ec2e0afa5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10897,8 +10895,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977526892}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 16.5, y: 11, z: 1}
+  m_LocalPosition: {x: 1.4549, y: 0, z: 0}
+  m_LocalScale: {x: 19.410599, y: 11, z: 1}
   m_Children: []
   m_Father: {fileID: 699770746}
   m_RootOrder: 3
@@ -11273,7 +11271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10a0957949fa87d499c3e19c7c936bcc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 641ec05df7ef8f643b89ee9ec2e0afa5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11324,7 +11322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &997472061
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13628,7 +13626,7 @@ GameObject:
   - component: {fileID: 1235864065}
   - component: {fileID: 1235864064}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: HeaderPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13650,8 +13648,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.928158, y: 81.71939}
-  m_SizeDelta: {x: -122.8263, y: -200.1019}
+  m_AnchoredPosition: {x: 0.5294037, y: 81.71939}
+  m_SizeDelta: {x: -114.302, y: -200.1019}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235864064
 MonoBehaviour:
@@ -13666,7 +13664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3764706, g: 0.6392157, b: 0.7372549, a: 1}
+  m_Color: {r: 0.28627452, g: 0.49803922, b: 0.5764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13997,10 +13995,10 @@ RectTransform:
   m_Father: {fileID: 878284019}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1310843922
 MonoBehaviour:
@@ -14075,7 +14073,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 175.39369, y: 144}
+  m_AnchoredPosition: {x: 105.5, y: 104.3}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1330374763
@@ -16498,7 +16496,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10a0957949fa87d499c3e19c7c936bcc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 641ec05df7ef8f643b89ee9ec2e0afa5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16673,8 +16671,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1474140751}
   m_HandleRect: {fileID: 1474140750}
   m_Direction: 0
-  m_Value: 1.0000081
-  m_Size: 0.0016008968
+  m_Value: 1.0000082
+  m_Size: 0.0016008967
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -18288,7 +18286,7 @@ GameObject:
   - component: {fileID: 1811375017}
   - component: {fileID: 1811375016}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: MiddlePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18326,7 +18324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3764706, g: 0.6392157, b: 0.7372549, a: 1}
+  m_Color: {r: 0.28627452, g: 0.49803922, b: 0.5764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -20197,7 +20195,7 @@ GameObject:
   - component: {fileID: 2013145289}
   - component: {fileID: 2013145288}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: HeaderPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20235,7 +20233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3764706, g: 0.6392157, b: 0.7372549, a: 1}
+  m_Color: {r: 0.28502136, g: 0.49654502, b: 0.5754717, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
