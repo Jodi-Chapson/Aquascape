@@ -28707,7 +28707,7 @@ PrefabInstance:
     - target: {fileID: -7484625207602008992, guid: c2c52e390a74ed843aa122478ea2f85a,
         type: 3}
       propertyPath: UpgradePrice
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2060002001, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
       propertyPath: m_Camera
