@@ -99,7 +99,7 @@ MonoBehaviour:
   FishPanelGO: {fileID: 0}
   hasSwimmingArea: 0
   TankName: 
-  SliderFill: {fileID: 0}
+  SliderFill: {fileID: 5208651667076388898}
   Level: 0
   Happiness: 10
   Species: Betta
