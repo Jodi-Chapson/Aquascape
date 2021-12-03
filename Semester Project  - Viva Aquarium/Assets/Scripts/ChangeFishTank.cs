@@ -21,7 +21,7 @@ public class ChangeFishTank : MonoBehaviour
         InfoTankManager tank1 = GameObject.Find("Tank01").GetComponent<InfoTankManager>();
         InfoTankManager tank2 = GameObject.Find("Tank02").GetComponent<InfoTankManager>();
         
-        if (this.GetComponent<FishPanelInfo>().FishID.GetComponent<Fish>().hometankID == 2)
+        if (this.GetComponent<FishPanelInfo>().FishID.GetComponent<Fish>().hometankID == 2 && tank1.GetComponent<InfoTankManager>().FishInTank != tank1.GetComponent<InfoTankManager>().FishAllowed)
         {
             tank1.FishInTank += 1;
             tank2.FishInTank -= 1;
@@ -32,7 +32,7 @@ public class ChangeFishTank : MonoBehaviour
             Destroy(this.GetComponent<FishPanelInfo>().FishID.GetComponent<Fish>().MoveSpot);
             Destroy(this.gameObject);
         }
-        else if (this.GetComponent<FishPanelInfo>().FishID.GetComponent<Fish>().hometankID == 1 && tank2.Unlocked)
+        else if (this.GetComponent<FishPanelInfo>().FishID.GetComponent<Fish>().hometankID == 1 && tank2.Unlocked && tank2.GetComponent<InfoTankManager>().FishInTank != tank2.GetComponent<InfoTankManager>().FishAllowed)
         {
 
             tank1.FishInTank -= 1;
