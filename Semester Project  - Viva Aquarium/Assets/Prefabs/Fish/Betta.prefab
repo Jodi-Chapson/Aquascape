@@ -104,7 +104,7 @@ MonoBehaviour:
   Happiness: 10
   Species: Betta
   hometankID: 0
-  UpgradePrice: 300
+  UpgradePrice: 500
 --- !u!61 &8830676449618092535
 BoxCollider2D:
   m_ObjectHideFlags: 0
