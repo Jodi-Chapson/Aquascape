@@ -30,7 +30,7 @@ public class BubblesGenerated : MonoBehaviour
         ResetTimer = false;
         fish = this.GetComponent<Fish>();
         hometank = GameObject.Find("Tank01").GetComponent<InfoTankManager>();
-        tankmodifier = hometank.TankProductionModifer;
+        //tankmodifier = hometank.TankProductionModifer;
 
         if (fish.Level != 0)
         {
@@ -45,7 +45,7 @@ public class BubblesGenerated : MonoBehaviour
     void Update()
     {
         happinessmodifier = fish.Happiness / 10;
-        tankmodifier = hometank.TankProductionModifer;
+        //tankmodifier = hometank.TankProductionModifer;
         
 
         
