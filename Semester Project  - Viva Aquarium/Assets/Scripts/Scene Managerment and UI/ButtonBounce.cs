@@ -11,6 +11,8 @@ public class ButtonBounce : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public int size;
     public Vector3 scale;
 
+    public AudioSource SoundEffect;
+
     public void Start()
     {
         if (isText)
@@ -50,5 +52,10 @@ public class ButtonBounce : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         }
 
         
+    }
+
+    public void PlayAudio()
+    {
+        SoundEffect.Play();
     }
 }

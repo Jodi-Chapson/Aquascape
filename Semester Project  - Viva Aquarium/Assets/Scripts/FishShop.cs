@@ -18,6 +18,8 @@ public class FishShop : MonoBehaviour
 
     public Text CapacityText;
 
+    public AudioSource SoundEffect;
+
     public void Start()
     {
         manager = GameObject.Find("Bubble_Manager").GetComponent<GameManager>();   
@@ -57,21 +59,25 @@ public class FishShop : MonoBehaviour
         {
             fishprice = 60;
             targetfish = manager.fishtypes[0];
+            SoundEffect.Play();
         }
         else if (type == 2)
         {
             fishprice = 350;
             targetfish = manager.fishtypes[1];
+            SoundEffect.Play();
         }
         else if (type == 3)
         {
             fishprice = 900;
             targetfish = manager.fishtypes[2];
+            SoundEffect.Play();
         }
         else
         {
             fishprice = 1500; //obviously edit this later
             targetfish = manager.fishtypes[3];
+            SoundEffect.Play();
         }
 
 

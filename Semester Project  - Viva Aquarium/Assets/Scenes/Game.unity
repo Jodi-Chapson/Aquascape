@@ -813,6 +813,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &79269607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1149,6 +1150,133 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &125535485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 125535487}
+  - component: {fileID: 125535486}
+  m_Layer: 0
+  m_Name: SoundEffectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &125535486
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125535485}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4c365501b74a53c4e91b11d5cc4cb4d6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &125535487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125535485}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 642.2995, y: 295.73193, z: -32.38434}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &132719815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,6 +1681,7 @@ MonoBehaviour:
   text: {fileID: 1770590616}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 125535486}
 --- !u!114 &150951599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1600,6 +1729,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1463591275}
         m_TargetAssemblyTypeName: _SceneManager, Assembly-CSharp
         m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 150951598}
+        m_TargetAssemblyTypeName: ButtonBounce, Assembly-CSharp
+        m_MethodName: PlayAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1819,6 +1960,7 @@ MonoBehaviour:
   text: {fileID: 951499098}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 125535486}
 --- !u!114 &160809448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1867,6 +2009,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 160809447}
+        m_TargetAssemblyTypeName: ButtonBounce, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2049,6 +2203,7 @@ MonoBehaviour:
   tank03fishgroup: {fileID: 0}
   tank04fishgroup: {fileID: 0}
   CapacityText: {fileID: 2059901015}
+  SoundEffect: {fileID: 125535486}
 --- !u!114 &182728870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2678,6 +2833,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 125535486}
 --- !u!114 &278421681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2726,6 +2882,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 278421680}
+        m_TargetAssemblyTypeName: ButtonBounce, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3542,6 +3710,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &339706193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3727,6 +3896,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &344162963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4064,6 +4234,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 125535486}
 --- !u!114 &360095552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4112,6 +4283,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 360095551}
+        m_TargetAssemblyTypeName: ButtonBounce, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5312,6 +5495,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &444891203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5582,6 +5766,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!1 &504985298
 GameObject:
   m_ObjectHideFlags: 0
@@ -6733,6 +6918,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!1 &579854269
 GameObject:
   m_ObjectHideFlags: 0
@@ -6853,6 +7039,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 579854274}
+        m_TargetAssemblyTypeName: ButtonBounce, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &579854272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6907,6 +7105,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 125535486}
 --- !u!1 &582405021
 GameObject:
   m_ObjectHideFlags: 0
@@ -7267,6 +7466,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 595897384}
+        m_TargetAssemblyTypeName: ButtonBounce, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &595897382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7321,6 +7532,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 125535486}
 --- !u!1 &600860488
 GameObject:
   m_ObjectHideFlags: 0
@@ -7696,6 +7908,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &615447455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9337,6 +9550,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &726121557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9880,6 +10094,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &749675313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10648,6 +10863,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 796806488}
+        m_TargetAssemblyTypeName: ButtonBounce, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &796806486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10702,6 +10929,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 125535486}
 --- !u!1 &799912559
 GameObject:
   m_ObjectHideFlags: 0
@@ -11045,6 +11273,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 856958866}
+        m_TargetAssemblyTypeName: ButtonBounce, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &856958864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11099,6 +11339,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 125535486}
 --- !u!1 &859360853
 GameObject:
   m_ObjectHideFlags: 0
@@ -11738,6 +11979,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 125535486}
 --- !u!114 &881619909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11790,6 +12032,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 881619908}
+        m_TargetAssemblyTypeName: ButtonBounce, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -11974,6 +12228,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &887353990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12967,6 +13222,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 125535486}
 --- !u!114 &953971455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13015,6 +13271,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: BrowseHandbook
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 953971454}
+        m_TargetAssemblyTypeName: ButtonBounce, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13854,6 +14122,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &983743122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14068,6 +14337,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &997472063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14524,6 +14794,7 @@ MonoBehaviour:
   text: {fileID: 2028862332}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 125535486}
 --- !u!114 &1013889145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14607,6 +14878,18 @@ MonoBehaviour:
       - m_Target: {fileID: 761694661}
         m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
         m_MethodName: SaveTankData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1013889144}
+        m_TargetAssemblyTypeName: ButtonBounce, Assembly-CSharp
+        m_MethodName: PlayAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16297,6 +16580,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1142727754}
+        m_TargetAssemblyTypeName: ButtonBounce, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1142727752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16351,6 +16646,7 @@ MonoBehaviour:
   text: {fileID: 518454468}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 125535486}
 --- !u!1 &1154137016
 GameObject:
   m_ObjectHideFlags: 0
@@ -16672,6 +16968,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &1193005258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17046,6 +17343,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &1210606979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17536,6 +17834,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!1 &1277822331
 GameObject:
   m_ObjectHideFlags: 0
@@ -18453,6 +18752,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &1349277430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19314,6 +19614,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!1 &1452813860
 GameObject:
   m_ObjectHideFlags: 0
@@ -19594,6 +19895,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!1 &1461271808
 GameObject:
   m_ObjectHideFlags: 0
@@ -21546,6 +21848,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &1559559364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23695,6 +23998,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 0}
 --- !u!114 &1765243311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26689,6 +26993,7 @@ MonoBehaviour:
   text: {fileID: 0}
   size: 0
   scale: {x: 0, y: 0, z: 0}
+  SoundEffect: {fileID: 125535486}
 --- !u!114 &2011422862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26736,6 +27041,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1463591276}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: ToggleNumbers
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2011422861}
+        m_TargetAssemblyTypeName: ButtonBounce, Assembly-CSharp
+        m_MethodName: PlayAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
