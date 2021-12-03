@@ -81,6 +81,12 @@ public class FishShop : MonoBehaviour
 
             
             GameObject fish = Instantiate(targetfish, targetspawnpoint.position, Quaternion.identity);
+
+            if (type == 4)
+            {
+                manager.RandomizeBetta(fish);
+            }
+
             BubblesGenerated.bubbles -= fishprice;
             targettank.FishInTank += 1;
             targettank.CapacityText.text = "Capacity : " + targettank.FishInTank + "/" + targettank.FishAllowed;

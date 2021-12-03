@@ -16220,8 +16220,6 @@ MonoBehaviour:
   tanks:
   - {fileID: 246969935}
   - {fileID: 583073073}
-  - {fileID: 0}
-  - {fileID: 0}
   fishtypes:
   - {fileID: 780711293047101201, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
   - {fileID: 7269933901818935627, guid: e82b451d1d9183d45aec2dfe5051f5ce, type: 3}
@@ -16249,6 +16247,10 @@ MonoBehaviour:
   tank2decor1: {fileID: 887353987}
   tank2decor2: {fileID: 726121554}
   tank2decor3: {fileID: 339706190}
+  betta1: {fileID: 9100000, guid: 317ca04a6659852498f5147845acf7ea, type: 2}
+  betta2: {fileID: 9100000, guid: dabfd7d7cbd16df4ab59b1f5e31f8366, type: 2}
+  betta3: {fileID: 9100000, guid: 0a0594af29cc5954b88b87ed3dee2f5d, type: 2}
+  lastfish: 0
   CurrentTankID: 0
   circle: {fileID: 1700020604}
   x1: {fileID: 1210606976}

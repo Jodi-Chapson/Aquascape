@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     public GameObject tank1decor0, tank1decor1, tank1decor2, tank1decor3;
     public GameObject tank2decor0, tank2decor1, tank2decor2, tank2decor3;
 
+    public RuntimeAnimatorController betta1, betta2, betta3;
+    public int lastfish;
+    
+
     public static List<GameObject> fish = new List<GameObject>();
     public int CurrentTankID;
 
@@ -31,6 +35,7 @@ public class GameManager : MonoBehaviour
             GameSpeed = 1;
         }
 
+        lastfish = 0;
 
         //change this later maybe 
             numbers = true;
@@ -188,7 +193,35 @@ public class GameManager : MonoBehaviour
         }
     }
 
-   
+    public void RandomizeBetta(GameObject targetfish)
+    {
+        GameObject fish = targetfish;
+        int random = Random.Range(1, 4);
+
+        if (random == lastfish)
+        {
+            RandomizeBetta(fish);
+            return;
+        }
+        
+
+
+        if (random == 1)
+        {
+            targetfish.GetComponentInChildren<Animator>().runtimeAnimatorController = betta1;
+            lastfish = random;
+        }
+        else if (random == 2)
+        {
+            targetfish.GetComponentInChildren<Animator>().runtimeAnimatorController = betta2;
+            lastfish = random;
+        }
+        else if (random == 3)
+        {
+            targetfish.GetComponentInChildren<Animator>().runtimeAnimatorController = betta3;
+            lastfish = random;
+        }
+    }
 
 
     public void ChangeGameSpeed(int speed)

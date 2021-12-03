@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4800131112817055517}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.3185, y: -0.28921, z: -2}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4800131113695482488}
   - {fileID: 8304265512195096888}
@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3756ad1f9876ce34dbfa0a2247254c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 0
   SpawnPoint: {fileID: 4800131113695482488}
   BubblePrefab: {fileID: 3891401958653588265, guid: ac25ff0550131da4f8a633e74c9ea7cb,
     type: 3}
@@ -98,6 +99,7 @@ MonoBehaviour:
   FishPanelGO: {fileID: 0}
   hasSwimmingArea: 0
   TankName: 
+  SliderFill: {fileID: 0}
   Level: 0
   Happiness: 10
   Species: Betta
@@ -619,7 +621,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 3c656a90ba6f5b7418ee72b7d59a2d92, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93a984a32d439ba4eaea499457b2b2ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -640,7 +642,7 @@ Animator:
   m_GameObject: {fileID: 5757230672873080855}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6866d338236a2254daee1b26f39b3e6d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0a0594af29cc5954b88b87ed3dee2f5d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
