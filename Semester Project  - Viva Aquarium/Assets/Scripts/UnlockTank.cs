@@ -16,17 +16,9 @@ public class UnlockTank : MonoBehaviour
     public GameObject Tank02_InfoButton;
     public GameObject Tank02_Dirt;
 
-    public GameObject Tank03_LockButton;
-    public GameObject Tank03_LockedSprite;
-    public GameObject Tank03_InfoButton;
-
-    public GameObject Tank04_LockButton;
-    public GameObject Tank04_LockedSprite;
-    public GameObject Tank04_InfoButton;
-
     public void Tank02()
     {
-        Price = 1000;
+        Price = 3000;
         PriceText.text = "" + Price;
 
         TankNumber = 2;
@@ -70,22 +62,6 @@ public class UnlockTank : MonoBehaviour
                 Tank02_InfoButton.SetActive(true);
                 Tank02_Dirt.SetActive(true);
                 GameObject.Find("Tank02").GetComponent<InfoTankManager>().Unlocked = true;
-            }
-
-            if (TankNumber == 3)
-            {
-                Tank03_LockButton.SetActive(false);
-                Tank03_LockedSprite.SetActive(false);
-                Tank03_InfoButton.SetActive(true);
-                GameObject.Find("Tank03").GetComponent<InfoTankManager>().Unlocked = true;
-            }
-
-            if (TankNumber == 4)
-            {
-                Tank04_LockButton.SetActive(false);
-                Tank04_LockedSprite.SetActive(false);
-                Tank04_InfoButton.SetActive(true);
-                GameObject.Find("Tank04").GetComponent<InfoTankManager>().Unlocked = true;
             }
 
 

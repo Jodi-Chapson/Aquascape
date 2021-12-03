@@ -2016,13 +2016,7 @@ MonoBehaviour:
   Tank02_LockButton: {fileID: 615447452}
   Tank02_LockedSprite: {fileID: 972676172}
   Tank02_InfoButton: {fileID: 579854269}
-  Tank02_Dirt: {fileID: 0}
-  Tank03_LockButton: {fileID: 0}
-  Tank03_LockedSprite: {fileID: 0}
-  Tank03_InfoButton: {fileID: 0}
-  Tank04_LockButton: {fileID: 0}
-  Tank04_LockedSprite: {fileID: 0}
-  Tank04_InfoButton: {fileID: 0}
+  Tank02_Dirt: {fileID: 745288931}
 --- !u!1 &243789262
 GameObject:
   m_ObjectHideFlags: 0
@@ -10945,12 +10939,6 @@ MonoBehaviour:
   Tank02_LockedSprite: {fileID: 972676172}
   Tank02_InfoButton: {fileID: 579854269}
   Tank02_Dirt: {fileID: 745288931}
-  Tank03_LockButton: {fileID: 0}
-  Tank03_LockedSprite: {fileID: 0}
-  Tank03_InfoButton: {fileID: 0}
-  Tank04_LockButton: {fileID: 0}
-  Tank04_LockedSprite: {fileID: 0}
-  Tank04_InfoButton: {fileID: 0}
 --- !u!1 &977526892
 GameObject:
   m_ObjectHideFlags: 0
