@@ -79,12 +79,16 @@ public class BubblesGenerated : MonoBehaviour
         }
        else if (GameObject.Find("Dirt01").GetComponent<Dirt>().Dirty == false)
         {
-            //continue
-            bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
-            seconds += Time.deltaTime;
+            string name = GetComponent<Fish>().TankName;
+            if (name == "Tank01")
+            {
+                //continue
+                bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
+                seconds += Time.deltaTime;
 
-            Image SliderFill = GetComponent<Fish>().SliderFill;
-            SliderFill.color = Color.green;
+                Image SliderFill = GetComponent<Fish>().SliderFill;
+                SliderFill.color = Color.green;
+            }
         }
 
 
@@ -104,12 +108,18 @@ public class BubblesGenerated : MonoBehaviour
         }
         else if (GameObject.Find("Dirt02").GetComponent<Dirt>().Dirty == false)
         {
-            //continue
-            bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
-            seconds += Time.deltaTime;
 
-            Image SliderFill = GetComponent<Fish>().SliderFill;
-            SliderFill.color = Color.green;
+            string name = GetComponent<Fish>().TankName;
+            if (name == "Tank02")
+            {
+                //continue
+                bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
+                seconds += Time.deltaTime;
+
+                Image SliderFill = GetComponent<Fish>().SliderFill;
+                SliderFill.color = Color.green;
+            }
+          
         }
 
     }
