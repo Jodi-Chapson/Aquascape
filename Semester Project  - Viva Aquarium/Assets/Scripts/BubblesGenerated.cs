@@ -49,7 +49,7 @@ public class BubblesGenerated : MonoBehaviour
         
 
         
-        if (seconds >= 15)
+        if (seconds >= 5)
         {
             bubbles += bubbleproduction;      //+1 each time a bubble spawns
             
