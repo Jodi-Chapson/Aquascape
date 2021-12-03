@@ -94,7 +94,7 @@ public class BubblesGenerated : MonoBehaviour
 
 
         //If tank 02 is dirty, fish in that tank stop producing bubbles
-        if (GameObject.Find("Dirt02").GetComponent<Dirt>().Dirty == true)
+        if (GameObject.Find("Dirt02").GetComponent<Dirt2>().Dirty == true)
         {
             string name = GetComponent<Fish>().TankName;
             if (name == "Tank02")
@@ -106,7 +106,7 @@ public class BubblesGenerated : MonoBehaviour
                 SliderFill.color = Color.red;
             }
         }
-        else if (GameObject.Find("Dirt02").GetComponent<Dirt>().Dirty == false)
+        else if (GameObject.Find("Dirt02").GetComponent<Dirt2>().Dirty == false)
         {
 
             string name = GetComponent<Fish>().TankName;
