@@ -19927,7 +19927,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2f1ad2af4d7234d4895223edb156af0a, type: 3}
   - {fileID: 21300000, guid: 887dd626a8d5d0749816648b86261e97, type: 3}
   - {fileID: 21300000, guid: 93bab4ff9ae08a14393813205af84a0a, type: 3}
-  - {fileID: 21300000, guid: 5df4420561b5f1a45be8d4cd86c29a49, type: 3}
+  - {fileID: 21300000, guid: 8de31ff5421af4a44acb8dc37051b96d, type: 3}
+  - {fileID: 21300000, guid: d4769601003569548bbc8cd0e26ea55c, type: 3}
+  - {fileID: 21300000, guid: 0f58d415535540a489481518547815e9, type: 3}
   tankthemes:
   - {fileID: 21300000, guid: 0deab41e31b137943be098c8a23c6e4b, type: 3}
   - {fileID: 21300000, guid: afe30d751cedafe429b07df926e9a510, type: 3}

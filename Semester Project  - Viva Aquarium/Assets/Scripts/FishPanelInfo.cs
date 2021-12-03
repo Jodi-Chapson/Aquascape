@@ -44,9 +44,20 @@ public class FishPanelInfo : MonoBehaviour
             fishsprite.GetComponent<Image>().sprite = manager.panelsprites[2];
             
         }
-        else
+        else if (fish.GetComponent<Fish>().Species == "Betta")
         {
-            fishsprite.GetComponent<Image>().sprite = manager.panelsprites[3];
+            if (fish.GetComponentInChildren<Animator>().runtimeAnimatorController == manager.betta1)
+            {
+                fishsprite.GetComponent<Image>().sprite = manager.panelsprites[3];
+            }
+            else if (fish.GetComponentInChildren<Animator>().runtimeAnimatorController == manager.betta2)
+            {
+                fishsprite.GetComponent<Image>().sprite = manager.panelsprites[4];
+            }
+            else if (fish.GetComponentInChildren<Animator>().runtimeAnimatorController == manager.betta3)
+            {
+                fishsprite.GetComponent<Image>().sprite = manager.panelsprites[5];
+            }
             
         }    
         
