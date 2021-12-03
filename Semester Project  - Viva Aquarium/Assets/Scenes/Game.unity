@@ -2259,7 +2259,7 @@ MonoBehaviour:
   Decor4_button: {fileID: 344162960}
   TankLevel: 0
   TankProductionModifer: 1
-  UpgradeTankPrice: 250
+  UpgradeTankPrice: 500
   FishInTank: 1
   FishAllowed: 8
   FishFoodPrefab: {fileID: 5788731206443467250, guid: 15a30baaa8e0e47418b583dba075192f,
@@ -5723,7 +5723,7 @@ MonoBehaviour:
   Decor4_button: {fileID: 339706190}
   TankLevel: 0
   TankProductionModifer: 1
-  UpgradeTankPrice: 20
+  UpgradeTankPrice: 1000
   FishInTank: 0
   FishAllowed: 8
   FishFoodPrefab: {fileID: 1398346939}
@@ -7940,8 +7940,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1120083838}
   m_HandleRect: {fileID: 1120083837}
   m_Direction: 0
-  m_Value: 1.0000081
-  m_Size: 0.0016008967
+  m_Value: 1.000008
+  m_Size: 0.0016008965
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -17936,11 +17936,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bf043c0cae253f547a24a2335c4e7c2b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.097
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -16,7 +16,7 @@ public class InfoTankManager : MonoBehaviour
     public float TankLevel = 1f;
     public float TankProductionModifer; //a percentage?
 
-    public float UpgradeTankPrice = 20f; //Initial upgrade price for the tank
+    public float UpgradeTankPrice; //Initial upgrade price for the tank
 
 
     public float FishInTank;
