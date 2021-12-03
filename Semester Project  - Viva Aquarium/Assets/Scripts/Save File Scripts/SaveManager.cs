@@ -46,13 +46,6 @@ public class SaveManager : MonoBehaviour
         LoadTankData();
     }
 
-    //private void OnApplicationQuit()
-    //{
-    //    SaveFishData();
-    //    SaveNumberOfBubbles();
-    //    SaveTankData();
-    //}
-
     public void SaveFishData()
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -112,7 +105,6 @@ public class SaveManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log(data.Species);
 
                     if (data.HomeTankID == 1)
                     {
@@ -130,7 +122,6 @@ public class SaveManager : MonoBehaviour
 
                     if (data.Species == "Gold Fish")
                     {
-                        Debug.Log("Spawning gold fish");
                         Fish fish = Instantiate(Gold_Fish, Pos, Quaternion.identity);
                         fish.Level = data.Level;
                         fish.Species = data.Species;
@@ -140,7 +131,6 @@ public class SaveManager : MonoBehaviour
                     }
                     else if (data.Species == "Red Tailed Shark")
                     {
-                        Debug.Log("Spawning RTS");
                         Fish fish = Instantiate(Red_Tailed_Shark, Pos, Quaternion.identity);
                         fish.Level = data.Level;
                         fish.Species = data.Species;
