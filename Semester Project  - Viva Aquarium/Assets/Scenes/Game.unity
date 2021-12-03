@@ -2521,6 +2521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 288937311}
   - component: {fileID: 288937310}
+  - component: {fileID: 288937312}
   m_Layer: 5
   m_Name: Vertical Layout Group 02
   m_TagString: Untagged
@@ -2573,6 +2574,20 @@ RectTransform:
   m_AnchoredPosition: {x: -2.2, y: -0.0000023842}
   m_SizeDelta: {x: 100, y: 62.465}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &288937312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288937309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!1 &290448982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2739,6 +2754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 319612274}
   - component: {fileID: 319612275}
+  - component: {fileID: 319612276}
   m_Layer: 5
   m_Name: Vertical Layout Group 01
   m_TagString: Untagged
@@ -2791,6 +2807,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &319612276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319612273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!1 &333584549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4896,7 +4926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Content: {fileID: 535880217}
+  m_Content: {fileID: 288937311}
   m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
@@ -8361,7 +8391,7 @@ MonoBehaviour:
     type: 3}
   Neon_Tetra: {fileID: 1176685205805307522, guid: 751b3276fc4fa714287057e1fffe6421,
     type: 3}
-  Betta: {fileID: 0}
+  Betta: {fileID: 5794334053201423468, guid: add29cae57aa86b419ba2eb1d0bbd603, type: 3}
   gamemanager: {fileID: 1463591276}
   FishTankOneCollider: {fileID: 246969933}
   FishTankTwoCollider: {fileID: 583073072}
@@ -20422,7 +20452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Content: {fileID: 1956744621}
+  m_Content: {fileID: 319612274}
   m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
