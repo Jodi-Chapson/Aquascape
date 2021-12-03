@@ -4151,7 +4151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.1, y: -18.8}
+  m_AnchoredPosition: {x: 123, y: -18.8}
   m_SizeDelta: {x: 99.3981, y: 65.5664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &360095551
@@ -23005,6 +23005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1622004433}
   - component: {fileID: 1622004434}
+  - component: {fileID: 1622004435}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -23122,6 +23123,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1622004435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622004432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8a568b680b1514a95ca1434547554b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1625165360
 GameObject:
   m_ObjectHideFlags: 0
