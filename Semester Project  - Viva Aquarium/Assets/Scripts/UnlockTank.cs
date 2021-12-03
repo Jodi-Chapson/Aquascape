@@ -24,22 +24,6 @@ public class UnlockTank : MonoBehaviour
         TankNumber = 2;
     }
 
-    public void Tank03()
-    {
-        Price = 3000;
-        PriceText.text = "" + Price;
-
-        TankNumber = 3;
-    }
-
-    public void Tank04()
-    {
-        Price = 9000;
-        PriceText.text = "" + Price;
-
-        TankNumber = 4;
-    }
-
     public void Yes()
     {
         //Color newColor;
