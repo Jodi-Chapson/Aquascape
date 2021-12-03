@@ -86,7 +86,7 @@ MonoBehaviour:
   BubblePrefab: {fileID: 3891401958653588265, guid: ac25ff0550131da4f8a633e74c9ea7cb,
     type: 3}
   bubbleproduction: 0
-  baseproduction: 4
+  baseproduction: 2
   level: 0
   levelmodifier: 1
   happinessmodifier: 0

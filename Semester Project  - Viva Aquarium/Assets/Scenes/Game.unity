@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -14.6}
-  m_SizeDelta: {x: 348, y: 264}
+  m_AnchoredPosition: {x: 0, y: -12.9}
+  m_SizeDelta: {x: 325, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4931509
 MonoBehaviour:
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 122eb613690ca93448df739ebf05df97, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80a329db813921046915936e49079b56, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3739,7 +3739,7 @@ RectTransform:
   m_GameObject: {fileID: 395887789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.13, y: 0.13, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 6775661}
   m_RootOrder: 0
@@ -3747,7 +3747,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -14.4}
-  m_SizeDelta: {x: 640, y: 255}
+  m_SizeDelta: {x: 278, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &395887791
 MonoBehaviour:
@@ -3769,7 +3769,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 32a92364192302d43a1133de708b9d69, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4dd6a39d09286214995af59e3529b0ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3857,7 +3857,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Tetra
+  m_Text: 'Red-Tailed Shark
 
     900 Bubbles'
 --- !u!222 &401278401
@@ -10843,14 +10843,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This fish is naturally shy and nervous - needs to be kept in shoals with
-    fish of its species so that it is more happy. Middle to upper waters
-
-
-    bubble
-    generation : +4
-
-'
+  m_Text: "This fish is intolerant of its own kind but is otherwise fine with other
+    fish. Faster moving middle/large fish and hangs in the middle to lower waters.
+    \n\nbubble generation : +4\n"
 --- !u!222 &957641814
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13559,7 +13554,7 @@ RectTransform:
   m_GameObject: {fileID: 1154137016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.13, y: 0.13, z: 1}
   m_Children: []
   m_Father: {fileID: 757543755}
   m_RootOrder: 0
@@ -13567,7 +13562,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0000076293945, y: -9.9}
-  m_SizeDelta: {x: 278, y: 110}
+  m_SizeDelta: {x: 640, y: 255}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1154137018
 MonoBehaviour:
@@ -13589,7 +13584,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4dd6a39d09286214995af59e3529b0ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2402c6366a573b14fa813292a52cfd33, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15279,7 +15274,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Exodon
+  m_Text: 'Betta
 
     1 500 Bubbles'
 --- !u!222 &1375120631
@@ -15675,7 +15670,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Red Tailed Shark
+  m_Text: 'Tetra
 
     350 Bubbles'
 --- !u!222 &1407630120
@@ -16222,8 +16217,8 @@ MonoBehaviour:
   - {fileID: 583073073}
   fishtypes:
   - {fileID: 780711293047101201, guid: c2c52e390a74ed843aa122478ea2f85a, type: 3}
-  - {fileID: 7269933901818935627, guid: e82b451d1d9183d45aec2dfe5051f5ce, type: 3}
   - {fileID: 189306466236919283, guid: 751b3276fc4fa714287057e1fffe6421, type: 3}
+  - {fileID: 7269933901818935627, guid: e82b451d1d9183d45aec2dfe5051f5ce, type: 3}
   - {fileID: 4800131112817055517, guid: add29cae57aa86b419ba2eb1d0bbd603, type: 3}
   panelsprites:
   - {fileID: 21300000, guid: 2f1ad2af4d7234d4895223edb156af0a, type: 3}
@@ -18795,15 +18790,15 @@ RectTransform:
   m_GameObject: {fileID: 1766223383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.13, y: 0.13, z: 1}
   m_Children: []
   m_Father: {fileID: 1727770522}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.744, y: -15.311}
-  m_SizeDelta: {x: 359.6419, y: 157.854}
+  m_AnchoredPosition: {x: -0.744, y: -11.7}
+  m_SizeDelta: {x: 392, y: 331}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766223385
 MonoBehaviour:
@@ -18825,7 +18820,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3c656a90ba6f5b7418ee72b7d59a2d92, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93a984a32d439ba4eaea499457b2b2ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21790,9 +21785,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "This fish is intolerant of its own kind but is otherwise fine with other
-    fish. Faster moving middle/large fish and hangs in the middle to lower waters.
-    \n\nbubble generation : +2\n"
+  m_Text: 'This fish is naturally shy and nervous - needs to be kept in shoals with
+    fish of its species so that it is more happy. Middle to upper waters
+
+
+    bubble
+    generation : +2
+
+'
 --- !u!222 &2122393559
 CanvasRenderer:
   m_ObjectHideFlags: 0
