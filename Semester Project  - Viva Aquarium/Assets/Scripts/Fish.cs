@@ -40,6 +40,8 @@ public class Fish : MonoBehaviour
 
     public string TankName;
 
+    public Image SliderFill;
+
     //Save File stuff
     public int Level;
     public float Happiness;

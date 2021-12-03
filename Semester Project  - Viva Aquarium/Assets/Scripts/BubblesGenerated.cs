@@ -72,6 +72,9 @@ public class BubblesGenerated : MonoBehaviour
             {
                 bubbleproduction = 0;
                 seconds = 0;
+
+                Image SliderFill = GetComponent<Fish>().SliderFill;         //accessing slider image in fish script and turning it red when in dirt
+                SliderFill.color = Color.red;
             }  
         }
        else if (GameObject.Find("Dirt01").GetComponent<Dirt>().Dirty == false)
@@ -79,6 +82,9 @@ public class BubblesGenerated : MonoBehaviour
             //continue
             bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
             seconds += Time.deltaTime;
+
+            Image SliderFill = GetComponent<Fish>().SliderFill;
+            SliderFill.color = Color.green;
         }
 
 
@@ -91,6 +97,9 @@ public class BubblesGenerated : MonoBehaviour
             {
                 bubbleproduction = 0;
                 seconds = 0;
+
+                Image SliderFill = GetComponent<Fish>().SliderFill;
+                SliderFill.color = Color.red;
             }
         }
         else if (GameObject.Find("Dirt02").GetComponent<Dirt>().Dirty == false)
@@ -98,9 +107,14 @@ public class BubblesGenerated : MonoBehaviour
             //continue
             bubbleproduction = (int)((float)baseproduction * levelmodifier * tankmodifier * happinessmodifier * GameManager.GameSpeed);
             seconds += Time.deltaTime;
+
+            Image SliderFill = GetComponent<Fish>().SliderFill;
+            SliderFill.color = Color.green;
         }
 
     }
+
+
 
     
     public IEnumerator GenerateBubble(int production)

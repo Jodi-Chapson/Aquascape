@@ -523,6 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3756ad1f9876ce34dbfa0a2247254c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 0
   SpawnPoint: {fileID: 780711291800588916}
   BubblePrefab: {fileID: 3891401958653588265, guid: ac25ff0550131da4f8a633e74c9ea7cb,
     type: 3}
@@ -570,6 +571,7 @@ MonoBehaviour:
   FishPanelGO: {fileID: 0}
   hasSwimmingArea: 0
   TankName: 
+  SliderFill: {fileID: 1981945902}
   Level: 0
   Happiness: 10
   Species: Gold Fish
