@@ -28,6 +28,11 @@ public class GameManager : MonoBehaviour
     public static bool numbers;
     public GameObject onoff;
 
+    public GameObject handbook;
+    public GameObject leftscrollbutton, rightscrollbutton;
+    public int currentpage;
+    public GameObject[] bookpages = new GameObject[5]; //reference for all pages of aquarium handbook
+
     public void Start()
     {
         if (GameSpeed == 0)
@@ -36,6 +41,7 @@ public class GameManager : MonoBehaviour
         }
 
         lastfish = 0;
+        currentpage = 0;
 
         //change this later maybe 
             numbers = true;
@@ -223,7 +229,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     public void ChangeGameSpeed(int speed)
     {
         if (speed == 1)
@@ -255,4 +260,63 @@ public class GameManager : MonoBehaviour
             onoff.GetComponentInChildren<Text>().text = "ON";
         }
     }
+
+    public void BrowseHandbook (int direction)
+    {
+        // 0 = left, 1 = right\
+        // for the book pages: 0 = main page, 1 - 4 is fish pages
+
+        if (direction == 0)
+        {
+            bookpages[currentpage].SetActive(false);
+            bookpages[currentpage - 1].SetActive(true);
+
+            currentpage -= 1;
+
+            if (currentpage == 0)
+            {
+                leftscrollbutton.SetActive(false);
+                
+            }
+            else
+            {
+                leftscrollbutton.SetActive(true);
+            }
+            rightscrollbutton.SetActive(true);
+        }
+        else if (direction == 1)
+        {
+            bookpages[currentpage].SetActive(false);
+            bookpages[currentpage + 1].SetActive(true);
+
+            currentpage += 1;
+
+            if (currentpage == 4)
+            {
+                rightscrollbutton.SetActive(false);
+            }
+            else
+            {
+                rightscrollbutton.SetActive(true);
+            }
+            leftscrollbutton.SetActive(true);
+        }
+    }
+
+    public void CloseBook()
+    {
+        if (currentpage != 0)
+        {
+            bookpages[currentpage].SetActive(false);
+            bookpages[0].SetActive(true);
+            currentpage = 0;
+            rightscrollbutton.SetActive(true);
+            leftscrollbutton.SetActive(false);
+
+            
+        }
+        handbook.SetActive(false);
+    }
+
+    
 }
