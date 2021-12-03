@@ -20483,7 +20483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -97.2, y: -47.8}
+  m_AnchoredPosition: {x: -97.2, y: -32.3}
   m_SizeDelta: {x: 128.4839, y: 62.4413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1504298134
@@ -28716,32 +28716,32 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Salutations, budding fishkeeper!
+  m_Text: 'Salutations!
 
 
-    A life of devoted to the love and
-    care of fish lies ahead of you. And by the power of the developers, the art of
-    rearing and looking after fish has been made simple!
+    A life devoted to the love and care of fish lies ahead
+    of you. And by the power of the developers, the art of fishkeeping has been made
+    simple!
 
 
-    In your pursuit of
-    colourful and beautiful fish, you may do the following:
+    In your pursuit of colourful and beautiful fish, you may do the
+    following:
 
 
     - Leveling up fish
 
-    -
-    Leveling up tanks
+    - Leveling up tanks
 
-    - Decorating tanks
+    - Decorating
+    tanks (via the tank menus)
 
     - Buying more tanks and fish!
 
 
-    Your
-    fish produce bubbles for you, and the happier the fish, the more bubbles they
-    produce! Make sure to clean their tanks, and pay close attention to their specific
-    needs and preferences!'
+    Your fish
+    produce bubbles for you, and the happier the fish, the more bubbles they produce!
+    Make sure to clean their tanks, and pay close attention to their specific needs
+    and preferences!'
 --- !u!222 &2147429103
 CanvasRenderer:
   m_ObjectHideFlags: 0
