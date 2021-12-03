@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BubblesGenerated : MonoBehaviour
 {
-    float seconds = 0f;
+    public float seconds = 0f;
     public static double bubbles = 0;
    
 
@@ -49,7 +49,7 @@ public class BubblesGenerated : MonoBehaviour
         
 
         
-        if (seconds >= 6)
+        if (seconds >= 15)
         {
             bubbles += bubbleproduction;      //+1 each time a bubble spawns
             
