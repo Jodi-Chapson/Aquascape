@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
     public GameObject leftscrollbutton, rightscrollbutton;
     public int currentpage;
     public GameObject[] bookpages = new GameObject[5]; //reference for all pages of aquarium handbook
+    public Text goldfish1, goldfish2, goldfish3, tetra1, tetra2, tetra3, rt1, rt2, rt3, betta_1, betta_2, betta_3;
+    public int goldfishlevel, rtlevel, tetralevel, bettalevel;
+    public GameObject notif;
 
     public void Start()
     {
@@ -42,9 +45,13 @@ public class GameManager : MonoBehaviour
 
         lastfish = 0;
         currentpage = 0;
+        goldfishlevel = 0;
+        rtlevel = 0;
+        tetralevel = 0;
+        bettalevel = 0;
 
         //change this later maybe 
-            numbers = true;
+        numbers = true;
         
         if (tanks[0].DecorationInt == 0)
         {
@@ -105,6 +112,90 @@ public class GameManager : MonoBehaviour
             tank2decor0.GetComponent<Image>().sprite = block;
         }
 
+    }
+
+    public void EditHandBook(int species)
+    {
+        if (species == 0)
+        {
+            //goldfish
+            if (goldfishlevel == 1)
+            {
+                goldfish1.text = "This fish isn't picky when it comes to tank mates.";
+                notif.SetActive(true);
+            }
+            else if (goldfishlevel == 3)
+            {
+                goldfish2.text = "Like all goldfish, the fantail is descended from wild carp.";
+                notif.SetActive(true);
+            }
+            else if (goldfishlevel == 5)
+            {
+                goldfish3.text = "This white variant is quite rare! ;)";
+                notif.SetActive(true);
+            }
+
+
+        }
+        else if (species == 2)
+        {
+            //red tailed shark
+            if (rtlevel == 1)
+            {
+                rt1.text = "Juveniles are silvery in appearance - gaining their signature red tail at 7 weeks.";
+                notif.SetActive(true);
+            }
+            else if (rtlevel == 3)
+            {
+                rt2.text = "Beware - this fish is intolerant of its own kind.";
+                notif.SetActive(true);
+            }
+            else if (rtlevel == 5)
+            {
+                rt3.text = "If threatened, they can be territorial and aggressive.";
+                notif.SetActive(true);
+            }
+        }
+        else if (species == 1)
+        {
+            //tetra
+            if (tetralevel == 1)
+            {
+                tetra1.text = "This fish is happiest when kept with other tetras!";
+                notif.SetActive(true);
+            }
+            else if (tetralevel == 3)
+            {
+                tetra2.text = "The Tetra are very popular aquarium fish.";
+                notif.SetActive(true);
+            }
+            else if (tetralevel == 5)
+            {
+                tetra3.text = "These little guys are distant cousins of the infamous pirahna!";
+                notif.SetActive(true);
+            }
+        }
+        else if (species == 3)
+        {
+            //betta
+            if (bettalevel == 1)
+            {
+                betta_1.text = "The Betta comes in all kinds of colours - three of which are available here.";
+                notif.SetActive(true);
+            }
+            else if (bettalevel == 3)
+            {
+                betta_2.text = "These fish are territorial and will attack other bettas.";
+                notif.SetActive(true);
+            }
+            else if (bettalevel == 5)
+            {
+                betta_3.text = "Their aggression may sometimes extend to other visually-similar fish.";
+                notif.SetActive(true);
+            }
+        }
+
+        
     }
 
     public void ChangeThemeToInt (int themeID)

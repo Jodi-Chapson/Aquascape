@@ -78,6 +78,44 @@ public class FishPanelInfo : MonoBehaviour
             currentlevel = targetfish.GetComponent<BubblesGenerated>().level;
 
             UpdateStarSprites(targetfish.GetComponent<Fish>());
+
+
+            if (targetfish.GetComponent<Fish>().Species == "Gold Fish")
+            {
+                if (currentlevel > manager.goldfishlevel)
+                {
+                    manager.goldfishlevel = currentlevel;
+                    manager.EditHandBook(0);
+                }
+            }
+            else if (targetfish.GetComponent<Fish>().Species == "Neon Tetra")
+            {
+                if (currentlevel > manager.tetralevel)
+                {
+                    manager.tetralevel = currentlevel;
+                    manager.EditHandBook(1);
+                }
+            }
+            else if (targetfish.GetComponent<Fish>().Species == "Red Tailed Shark")
+            {
+                if (currentlevel > manager.rtlevel)
+                {
+                    manager.rtlevel = currentlevel;
+                    manager.EditHandBook(2);
+                }
+            }
+            else if (targetfish.GetComponent<Fish>().Species == "Betta")
+            {
+                if (currentlevel > manager.bettalevel)
+                {
+                    manager.bettalevel = currentlevel;
+                    manager.EditHandBook(3);
+                }
+            }
+
+
+
+
             
         }
 
